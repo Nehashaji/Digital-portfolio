@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Hero Section</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo" data-aos="fade-down" data-aos-delay="100">Neha Shaji</div>
+
+  <div class="hamburger" id="hamburger" data-aos="fade-down" data-aos-delay="200">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="navLinks" data-aos="fade-down" data-aos-delay="300">
+    <li><a href="#hero">HOME</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#certificates">CERTIFICATES</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="grid-overlay"></div>
+  <div class="shapes"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="welcome" data-aos="fade-down" data-aos-delay="400">Welcome to my digital universe</div>
+      <h1 data-aos="fade-up" data-aos-delay="500">Hi, I’m <span class="gold-text">Neha</span></h1>
+      <h2 data-aos="fade-up" data-aos-delay="600">Bsc Creative Computing Student</h2>
+      <p data-aos="fade-up" data-aos-delay="700">
+        Blending <span class="gold">Creativity</span>, 
+        <span class="gold">Technology</span>, and 
+        <span class="gold">AI</span> to build meaningful digital experiences.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn gold-btn" data-aos="zoom-in" data-aos-delay="800">Explore My Work</a>
+        <a href="cv.pdf" class="btn outline-btn" download data-aos="zoom-in" data-aos-delay="900">Download CV</a>
+      </div>
+
+      <div class="stats" data-aos="fade-up" data-aos-delay="1000">
+        <div><span class="gold">10+</span><br>Projects</div>
+        <div><span class="gold">5+</span><br>Certifications</div>
+        <div><span class="gold">2+</span><br>Years Learning</div>
+      </div>
+    </div>
+
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="1100">
+      <div class="outer-ring"></div>
+      <div class="inner-ring"></div>
+      <img src="Images/photo.jpg" alt="Profile" class="photo-animate">
+    </div>
+  </div>
+
+  <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+    <div class="mouse"><div class="wheel"></div></div>
+    <p>Scroll to explore</p>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="about-section">
+  <canvas id="about-canvas"></canvas>
+  <div class="container">
+    <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+      <h2>About <span class="gold-text">Me</span></h2>
+
+      <p>
+        I’m <strong>Neha Shaji</strong>, a final-year 
+        <strong>BSc Creative Computing student at Bath Spa University RAK</strong>. 
+        My academic journey blends creativity with technology, giving me the ability 
+        to design, develop, and deliver impactful digital experiences.
+      </p>
+
+      <p>
+        Over the years, I have worked on a variety of projects, 
+        with a strong focus on <strong>web development</strong>, while also exploring 
+        <strong>game design, mobile applications, chatbots, and data visualizations</strong>. 
+        This hands-on experience has shaped me into a versatile creator who can adapt 
+        to different domains and think beyond conventional boundaries.
+      </p>
+
+      <p>
+        Looking ahead, I am preparing for an 
+        <strong>MSc in Data Science & Artificial Intelligence</strong>, 
+        where I aim to strengthen my expertise in 
+        <strong>data analysis, machine learning, and AI-driven solutions</strong>. 
+        My goal is to grow into a <strong>Data Analyst</strong> who can transform 
+        complex data into meaningful insights, combining technical depth with a 
+        creative perspective to solve real-world problems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 1500,
+    easing: 'ease-in-out',
+    once: true,
+  });
+
+  // GSAP floating and gentle animations
+  window.addEventListener('load', () => {
+    gsap.from(".welcome", {y:-20, opacity:0, duration:1.2, ease:"power2.out"});
+    gsap.from("h1", {y:20, opacity:0, duration:1.2, delay:0.2, ease:"power2.out"});
+    gsap.from("h2", {y:20, opacity:0, duration:1.2, delay:0.4, ease:"power2.out"});
+    gsap.from("p", {y:20, opacity:0, duration:1.2, delay:0.6, ease:"power2.out"});
+    gsap.from(".btn", {y:20, opacity:0, duration:1.2, delay:0.8, stagger:0.2, ease:"power2.out"});
+    gsap.from(".stats div", {y:20, opacity:0, duration:1.2, delay:1.0, stagger:0.2, ease:"power2.out"});
+    gsap.to(".photo-animate", {y:-10, duration:3, repeat:-1, yoyo:true, ease:"sine.inOut"});
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
