@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Hero Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
@@ -12,19 +13,20 @@
 
 <!-- Navbar -->
 <nav class="navbar">
-  <div class="logo" data-aos="fade-down" data-aos-delay="100">Neha Shaji</div>
+  <div class="logo">Neha Shaji</div>
 
-  <div class="hamburger" id="hamburger" data-aos="fade-down" data-aos-delay="200">
+  <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <ul class="nav-links" id="navLinks" data-aos="fade-down" data-aos-delay="300">
-    <li><a href="#hero">HOME</a></li>
-    <li><a href="#projects">PROJECTS</a></li>
-    <li><a href="#certificates">CERTIFICATES</a></li>
-    <li><a href="#contact">CONTACT</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -75,34 +77,65 @@
   <div class="container">
     <div class="about-content" data-aos="fade-up" data-aos-delay="200">
       <h2>About <span class="gold-text">Me</span></h2>
-
       <p>
         I’m <strong>Neha Shaji</strong>, a final-year 
-        <strong>BSc Creative Computing student at Bath Spa University RAK</strong>. 
-        My academic journey blends creativity with technology, giving me the ability 
+        <strong><span class="gold">BSc Creative Computing</span> student at Bath Spa University RAK</strong>. 
+        My academic journey blends <span class="gold">creativity</span> with <span class="gold">technology</span>, giving me the ability 
         to design, develop, and deliver impactful digital experiences.
       </p>
-
       <p>
         Over the years, I have worked on a variety of projects, 
-        with a strong focus on <strong>web development</strong>, while also exploring 
-        <strong>game design, mobile applications, chatbots, and data visualizations</strong>. 
-        This hands-on experience has shaped me into a versatile creator who can adapt 
+        with a strong focus on <span class="gold">web development</span>, while also exploring 
+        <span class="gold">game design</span>, <span class="gold">mobile applications</span>, <span class="gold">chatbots</span>, and <span class="gold">data visualizations</span>. 
+        This hands on experience has shaped me into a versatile creator who can adapt 
         to different domains and think beyond conventional boundaries.
       </p>
-
       <p>
-        Looking ahead, I am preparing for an 
-        <strong>MSc in Data Science & Artificial Intelligence</strong>, 
-        where I aim to strengthen my expertise in 
-        <strong>data analysis, machine learning, and AI-driven solutions</strong>. 
-        My goal is to grow into a <strong>Data Analyst</strong> who can transform 
-        complex data into meaningful insights, combining technical depth with a 
-        creative perspective to solve real-world problems.
+        Over the years, I have discovered a strong passion for <span class="gold">learning about data</span>
+        and exploring the possibilities of <span class="gold">AI</span> and <span class="gold">data-driven solutions</span>. 
+        As an <strong><span class="gold">aspiring Data Analyst</span></strong>, I am eager to deepen my knowledge, work on meaningful 
+        data projects, and transform insights into actionable results.
       </p>
     </div>
   </div>
 </section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="skills-header">
+      <h2>My <span>Skills</span></h2>
+      <div class="underline"></div>
+      <p>Key skills that enable me to craft engaging and effective solutions.</p>
+    </div>
+
+    <div id="skills-container">
+      <!-- Skill cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!--Project section-->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="projects-header">
+      <h2>My <span>Projects</span></h2>
+      <p>Highlighting my journey through innovative design, coding, and interactive experiences.</p>
+    </div>
+
+    <div class="projects-row top-row" id="top-row">
+      <!-- Top 3 cards injected by JS -->
+    </div>
+    <div class="projects-row bottom-row" id="bottom-row">
+      <!-- Bottom 3 cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -112,7 +145,6 @@
     easing: 'ease-in-out',
     once: true,
   });
-
   // GSAP floating and gentle animations
   window.addEventListener('load', () => {
     gsap.from(".welcome", {y:-20, opacity:0, duration:1.2, ease:"power2.out"});
@@ -123,6 +155,7 @@
     gsap.from(".stats div", {y:20, opacity:0, duration:1.2, delay:1.0, stagger:0.2, ease:"power2.out"});
     gsap.to(".photo-animate", {y:-10, duration:3, repeat:-1, yoyo:true, ease:"sine.inOut"});
   });
+
 </script>
 
 <script src="script.js"></script>
