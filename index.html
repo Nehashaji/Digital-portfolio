@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
 </head>
 <body>
@@ -37,9 +38,26 @@
 
   <div class="hero-content">
     <div class="hero-text">
-      <div class="welcome" data-aos="fade-down" data-aos-delay="400">Welcome to my digital universe</div>
-      <h1 data-aos="fade-up" data-aos-delay="500">Hi, I’m <span class="gold-text">Neha</span></h1>
-      <h2 data-aos="fade-up" data-aos-delay="600">Bsc Creative Computing Student</h2>
+      <div class="welcome" data-aos="fade-down" data-aos-delay="400">
+        Welcome to my digital universe
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="500">
+        Hi, I’m <span class="gold-text">Neha Shaji</span>
+      </h1>
+      <h2 data-aos="fade-up" data-aos-delay="600">
+        Bsc Creative Computing Student
+      </h2>
+
+      <!-- Roles / Skills -->
+      <div class="roles" data-aos="fade-up" data-aos-delay="650">
+        <span class="role">
+          <i class="fas fa-code"></i> Developer
+        </span>
+        <span class="role">
+          <i class="fas fa-pencil-ruler"></i> Designer
+        </span>
+      </div>
+
       <p data-aos="fade-up" data-aos-delay="700">
         Blending <span class="gold">Creativity</span>, 
         <span class="gold">Technology</span>, and 
@@ -100,21 +118,6 @@
   </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-  <div class="container">
-    <div class="skills-header">
-      <h2>My <span>Skills</span></h2>
-      <div class="underline"></div>
-      <p>Key skills that enable me to craft engaging and effective solutions.</p>
-    </div>
-
-    <div id="skills-container">
-      <!-- Skill cards injected by JS -->
-    </div>
-  </div>
-</section>
-
 <!--Project section-->
 <section id="projects" class="projects-section">
   <div class="container">
@@ -132,10 +135,138 @@
   </div>
 </section>
 
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="skills-header">
+      <h2>My <span>Skills</span></h2>
+      <div class="underline"></div>
+      <p>Key skills that enable me to craft engaging and effective solutions.</p>
+    </div>
+
+    <div id="skills-container">
+      <!-- Skill cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" class="certificates-section">
+  <div class="container">
+    <h2 data-aos="fade-up">My <span>Certificates</span></h2>
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="150">
+      A showcase of my most valuable achievements & recognitions.
+    </p>
+
+    <div class="certificates-grid">
+      <!-- Certificate Card 1 -->
+      <div class="certificate-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="Certificates/Python for DS_ Certificate.png" alt="IBM Python for Data Science">
+        <h3>IBM Python for Data Science</h3>
+      </div>
+
+      <!-- Certificate Card 2 -->
+      <div class="certificate-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="Certificates/Responsive design_certificate.jpg" alt="LinkedIn Responsive Design">
+        <h3>LinkedIn Responsive Design</h3>
+      </div>
+
+      <!-- Certificate Card 3 -->
+      <div class="certificate-card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="Certificates/Certificate of Academic Excellence.png" alt="Certificate of Academic Excellence">
+        <h3>Certificate of Academic Excellence</h3>
+      </div>
+    </div>
+
+    <div class="view-more" data-aos="fade-up" data-aos-delay="500">
+      <a href="certificates.html" class="btn">View More</a>
+    </div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="container" data-aos="fade-up">
+    <h2>Get in <span>Touch</span></h2>
+    <div class="underline"></div>
+    <p class="contact-sub">I’d love to hear from you! Connect with me via email or socials.</p>
+
+    <div class="contact-cards">
+      <div class="contact-card" data-aos="fade-right">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <a href="mailto:yourname@email.com">yourname@email.com</a>
+      </div>
+      <div class="contact-card" data-aos="fade-up">
+        <i class="fas fa-phone"></i>
+        <h3>Phone</h3>
+        <a href="tel:+971123456789">+971 123 456 789</a>
+      </div>
+      <div class="contact-card" data-aos="fade-left">
+        <i class="fab fa-linkedin"></i>
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+      </div>
+    </div>
+
+    <div class="contact-btn" data-aos="zoom-in">
+      <a href="mailto:yourname@email.com" class="btn">Send Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>Neha <span>Shaji</span></h2>
+      <p>Building creative solutions with design & code.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i> yourmail@example.com</p>
+      <p><i class="fas fa-phone"></i> +971 55 123 4567</p>
+      <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Neha Valuthindil Shaji | All Rights Reserved</p>
+  </div>
+</footer>
 
 <!-- FontAwesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>

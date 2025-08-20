@@ -36,7 +36,6 @@ function animateParticles() {
     top -= p.dy;
     left += p.dx;
 
-    // Reset to bottom if out of view
     if (top < -20) top = window.innerHeight + 20;
     if (left < -20) left = window.innerWidth + 20;
     if (left > window.innerWidth + 20) left = -20;
@@ -58,88 +57,67 @@ hamburger.addEventListener('click', () => {
 });
 
 
-// Neural Particle Background for About Section
-const canvas = document.getElementById("about-canvas");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = document.querySelector(".about-section").offsetHeight;
+/* =====================
+   ABOUT SECTION PARTICLES
+   ===================== */
+const aboutCanvas = document.getElementById("about-canvas");
+const aboutCtx = aboutCanvas.getContext("2d");
 
-let particles = [];
-const numParticles = 70;
+aboutCanvas.width = window.innerWidth;
+aboutCanvas.height = document.querySelector(".about-section").offsetHeight;
 
-class Particle {
+let aboutParticles = [];
+const aboutNumParticles = 70;
+
+class AboutParticle {
   constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
+    this.x = Math.random() * aboutCanvas.width;
+    this.y = Math.random() * aboutCanvas.height;
     this.size = Math.random() * 2 + 1;
-    this.speedX = (Math.random() - 0.5) * 0.5;
-    this.speedY = (Math.random() - 0.5) * 0.5;
+    this.speedY = Math.random() * 0.5 - 0.25;
+    this.speedX = Math.random() * 0.5 - 0.25;
   }
-
   update() {
     this.x += this.speedX;
     this.y += this.speedY;
-    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    if (this.x < 0 || this.x > aboutCanvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > aboutCanvas.height) this.speedY *= -1;
   }
-
   draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(212,175,55,0.8)";
-    ctx.shadowBlur = 15;
-    ctx.shadowColor = "gold";
-    ctx.fill();
+    aboutCtx.fillStyle = "rgba(191,167,96,0.8)";
+    aboutCtx.beginPath();
+    aboutCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    aboutCtx.fill();
   }
 }
 
-function initParticles() {
-  particles = [];
-  for (let i = 0; i < numParticles; i++) {
-    particles.push(new Particle());
+function initAboutParticles() {
+  aboutParticles = [];
+  for (let i = 0; i < aboutNumParticles; i++) {
+    aboutParticles.push(new AboutParticle());
   }
 }
 
-function connectParticles() {
-  for (let a = 0; a < particles.length; a++) {
-    for (let b = a; b < particles.length; b++) {
-      let dx = particles[a].x - particles[b].x;
-      let dy = particles[a].y - particles[b].y;
-      let distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < 120) {
-        ctx.strokeStyle = "rgba(212,175,55,0.2)";
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(particles[a].x, particles[a].y);
-        ctx.lineTo(particles[b].x, particles[b].y);
-        ctx.stroke();
-      }
-    }
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
+function animateAboutParticles() {
+  aboutCtx.clearRect(0, 0, aboutCanvas.width, aboutCanvas.height);
+  aboutParticles.forEach((p) => {
     p.update();
     p.draw();
   });
-  connectParticles();
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animateAboutParticles);
 }
 
-initParticles();
-animate();
+initAboutParticles();
+animateAboutParticles();
 
 window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = document.querySelector(".about-section").offsetHeight;
-  initParticles();
+  aboutCanvas.width = window.innerWidth;
+  aboutCanvas.height = document.querySelector(".about-section").offsetHeight;
+  initAboutParticles();
 });
 
 // ==================== Skills section ====================
 const skillsData = [
-  // Programming Languages
   { name: 'HTML', category: 'Programming Languages', proficiency: 95, icon: '🌐' },
   { name: 'CSS', category: 'Programming Languages', proficiency: 90, icon: '🎨' },
   { name: 'JavaScript', category: 'Programming Languages', proficiency: 85, icon: '⚡' },
@@ -147,8 +125,6 @@ const skillsData = [
   { name: 'C#', category: 'Programming Languages', proficiency: 65, icon: '🖥️' },
   { name: 'Kotlin', category: 'Programming Languages', proficiency: 70, icon: '📱' },
   { name: 'SQL', category: 'Programming Languages', proficiency: 50, icon: '🗄️' },
-
-  // Frameworks & Tools
   { name: 'Node.js', category: 'Frameworks & Tools', proficiency: 70, icon: '💻' },
   { name: 'Unity', category: 'Frameworks & Tools', proficiency: 80, icon: '🎮' },
   { name: 'Tkinter', category: 'Frameworks & Tools', proficiency: 70, icon: '🖥️' },
@@ -156,13 +132,9 @@ const skillsData = [
   { name: 'p5.js', category: 'Frameworks & Tools', proficiency: 90, icon: '🎨' },
   { name: 'Git & Version Control', category: 'Frameworks & Tools', proficiency: 80, icon: '🔧' },
   { name: 'Data Visualization', category: 'Frameworks & Tools', proficiency: 75, icon: '📊' },
-
-  // Design Skills
   { name: 'Figma', category: 'Design Skills', proficiency: 75, icon: '🖌️' },
   { name: 'UI/UX', category: 'Design Skills', proficiency: 70, icon: '🎨' },
   { name: 'Storytelling & Interactive Media', category: 'Design Skills', proficiency: 70, icon: '📖' },
-
-  // Soft Skills
   { name: 'Problem Solving', category: 'Soft Skills', proficiency: 75, icon: '💡' },
   { name: 'Collaboration', category: 'Soft Skills', proficiency: 90, icon: '🤝' },
   { name: 'Creative Thinking', category: 'Soft Skills', proficiency: 70, icon: '🧠' },
@@ -186,7 +158,7 @@ categories.forEach(category => {
   skillsData.filter(s => s.category === category).forEach((skill, index) => {
     const card = document.createElement('div');
     card.classList.add('skill-card');
-    card.setAttribute('data-aos', 'fade-up'); // AOS animation
+    card.setAttribute('data-aos', 'fade-up');
     card.setAttribute('data-aos-delay', `${index * 100}`);
     card.innerHTML = `
       <div class="skill-icon">${skill.icon}</div>
@@ -248,7 +220,7 @@ const bottomRow = document.getElementById('bottom-row');
 projectsData.forEach((project, index) => {
   const card = document.createElement('div');
   card.classList.add('project-card');
-  card.setAttribute('data-aos', 'fade-up'); // AOS animation
+  card.setAttribute('data-aos', 'fade-up');
   card.setAttribute('data-aos-delay', `${index * 150}`);
   card.innerHTML = `
     <div class="project-image">
@@ -270,3 +242,68 @@ AOS.init({
   duration: 1000,
   easing: 'ease-out-cubic',
 });
+
+/* ==========================
+   CERTIFICATES SECTION PARTICLES
+   ========================== */
+function createParticles(canvasId, sectionClass, numParticles) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = document.querySelector(sectionClass).offsetHeight;
+
+  let particles = [];
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 1;
+      this.dy = Math.random() * 0.5 + 0.2;
+    }
+    update() {
+      this.y -= this.dy;
+      if (this.y < 0) {
+        this.y = canvas.height;
+        this.x = Math.random() * canvas.width;
+      }
+    }
+    draw() {
+      ctx.fillStyle = "rgba(191,167,96,0.8)";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function init() {
+    particles = [];
+    for (let i = 0; i < numParticles; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p) => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  init();
+  animate();
+
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = document.querySelector(sectionClass).offsetHeight;
+    init();
+  });
+}
+
+// Call particle backgrounds for different sections
+createParticles("particles-canvas", ".certificates-section", 80);
+createParticles("skills-canvas", ".skills-section", 60);
+createParticles("projects-canvas", ".projects-section", 70);
