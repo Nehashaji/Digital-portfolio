@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates • Neha</title>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="certificate.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Neha Shaji</div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certificate.html">Certificates</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+
+  </ul>
+</nav>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="certificates-section">
+    <!-- Particle background  -->
+    <canvas id="cert-particles" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <header class="cert-header" data-aos="fade-down">
+        <h1>My <span>Certificates</span></h1>
+        <div class="underline"></div>
+        <p>Verified credentials highlighting my expertise.</p>
+      </header>
+
+      <!-- Category Filter Tabs -->
+      <nav class="cert-tabs" role="tablist" aria-label="Certificate Categories">
+        <button class="tab active" data-filter="all" aria-selected="true" role="tab">
+          <i class="fa-solid fa-layer-group"></i> All
+        </button>
+        <button class="tab" data-filter="data" role="tab" aria-selected="false">
+          <i class="fa-solid fa-brain"></i> Data Science & AI
+        </button>
+        <button class="tab" data-filter="academic" role="tab" aria-selected="false">
+          <i class="fa-solid fa-award"></i> Academic Achievements
+        </button>
+        <button class="tab" data-filter="technical" role="tab" aria-selected="false">
+          <i class="fa-solid fa-code"></i> Technical Skills
+        </button>
+      </nav>
+
+      <!-- Grid -->
+      <div class="cert-grid" id="certGrid">
+        <!-- DATA SCIENCE & AI -->
+        <article class="cert-card" data-category="data" data-aos="zoom-in" data-aos-delay="0">
+          <div class="cert-image">
+            <img src="Certificates/Python for DS_ Certificate.png" alt="IBM Python for Data Science Certificate" loading="lazy" />
+            <span class="badge"><i class="fa-solid fa-brain"></i> Data</span>
+          </div>
+          <div class="cert-content">
+            <h3>IBM – Python for Data Science</h3>
+            <p class="issuer"><i class="fa-solid fa-building-columns"></i> IBM</p>
+            <div class="tags">
+              <span>Python</span><span>NumPy</span><span>Pandas</span>
+            </div>
+            <a class="btn" href="Certificates/Python for DS_ Certificate.png" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </article>
+
+        <!-- ACADEMIC -->
+        <article class="cert-card" data-category="academic" data-aos="zoom-in" data-aos-delay="100">
+          <div class="cert-image">
+            <img src="Certificates/Certificate of Academic Excellence.png" alt="Certificate of Academic Excellence" loading="lazy" />
+            <span class="badge"><i class="fa-solid fa-award"></i> Academic</span>
+          </div>
+          <div class="cert-content">
+            <h3>Certificate of Academic Excellence</h3>
+            <p class="issuer"><i class="fa-solid fa-building-columns"></i> BSU RAK</p>
+            <div class="tags">
+              <span>Top Performance</span><span>Honors</span>
+            </div>
+            <a class="btn" href="Certificates/Certificate of Academic Excellence.png" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </article>
+
+        <article class="cert-card" data-category="academic" data-aos="zoom-in" data-aos-delay="150">
+          <div class="cert-image">
+            <img src="Certificates/Neha-Certificate of Appreciation.jpg" alt="Certificate of Appreciation" loading="lazy" />
+            <span class="badge"><i class="fa-solid fa-award"></i> Academic</span>
+          </div>
+          <div class="cert-content">
+            <h3>Certificate of Appreciation</h3>
+            <p class="issuer"><i class="fa-solid fa-building-columns"></i> Client Project</p>
+            <div class="tags">
+              <span>Web Project</span><span>Service</span>
+            </div>
+            <a class="btn" href="Certificates/Neha-Certificate of Appreciation.jpg" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </article>
+
+        <!-- TECHNICAL -->
+        <article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="200">
+          <div class="cert-image">
+            <img src="Certificates/Responsive design_certificate.jpg" alt="LinkedIn Responsive Design Certificate" loading="lazy" />
+            <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+          </div>
+          <div class="cert-content">
+            <h3>LinkedIn – Responsive Design</h3>
+            <p class="issuer"><i class="fa-brands fa-linkedin"></i> LinkedIn Learning</p>
+            <div class="tags">
+              <span>Flexbox</span><span>Grid</span><span>UI</span>
+            </div>
+            <a class="btn" href="Certificates/Responsive design_certificate.jpg" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </article>
+
+<article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="250">
+  <div class="cert-image">
+    <img src="Certificates/Great Learning Certificate.jpg" alt="Great Learning Python Tkinter Certificate" loading="lazy" />
+    <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+  </div>
+  <div class="cert-content">
+    <h3>Great Learning – Python Tkinter</h3>
+    <p class="issuer"><i class="fa-solid fa-graduation-cap"></i> Great Learning</p>
+    <div class="tags">
+      <span>Python</span><span>Tkinter</span><span>GUI</span>
+    </div>
+    <a class="btn" href="Certificates/Great Learning Certificate.jpg" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</article>
+
+<!-- Sololearn Certificates -->
+
+<article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="350">
+  <div class="cert-image">
+    <img src="Certificates/Html_Certificate.png" alt="Sololearn HTML Certificate" loading="lazy" />
+    <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+  </div>
+  <div class="cert-content">
+    <h3>Sololearn – HTML</h3>
+    <p class="issuer"><i class="fa-solid fa-graduation-cap"></i> Sololearn</p>
+    <div class="tags"><span>HTML</span></div>
+    <a class="btn" href="https://www.sololearn.com/certificates/CC-LWYO1VRT" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</article>
+
+<article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="400">
+  <div class="cert-image">
+    <img src="Certificates/CSS_Certificate.png" alt="Sololearn CSS Certificate" loading="lazy" />
+    <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+  </div>
+  <div class="cert-content">
+    <h3>Sololearn – CSS</h3>
+    <p class="issuer"><i class="fa-solid fa-graduation-cap"></i> Sololearn</p>
+    <div class="tags"><span>CSS</span></div>
+    <a class="btn" href="https://www.sololearn.com/certificates/CC-CXG9FFBU" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</article>
+
+<article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="450">
+  <div class="cert-image">
+    <img src="Certificates/JS_Certificate.png" alt="Sololearn JavaScript Certificate" loading="lazy" />
+    <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+  </div>
+  <div class="cert-content">
+    <h3>Sololearn – JavaScript</h3>
+    <p class="issuer"><i class="fa-solid fa-graduation-cap"></i> Sololearn</p>
+    <div class="tags"><span>JavaScript</span></div>
+    <a class="btn" href="https://www.sololearn.com/certificates/CC-RWCUAQXV" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</article>
+
+<article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="500">
+  <div class="cert-image">
+    <img src="Certificates/Intro to python_Certificate.png" alt="Sololearn Python Certificate" loading="lazy" />
+    <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+  </div>
+  <div class="cert-content">
+    <h3>Sololearn – Python</h3>
+    <p class="issuer"><i class="fa-solid fa-graduation-cap"></i> Sololearn</p>
+    <div class="tags"><span>Python</span></div>
+    <a class="btn" href="https://www.sololearn.com/certificates/CC-F6ZSPXQT" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</article>
+
+<article class="cert-card" data-category="technical" data-aos="zoom-in" data-aos-delay="550">
+  <div class="cert-image">
+    <img src="Certificates/Python Inter_Certificate.png" alt="Sololearn Python Intermediate Certificate" loading="lazy" />
+    <span class="badge"><i class="fa-solid fa-code"></i> Tech</span>
+  </div>
+  <div class="cert-content">
+    <h3>Sololearn – Python Intermediate</h3>
+    <p class="issuer"><i class="fa-solid fa-graduation-cap"></i> Sololearn</p>
+    <div class="tags"><span>Python</span><span>Intermediate</span></div>
+    <a class="btn" href="https://www.sololearn.com/certificates/CC-K56PFJ7O" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</article>
+      </div>
+
+  </section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>Neha <span>Shaji</span></h2>
+      <p>Building creative solutions with design & code.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i> nehavshaji@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/nehavshaji/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Nehashaji"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@nehashaji1748"><i class="fab fa-youtube"></i></a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Neha Valuthundil Shaji | All Rights Reserved</p>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="certificates.js"></script>
+</body>
+</html>
