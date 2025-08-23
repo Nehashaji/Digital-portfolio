@@ -1,9 +1,11 @@
+// ==================== Smooth Scroll ====================
+document.documentElement.style.scrollBehavior = "smooth";
+
 // ==================== Code Particles ====================
 const codeSymbols = ['</>', '{}', '[]', '()', 'AI', 'ML', 'JS', 'PY', 'HTML', 'CSS'];
 const particleCount = 30;
 const codeParticles = [];
 
-// Create particles
 for (let i = 0; i < particleCount; i++) {
   const particle = document.createElement('div');
   particle.classList.add('code-particle');
@@ -13,10 +15,11 @@ for (let i = 0; i < particleCount; i++) {
     left: Math.random() * window.innerWidth + 'px',
     top: Math.random() * window.innerHeight + 'px',
     fontFamily: 'monospace',
-    color: 'rgba(252,211,77,0.3)',
+    color: 'rgba(252, 207, 60, 0.3)',
     fontSize: Math.random() * 14 + 10 + 'px',
     pointerEvents: 'none',
-    userSelect: 'none'
+    userSelect: 'none',
+    zIndex: 1
   });
   document.body.appendChild(particle);
 
@@ -27,7 +30,6 @@ for (let i = 0; i < particleCount; i++) {
   });
 }
 
-// Animate code particles
 function animateParticles() {
   codeParticles.forEach(p => {
     let top = parseFloat(p.el.style.top);
@@ -56,15 +58,16 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-
-/* =====================
-   ABOUT SECTION PARTICLES
-   ===================== */
+// ===================== ABOUT SECTION PARTICLES =====================
 const aboutCanvas = document.getElementById("about-canvas");
 const aboutCtx = aboutCanvas.getContext("2d");
 
-aboutCanvas.width = window.innerWidth;
-aboutCanvas.height = document.querySelector(".about-section").offsetHeight;
+function resizeAboutCanvas() {
+  aboutCanvas.width = aboutCanvas.parentElement.offsetWidth;
+  aboutCanvas.height = aboutCanvas.parentElement.offsetHeight;
+}
+resizeAboutCanvas();
+window.addEventListener("resize", resizeAboutCanvas);
 
 let aboutParticles = [];
 const aboutNumParticles = 70;
@@ -110,108 +113,71 @@ function animateAboutParticles() {
 initAboutParticles();
 animateAboutParticles();
 
-window.addEventListener("resize", () => {
-  aboutCanvas.width = window.innerWidth;
-  aboutCanvas.height = document.querySelector(".about-section").offsetHeight;
-  initAboutParticles();
-});
-
 // ==================== Skills section ====================
-const skillsData = [
-  { name: 'HTML', category: 'Programming Languages', proficiency: 95, icon: '🌐' },
-  { name: 'CSS', category: 'Programming Languages', proficiency: 90, icon: '🎨' },
-  { name: 'JavaScript', category: 'Programming Languages', proficiency: 85, icon: '⚡' },
-  { name: 'Python', category: 'Programming Languages', proficiency: 75, icon: '🐍' },
-  { name: 'C#', category: 'Programming Languages', proficiency: 65, icon: '🖥️' },
-  { name: 'Kotlin', category: 'Programming Languages', proficiency: 70, icon: '📱' },
-  { name: 'SQL', category: 'Programming Languages', proficiency: 50, icon: '🗄️' },
-  { name: 'Node.js', category: 'Frameworks & Tools', proficiency: 70, icon: '💻' },
-  { name: 'Unity', category: 'Frameworks & Tools', proficiency: 80, icon: '🎮' },
-  { name: 'Tkinter', category: 'Frameworks & Tools', proficiency: 70, icon: '🖥️' },
-  { name: 'Android Studio', category: 'Frameworks & Tools', proficiency: 70, icon: '📱' },
-  { name: 'p5.js', category: 'Frameworks & Tools', proficiency: 90, icon: '🎨' },
-  { name: 'Git & Version Control', category: 'Frameworks & Tools', proficiency: 80, icon: '🔧' },
-  { name: 'Data Visualization', category: 'Frameworks & Tools', proficiency: 75, icon: '📊' },
-  { name: 'Figma', category: 'Design Skills', proficiency: 75, icon: '🖌️' },
-  { name: 'UI/UX', category: 'Design Skills', proficiency: 70, icon: '🎨' },
-  { name: 'Storytelling & Interactive Media', category: 'Design Skills', proficiency: 70, icon: '📖' },
-  { name: 'Problem Solving', category: 'Soft Skills', proficiency: 75, icon: '💡' },
-  { name: 'Collaboration', category: 'Soft Skills', proficiency: 90, icon: '🤝' },
-  { name: 'Creative Thinking', category: 'Soft Skills', proficiency: 70, icon: '🧠' },
-  { name: 'Communication & Presentation', category: 'Soft Skills', proficiency: 80, icon: '🗣️' },
-];
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.skills-tabs .tab');
+  const cards = document.querySelectorAll('.skill-card');
 
-const container = document.getElementById('skills-container');
-const categories = [...new Set(skillsData.map(s => s.category))];
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
 
-categories.forEach(category => {
-  const catDiv = document.createElement('div');
-  catDiv.classList.add('category');
-
-  const title = document.createElement('h3');
-  title.textContent = category;
-  catDiv.appendChild(title);
-
-  const grid = document.createElement('div');
-  grid.classList.add('skills-grid');
-
-  skillsData.filter(s => s.category === category).forEach((skill, index) => {
-    const card = document.createElement('div');
-    card.classList.add('skill-card');
-    card.setAttribute('data-aos', 'fade-up');
-    card.setAttribute('data-aos-delay', `${index * 100}`);
-    card.innerHTML = `
-      <div class="skill-icon">${skill.icon}</div>
-      <div class="skill-name">${skill.name}</div>
-      <div class="progress-circle">
-        <svg>
-          <circle class="progress-bg" cx="40" cy="40" r="32"></circle>
-          <circle class="progress-bar" cx="40" cy="40" r="32"></circle>
-        </svg>
-        <div class="progress-text">${skill.proficiency}%</div>
-      </div>
-    `;
-    grid.appendChild(card);
+      cards.forEach(card => {
+        if(filter === 'all' || card.dataset.category === filter) {
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+          card.style.pointerEvents = 'auto';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0)';
+          card.style.pointerEvents = 'none';
+        }
+      });
+    });
   });
 
-  catDiv.appendChild(grid);
-  container.appendChild(catDiv);
+  const progressBars = document.querySelectorAll('.progress-bar');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const bar = entry.target.querySelector('div');
+        const percentSpan = entry.target.querySelector('.percent');
+        const percentage = entry.target.dataset.percentage;
+        bar.style.width = percentage + '%';
+        let count = 0;
+        const interval = setInterval(() => {
+          if(count >= percentage) clearInterval(interval);
+          percentSpan.textContent = count + '%';
+          count++;
+        }, 15);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  progressBars.forEach(bar => observer.observe(bar));
 });
 
-// Animate skills circular progress
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const bar = entry.target.querySelector('.progress-bar');
-      const text = entry.target.querySelector('.progress-text');
-      if (!bar) return;
-      const radius = bar.r.baseVal.value;
-      const circumference = 2 * Math.PI * radius;
-      const percent = parseFloat(text.textContent);
-
-      bar.style.strokeDasharray = circumference;
-      bar.style.strokeDashoffset = circumference;
-
-      setTimeout(() => {
-        bar.style.transition = 'stroke-dashoffset 1.5s ease';
-        bar.style.strokeDashoffset = circumference * (1 - percent / 100);
-      }, 100);
-
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
+// Add CSS for smooth hiding/showing of skill cards
+const style = document.createElement('style');
+style.innerHTML = `
+.skill-card {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: block; /* keep in layout */
+}
+`;
+document.head.appendChild(style);
 
 // ==================== Project section ====================
 const projectsData = [
-  { title: 'Web/App Figma Design', description: 'Figma app & web designs, wireframes, responsive mockups.', image: 'Images/figma.gif', link: 'projects.html#figma' },
-  { title: 'Web Development', description: 'Frontend websites, backend projects, fullstack demos.', image: 'Images/web-development.gif', link: 'projects.html#webdev' },
-  { title: 'Creative Coding & Interactive Media', description: 'p5.js projects, Twine interactive stories, Python exercises, chatbots.', image: 'Images/creative-coding.gif', link: 'projects.html#creative' },
-  { title: 'Game Development', description: 'Unity 2D games with interactive gameplay.', image: 'Images/game.gif', link: 'projects.html#games' },
-  { title: 'Data & Analytics', description: 'Python Tkinter data-driven apps, Flourish visualizations.', image: 'Images/data.gif', link: 'projects.html#data' },
-  { title: 'Mobile Apps', description: 'Android Studio smartphone apps.', image: 'Images/mobile.gif', link: 'projects.html#mobile' }
+  { title: 'Data & Analytics', description: 'Python Tkinter data-driven apps, Flourish visualizations.', image: 'Images/data.gif', link: 'projects.html#data-analytics' },
+  { title: 'Web Development', description: 'Frontend websites, backend projects, Client Projects.', image: 'Images/web-development.gif', link: 'projects.html#web-dev' },
+  { title: 'Mobile Apps', description: 'Android Studio smartphone apps Kotlin.', image: 'Images/mobile.gif', link: 'projects.html#mobile-apps' },
+  { title: 'Game Development', description: 'Unity 2D games with interactive gameplay.', image: 'Images/game.gif', link: 'projects.html#game-dev' },
+  { title: 'Creative Coding & Interactive Media', description: 'p5.js projects, Twine interactive stories, chatbots.', image: 'Images/creative-coding.gif', link: 'projects.html#creative-coding' },
+  { title: 'Web/App Figma Design', description: 'Figma App and mobile designs, wireframes.', image: 'Images/figma.gif', link: 'projects.html#figma-design' }
 ];
 
 const topRow = document.getElementById('top-row');
@@ -236,74 +202,67 @@ projectsData.forEach((project, index) => {
   else bottomRow.appendChild(card);
 });
 
-// Initialize AOS
 AOS.init({
   once: true,
   duration: 1000,
   easing: 'ease-out-cubic',
 });
 
-/* ==========================
-   CERTIFICATES SECTION PARTICLES
-   ========================== */
-function createParticles(canvasId, sectionClass, numParticles) {
-  const canvas = document.getElementById(canvasId);
-  const ctx = canvas.getContext("2d");
+// ==================== Certificates Section Particles ====================
+const canvas = document.getElementById("particles-canvas");
+const ctx = canvas.getContext("2d");
 
+let particlesArray;
+
+function resizeCanvas() {
   canvas.width = window.innerWidth;
-  canvas.height = document.querySelector(sectionClass).offsetHeight;
+  canvas.height = canvas.parentElement.offsetHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
-  let particles = [];
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 1;
-      this.dy = Math.random() * 0.5 + 0.2;
-    }
-    update() {
-      this.y -= this.dy;
-      if (this.y < 0) {
-        this.y = canvas.height;
-        this.x = Math.random() * canvas.width;
-      }
-    }
-    draw() {
-      ctx.fillStyle = "rgba(191,167,96,0.8)";
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-    }
+class Particle {
+  constructor(x, y, size, speedX, speedY) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.speedX = speedX;
+    this.speedY = speedY;
   }
-
-  function init() {
-    particles = [];
-    for (let i = 0; i < numParticles; i++) {
-      particles.push(new Particle());
-    }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
   }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach((p) => {
-      p.update();
-      p.draw();
-    });
-    requestAnimationFrame(animate);
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255, 215, 0, 0.7)";
+    ctx.fill();
   }
-
-  init();
-  animate();
-
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = document.querySelector(sectionClass).offsetHeight;
-    init();
-  });
 }
 
-// Call particle backgrounds for different sections
-createParticles("particles-canvas", ".certificates-section", 80);
-createParticles("skills-canvas", ".skills-section", 60);
-createParticles("projects-canvas", ".projects-section", 70);
+function initParticles() {
+  particlesArray = [];
+  const numberOfParticles = 60;
+  for (let i = 0; i < numberOfParticles; i++) {
+    const size = Math.random() * 3 + 1;
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height;
+    const speedX = (Math.random() - 0.5) * 1;
+    const speedY = (Math.random() - 0.5) * 1;
+    particlesArray.push(new Particle(x, y, size, speedX, speedY));
+  }
+}
+initParticles();
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particlesArray.forEach(p => {
+    p.update();
+    p.draw();
+  });
+  requestAnimationFrame(animate);
+}
+animate();

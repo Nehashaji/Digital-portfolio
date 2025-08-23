@@ -520,151 +520,152 @@ body {
   }
 }
 
-/* General Container */
+/*Skills section*/
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* ---------------- Skills Section ---------------- */
 .skills-section {
-  padding-top: 50px; 
-  padding-bottom: 60px;
-}
-
-.skills-header {
+  background: #000000;
+  color: #fff;
+  padding: 20px 20px; 
+  font-family: 'Poppins', sans-serif;
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .skills-header h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  color: #FFD700;
+  margin-bottom: 5px; 
 }
 
 .skills-header h2 span {
-  color: #FFD700;
+  color: #fff;
 }
 
-.skills-header .underline {
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(to right, #FFD700, #FFC107);
-  margin: 0 auto 15px;
-  border-radius: 2px;
-}
-
-.skills-header p {
+.skills-header p.subtitle {
   font-size: 1.1rem;
   color: #ccc;
-}
-
-/* Skill Categories */
-.category {
   margin-bottom: 50px;
 }
 
-.category h3 {
-  color: #FFD700;
-  font-size: 2rem;
-  margin-bottom: 25px;
+.skills-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
-/* Skills Grid */
+.skills-tabs .tab {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255,215,0,0.3);
+  color: #FFD700;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-tabs .tab.active,
+.skills-tabs .tab:hover {
+  background: #FFD700;
+  color: #000;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
-/* Skill Card */
 .skill-card {
-  background: linear-gradient(to bottom right, rgba(50,50,50,0.8), rgba(30,30,30,0.8));
-  border-radius: 15px;
-  padding: 25px 20px;
-  border: 1px solid #555;
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255,215,0,0.3);
+  border-radius: 12px;
+  padding: 20px;
   text-align: center;
-  transition: transform 0.3s, border 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
 }
 
 .skill-card:hover {
-  transform: translateY(-7px) scale(1.05);
-  border: 1px solid #FFD700;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255,215,0,0.4);
 }
 
-.skill-icon {
+.skill-card .skill-icon {
   font-size: 3rem;
   margin-bottom: 12px;
 }
 
-.skill-name {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+.skill-card h3 {
+  color: #FFD700;
   font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.skill-card .tags {
   margin-bottom: 12px;
 }
-
-.progress-circle {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 12px;
-}
-
-.progress-circle svg {
-  width: 80px;
-  height: 80px;
-  transform: rotate(-90deg);
-}
-
-.progress-circle circle {
-  fill: none;
-  stroke-width: 6;
-  stroke-linecap: round;
-}
-
-.progress-bg {
-  stroke: #555;
+.skill-card .tags span {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #fff;
+  background: rgba(255,215,0,0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .progress-bar {
-  stroke: #FFD700;
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-dasharray: 201;
-  stroke-dashoffset: 201;
-  transition: stroke-dashoffset 1.5s ease;
+  width: 100%;
+  height: 14px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
 }
 
-.progress-text {
+.progress-bar div {
+  height: 100%;
+  width: 0;
+  background: #FFD700;
+  border-radius: 6px;
+  transition: width 1.5s ease;
+}
+
+.progress-bar span.percent {
   position: absolute;
+  right: 10px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
   color: #fff;
+  font-weight: 400;
 }
 
-/* Skills Responsive */
-@media (max-width: 1024px) {
-  .skills-grid { gap: 20px; }
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .skills-tabs { gap: 8px; }
 }
-@media (max-width: 768px) {
-  .skills-header h2 { font-size: 2.5rem; }
-  .category h3 { font-size: 1.7rem; }
-}
-@media (max-width: 480px) {
-  .skills-header h2 { font-size: 2rem; }
-  .category h3 { font-size: 1.5rem; }
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------------- Projects Section ---------------- */
 .projects-section {
-  padding-top: 50px;
-  padding-bottom: 80px;
-  background: black; 
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background: rgb(0, 0, 0); 
 }
 
 .projects-header {
@@ -770,17 +771,58 @@ body {
 .certificates-section {
   position: relative;
   padding: 80px 20px;
-  background: #000; /* Black base */
+  background: #000; 
   color: #fff;
   text-align: center;
   overflow: hidden;
+}
+
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  display: block;   
+  overflow: hidden; 
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+
+.certificates-section .container,
+.certificates-grid,
+.view-more {
+  position: relative;
+  z-index: 1;
+}
+
+.certificates-section .container {
+  position: relative;
+  z-index: 2; 
+}
+
+.certificates-section canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  pointer-events: none; 
 }
 
 .certificates-section h2 {
   font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
-  color: #FFD700; /* Gold */
+  color: #FFD700; 
 }
 
 .certificates-section h2 span {
@@ -853,14 +895,19 @@ body {
   box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
 }
 
-/* Particle Canvas */
 #particles-canvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   z-index: 1;
+}
+
+.certificates-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* Contact Section */
@@ -965,6 +1012,7 @@ body {
   color: #fff;
   padding: 60px 20px 30px;
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
 .footer-container {
@@ -973,6 +1021,21 @@ body {
   gap: 40px;
   max-width: 1200px;
   margin: auto;
+  padding-top: 40px; 
+  position: relative;
+}
+
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%; 
+  height: 2px;
+  background: #FFD700;
+  opacity: 0.5;
+  border-radius: 2px;
 }
 
 .footer-brand h2 {
