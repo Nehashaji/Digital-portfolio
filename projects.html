@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="projects.css">
+</head>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Neha Shaji</div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certificate.html">Certificates</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+
+  </ul>
+</nav>
+
+<body>
+  <!-- Particles Background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p class="subtitle">Showcasing my journey in digital creativity and technology</p>
+    </div>
+  </header>
+  
+<main class="container">
+  <!-- 1) Data & Analytics -->
+  <section class="project-category" id="data-analytics">
+    <header class="cat-header">
+      <h2>Data & Analytics</h2>
+      <p class="subheading">Data-driven applications and visualizations</p>
+    </header>
+
+    <div class="project-grid">
+      <!-- Python Tkinter app -->
+      <article class="project-card">
+        <img src="Project-Images/data/pythonTkinder.png" alt="Python Tkinter data-driven application">
+        <div class="overlay">
+          <h3>Python Tkinter Data Driven App</h3>
+          <div class="badges">
+            <span>Python</span><span>Tkinter</span>
+          </div>
+          <div class="actions">
+            <a aria-label="YouTube demo" href="https://youtu.be/JCkDhxl93MM" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cross-link Flourish -->
+      <article class="project-card">
+        <img src="Project-Images/data/flourish.png" alt="Flourish visualization">
+        <div class="overlay">
+          <h3>Flourish Data Visualization</h3>
+          <div class="badges">
+            <span>Data Viz</span><span>Flourish</span><span>Storytelling</span>
+          </div>
+          <div class="actions">
+            <a aria-label="Live viz" href="https://public.flourish.studio/story/3057141/" target="_blank"><i class="fas fa-link"></i></a>
+            <a aria-label="YouTube overview" href="https://youtu.be/7Pf2GgrMc1Y" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 2) Web Development -->
+  <section class="project-category" id="web-dev">
+    <header class="cat-header">
+      <h2>Web Development</h2>
+      <p class="subheading">Client & academic builds across the stack</p>
+    </header>
+
+    <div class="project-grid">
+      <!-- Dockside Technical Service website – Client-based -->
+      <article class="project-card">
+        <img src="Project-Images/Websites/docksidewebsite.png" alt="Dockside Technical Service website screenshot">
+        <div class="overlay">
+          <h3>Dockside Technical Service</h3>
+          <div class="badges">
+            <span>Frontend</span><span>Academic</span><span>Client</span>
+          </div>
+          <div class="actions">
+            <a aria-label="GitHub" href="https://github.com/Nehashaji/Dockside-Technical-Service.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a aria-label="Live site" href="https://docksidetechnical.com/" target="_blank"><i class="fas fa-link"></i></a>
+            <a aria-label="YouTube demo" href="https://youtu.be/_1terT9pSJE" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Parents Healthcare website – Client-based -->
+      <article class="project-card">
+        <img src="Project-Images/Websites/parentshealthcare.png" alt="Parents Healthcare website screenshot">
+        <div class="overlay">
+          <h3>Parents Healthcare</h3>
+          <div class="badges">
+            <span>Frontend</span><span>Client based project</span>
+          </div>
+          <div class="actions">
+            <a aria-label="Live site" href="https://parentshealthcare.com/" target="_blank"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ayurminar website – Client-based -->
+      <article class="project-card">
+        <img src="Project-Images/Websites/ayurminar.png" alt="Ayurminar website screenshot">
+        <div class="overlay">
+          <h3>Ayurminar Website</h3>
+          <div class="badges">
+            <span>Frontend</span><span>Client based project</span>
+          </div>
+          <div class="actions">
+            <a aria-label="Live site" href="https://ayurminar.com/" target="_blank"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bentley website – Academic project -->
+      <article class="project-card">
+        <img src="Project-Images/Websites/bently.png" alt="Bentley academic website screenshot">
+        <div class="overlay">
+          <h3>Bentley Website (Academic)</h3>
+          <div class="badges">
+            <span>HTML</span><span>CSS</span><span>JS</span><span>Academic</span>
+          </div>
+          <div class="actions">
+            <a aria-label="GitHub" href="https://github.com/Nehashaji/Bentley_Motors.gite" target="_blank"><i class="fab fa-github"></i></a>
+            <a aria-label="Live demo" href="https://nehashaji.github.io/Bentley_Motors/" target="_blank"><i class="fas fa-link"></i></a>
+            <a aria-label="YouTube demo" href="https://youtu.be/_hlHe5bpmaI" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Movie/TV show website -->
+      <article class="project-card">
+        <img src="Project-Images/Websites/movie.png" alt="Movie TV website with search and sign-in">
+        <div class="overlay">
+          <h3>Movie/TV Show Website</h3>
+          <div class="badges">
+            <span>Frontend</span><span>Backend</span><span>Academic</span>
+          </div>
+          <div class="actions">
+            <a aria-label="GitHub" href="https://github.com/yourusername/movie-tv-auth" target="_blank"><i class="fab fa-github"></i></a>
+            <a aria-label="Live demo" href="https://your-movie-live-url" target="_blank"><i class="fas fa-link"></i></a>
+            <a aria-label="YouTube demo" href="https://youtu.be/sWA0bmhS63s" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Responsive design clone task – Academic -->
+      <article class="project-card">
+        <img src="Project-Images/Websites/responsivedesign.png" alt="Responsive design clone layout">
+        <div class="overlay">
+          <h3>Responsive Design Clone</h3>
+          <div class="badges">
+            <span>HTML</span><span>CSS Grid</span><span>SCSS</span><span>Academic</span>
+          </div>
+          <div class="actions">
+            <a aria-label="GitHub" href="https://github.com/Neha-005/Web-Dev-II_SA-1_Clone-Tasks.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a aria-label="YouTube walkthrough" href="https://youtu.be/IZsMt3B2wLs" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3) Mobile Apps -->
+  <section class="project-category" id="mobile-apps">
+    <header class="cat-header">
+      <h2>Mobile Apps</h2>
+      <p class="subheading">Android Studio smartphone apps</p>
+    </header>
+
+    <div class="project-grid">
+      <!-- NAN Calculator -->
+      <article class="project-card">
+        <img src="Project-Images/Moblie/nan.png" alt="NAN Calculator Android app">
+        <div class="overlay">
+          <h3>NAN Calculator</h3>
+          <div class="badges">
+            <span>Android Studio</span><span>Kotlin</span><span>UI</span>
+          </div>
+          <div class="actions">
+            <a aria-label="YouTube demo" href="https://youtu.be/m8CSeN4cxRM" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Multipage app -->
+      <article class="project-card">
+        <img src="Project-Images/Moblie/multipage.png" alt="Multipage Android app">
+        <div class="overlay">
+          <h3>Multipage App</h3>
+          <div class="badges">
+            <span>Android Studio</span><span>Java</span><span>Navigation</span>
+          </div>
+          <div class="actions">
+            <a aria-label="YouTube demo" href="https://youtu.be/DSXKQj577jQ" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4) Game Development -->
+  <section class="project-category" id="game-dev">
+    <header class="cat-header">
+      <h2>Game Development</h2>
+      <p class="subheading">Unity 2D game with core mechanics</p>
+    </header>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <img src="Project-Images/Media/2dgame.png" alt="Unity 2D gameplay GIF">
+        <div class="overlay">
+          <h3>Unity 2D Game</h3>
+          <div class="badges">
+            <span>Unity</span><span>C#</span><span>Level Design</span>
+          </div>
+          <div class="actions">
+            <a aria-label="Playable build" href="https://neha-shaji.itch.io/dash-of-hues" target="_blank"><i class="fas fa-gamepad"></i></a>
+            <a aria-label="Gameplay video" href="https://youtu.be/SG-oXzYQY-o" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+<!-- 5) Creative Coding & Interactive Media -->
+<section class="project-category" id="creative-coding">
+  <header class="cat-header">
+    <h2>Creative Coding & Interactive Media</h2>
+    <p class="subheading">Experiments, chatbots, and interactive stories</p>
+  </header>
+
+  <div class="project-grid">
+    <!-- Dialogflow chatbot -->
+    <article class="project-card">
+      <img src="Project-Images/Media/chatbot.png" alt="Dialogflow chatbot interface">
+      <div class="overlay">
+        <h3>Dialogflow Chatbot</h3>
+        <div class="badges">
+          <span>Dialogflow</span><span>NLP</span><span>ET Module</span>
+        </div>
+        <div class="actions">
+          <a aria-label="YouTube demo" href="https://youtu.be/yNCKnTIHZ7A" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Twine interactive story -->
+    <article class="project-card">
+      <img src="Project-Images/Media/twine.png" alt="Twine interactive story screenshot">
+      <div class="overlay">
+        <h3>Twine Interactive Story</h3>
+        <div class="badges">
+          <span>Twine</span><span>Narrative</span><span>Branches</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live story" href="https://neha-shaji.itch.io/the-little-red-riding-hood" target="_blank"><i class="fas fa-link"></i></a>
+          <a aria-label="YouTube walkthrough" href="https://youtu.be/Csko068QHj4" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Mouse Trails -->
+    <article class="project-card">
+      <img src="Project-Images/Media/Mouse Trails.jpg" alt="p5.js interactive sketch 1">
+      <div class="overlay">
+        <h3>p5.js Mouse Trails</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Interactive</span><span>Mouse Input</span><span>Animation</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/01LKwTMid" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/01LKwTMid" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Game -->
+    <article class="project-card">
+      <img src="Project-Images/Media/game.jpg" alt="p5.js interactive sketch 2">
+      <div class="overlay">
+        <h3>p5.js Game</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Interactive</span><span>Gameplay</span><span>Generative</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/EGkXr54GO" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/EGkXr54GO" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Audio Visualization -->
+    <article class="project-card">
+      <img src="Project-Images/Media/Audio.png" alt="p5.js interactive sketch 3">
+      <div class="overlay">
+        <h3>p5.js Audio Visualization</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Audio Reactive</span><span>Visualization</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/HYEliFfM2" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/HYEliFfM2" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Interactive Art -->
+    <article class="project-card">
+      <img src="Project-Images/Media/InteractiveArt.jpg" alt="p5.js interactive sketch 4">
+      <div class="overlay">
+        <h3>p5.js Interactive Art</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Interactive</span><span>Generative Art</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/QSOd91duM" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/QSOd91duM" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Simple Pattern -->
+    <article class="project-card">
+      <img src="Project-Images/Media/pattern.png" alt="p5.js interactive sketch 5">
+      <div class="overlay">
+        <h3>p5.js Simple Pattern</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Generative</span><span>Pattern</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/hZC6Je5s3" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/hZC6Je5s3" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Pixel Data -->
+    <article class="project-card">
+      <img src="Project-Images/Media/pixel data.png" alt="p5.js interactive sketch 6">
+      <div class="overlay">
+        <h3>p5.js Pixel Data</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Pixel Manipulation</span><span>Generative</span><span>Visualization</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/w9ndevI-V" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/w9ndevI-V" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- p5.js Pointillism Effect -->
+    <article class="project-card">
+      <img src="Project-Images/Media/pointillisum effect.png" alt="p5.js interactive sketch 7">
+      <div class="overlay">
+        <h3>p5.js Pointillism Effect</h3>
+        <div class="badges">
+          <span>p5.js</span><span>Pointillism</span><span>Generative Art</span><span>Particles</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/XrJ0I62AF" target="_blank"><i class="fa-solid fa-code"></i></a>
+          <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/XrJ0I62AF" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 6) Web/App Figma Design -->
+<section class="project-category" id="figma-design">
+  <header class="cat-header">
+    <h2>Web/App Figma Design</h2>
+    <p class="subheading">High-fidelity designs & wireframes (Academic Practice)</p>
+  </header>
+
+  <div class="project-grid">
+    <!-- Dockside website design -->
+    <article class="project-card">
+      <img src="Project-Images/Web&app-Figma/dockside-figma.png" alt="Dockside website design high-fidelity mockups">
+      <div class="overlay">
+        <h3>Dockside Website Design</h3>
+        <div class="badges">
+          <span>Figma</span><span>UI/UX</span><span>Components</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live prototype" href="https://www.figma.com/design/nq9ZZqPA5ZEdoZI5aq2kry/Dockside-Technical-Services-Prototype?node-id=0-1&t=tgh1Eyq1tXrFFGnz-1" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Mobile app design -->
+    <article class="project-card">
+      <img src="Project-Images/Web&app-Figma/moblie-app.png" alt="Mobile app design screens">
+      <div class="overlay">
+        <h3>Mobile App Design</h3>
+        <div class="badges">
+          <span>Figma</span><span>Mobile UI</span><span>Prototyping</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live prototype" href="https://www.figma.com/design/LcQWyoHYJT8xlnWKDGCsHE/Hi-Fidelity-Interactive-Prototype?node-id=0-1&t=Ggbt4li4ikI21LTm-1" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Data-driven application design -->
+    <article class="project-card">
+      <img src="Project-Images/Web&app-Figma/movio.png" alt="Data-driven application UI design">
+      <div class="overlay">
+        <h3>Data-driven Application Design</h3>
+        <div class="badges">
+          <span>Figma</span><span>Dashboards</span><span>UX Flows</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live prototype" href="https://www.figma.com/design/GbmE82tzZ0krFE0P5YC7Ds/Movio_High-Fidelity-Wireframe?t=8WblaaVu6boGITOd-1" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Movie/TV show website design -->
+    <article class="project-card">
+      <img src="Project-Images/Web&app-Figma/movie-tvshow.png" alt="Movie/TV show website hi-fi design">
+      <div class="overlay">
+        <h3>Movie/TV Show Website Design</h3>
+        <div class="badges">
+          <span>Figma</span><span>Design System</span><span>Responsive</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live prototype" href="https://www.figma.com/design/DPWh0MMmKW0goOclWXUDIN/Web-dev-2-SA-2?t=8WblaaVu6boGITOd-1" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Data-driven Application Wireframe -->
+    <article class="project-card">
+      <img src="Project-Images/Web&app-Figma/movio-low.png" alt="Data-driven Application Wireframe">
+      <div class="overlay">
+        <h3>Data-driven App Wireframe</h3>
+        <div class="badges">
+          <span>Figma</span><span>Wireframe</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live prototype" href="https://www.figma.com/design/SkTt9OWhtZ2OiLt28PGrpq/Movio_Low-Fidelity-Wireframe?t=8WblaaVu6boGITOd-1" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Real Website Wireframe -->
+    <article class="project-card">
+      <img src="Project-Images/Web&app-Figma/website-wireframe.png" alt="Real Website Wireframe">
+      <div class="overlay">
+        <h3>Website Wireframe</h3>
+        <div class="badges">
+          <span>Figma</span><span>Wireframe</span>
+        </div>
+        <div class="actions">
+          <a aria-label="Live prototype" href="https://www.figma.com/design/g4jAzuJNBWrv7YQuAaJVGE/wireframing?t=8WblaaVu6boGITOd-1" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+</main>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>Neha <span>Shaji</span></h2>
+      <p>Building creative solutions with design & code.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i> nehavshaji@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/nehavshaji/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Nehashaji"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@nehashaji1748"><i class="fab fa-youtube"></i></a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Neha Valuthundil Shaji | All Rights Reserved</p>
+  </div>
+</footer>
+<script defer src="projects.js"></script>
+</body>
+</html>
