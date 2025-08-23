@@ -589,10 +589,11 @@ body {
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
   width: 100%;
   max-width: 300px;
   position: relative;
+  visibility: visible;
 }
 
 .skill-card:hover {

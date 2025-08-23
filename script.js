@@ -122,22 +122,30 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+
       const filter = tab.dataset.filter;
 
       cards.forEach(card => {
-        if(filter === 'all' || card.dataset.category === filter) {
-          card.style.opacity = '1';
-          card.style.transform = 'scale(1)';
-          card.style.pointerEvents = 'auto';
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'block'; 
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+            card.style.pointerEvents = 'auto';
+          }, 10);
         } else {
           card.style.opacity = '0';
           card.style.transform = 'scale(0)';
           card.style.pointerEvents = 'none';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 400); 
         }
       });
     });
   });
 
+  // Skill progress bars animation
   const progressBars = document.querySelectorAll('.progress-bar');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -160,12 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
   progressBars.forEach(bar => observer.observe(bar));
 });
 
-// Add CSS for smooth hiding/showing of skill cards
+// Adding CSS for smooth hiding/showing of skill cards
 const style = document.createElement('style');
 style.innerHTML = `
 .skill-card {
   transition: transform 0.4s ease, opacity 0.4s ease;
-  display: block; /* keep in layout */
+  transform-origin: center;
+  display: block; /* default display */
 }
 `;
 document.head.appendChild(style);
