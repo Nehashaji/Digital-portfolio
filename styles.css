@@ -462,7 +462,7 @@ body {
 /* ---------------- About Me ---------------- */
 .about-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 2rem 2rem;
   background: #050505;
   color: #f5f5f5;
   overflow: hidden;
@@ -518,6 +518,113 @@ body {
   .about-content p {
     font-size: 1rem;
   }
+}
+
+/* ---------------- Projects Section ---------------- */
+.projects-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgb(0, 0, 0); 
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.projects-header h2 span {
+  color: #FFD700;
+}
+
+.projects-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* Project Rows */
+.projects-row {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+/* Project Card */
+.project-card {
+  background: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  flex: 1 1 30%;
+  max-width: 350px;
+  transition: transform 0.35s, box-shadow 0.35s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.35);
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.project-content .btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 5px;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.project-content .btn:hover {
+  background: #FFC107;
+  color: #000;
+}
+
+/* Projects Responsive */
+@media (max-width: 1024px) {
+  .projects-row { gap: 25px; }
+}
+@media (max-width: 768px) {
+  .projects-row { flex-direction: column; gap: 25px; }
+}
+@media (max-width: 480px) {
+  .projects-header h2 { font-size: 2rem; }
+  .project-card { max-width: 100%; }
 }
 
 /*Skills section*/
@@ -660,112 +767,6 @@ body {
 }
 @media (max-width: 600px) {
   .skills-grid { grid-template-columns: 1fr; }
-}
-
-/* ---------------- Projects Section ---------------- */
-.projects-section {
-  padding-top: 30px;
-  padding-bottom: 40px;
-  background: rgb(0, 0, 0); 
-}
-
-.projects-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.projects-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.projects-header h2 span {
-  color: #FFD700;
-}
-
-.projects-header p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-/* Project Rows */
-.projects-row {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-/* Project Card */
-.project-card {
-  background: #1e1e1e;
-  border-radius: 15px;
-  overflow: hidden;
-  flex: 1 1 30%;
-  max-width: 350px;
-  transition: transform 0.35s, box-shadow 0.35s;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.35);
-}
-
-.project-image img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.project-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.project-content h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #FFD700;
-}
-
-.project-content p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-.project-content .btn {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 5px;
-  background: #FFD700;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-}
-
-.project-content .btn:hover {
-  background: #FFC107;
-  color: #000;
-}
-
-/* Projects Responsive */
-@media (max-width: 1024px) {
-  .projects-row { gap: 25px; }
-}
-@media (max-width: 768px) {
-  .projects-row { flex-direction: column; gap: 25px; }
-}
-@media (max-width: 480px) {
-  .projects-header h2 { font-size: 2rem; }
-  .project-card { max-width: 100%; }
 }
 
 /* Certificates Section */

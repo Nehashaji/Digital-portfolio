@@ -2,7 +2,7 @@
 document.documentElement.style.scrollBehavior = "smooth";
 
 // ==================== Code Particles ====================
-const codeSymbols = ['</>', '{}', '[]', '()', 'AI', 'ML', 'JS', 'PY', 'HTML', 'CSS'];
+const codeSymbols = ['</>', '{}', '[]', 'REACT', 'AI', 'ML', 'JS', 'PY', 'HTML', 'CSS'];
 const particleCount = 30;
 const codeParticles = [];
 
@@ -181,16 +181,27 @@ document.head.appendChild(style);
 
 // ==================== Project section ====================
 const projectsData = [
-  { title: 'Data & Analytics', description: 'Python Tkinter data-driven apps, Flourish visualizations.', image: 'Images/data.gif', link: 'projects.html#data-analytics' },
-  { title: 'Web Development', description: 'Frontend websites, backend projects, Client Projects.', image: 'Images/web-development.gif', link: 'projects.html#web-dev' },
-  { title: 'Mobile Apps', description: 'Android Studio smartphone apps Kotlin.', image: 'Images/mobile.gif', link: 'projects.html#mobile-apps' },
-  { title: 'Game Development', description: 'Unity 2D games with interactive gameplay.', image: 'Images/game.gif', link: 'projects.html#game-dev' },
-  { title: 'Creative Coding & Interactive Media', description: 'p5.js projects, Twine interactive stories, chatbots.', image: 'Images/creative-coding.gif', link: 'projects.html#creative-coding' },
-  { title: 'Web/App Figma Design', description: 'Figma App and mobile designs, wireframes.', image: 'Images/figma.gif', link: 'projects.html#figma-design' }
+  { 
+    title: 'Web Development', 
+    description: 'High-quality frontend and backend websites, including client and academic projects, with a focus on usability and design.', 
+    image: 'Images/web-development.gif', 
+    link: 'projects.html#web-dev' 
+  },
+  { 
+    title: 'Data Exploration & ML', 
+    description: 'Data-driven applications using Python Tkinter, interactive Flourish visualizations, and introductory machine learning experiments.', 
+    image: 'Images/data.gif', 
+    link: 'projects.html#data-analytics' 
+  },
+  { 
+    title: 'Interactive & Creative Media', 
+    description: 'Creative coding projects including p5.js sketches, Dialogflow chatbots, Twine storytelling, and other interactive experiments.', 
+    image: 'Images/creative-coding.gif', 
+    link: 'projects.html#creative-coding' 
+  }
 ];
 
 const topRow = document.getElementById('top-row');
-const bottomRow = document.getElementById('bottom-row');
 
 projectsData.forEach((project, index) => {
   const card = document.createElement('div');
@@ -207,15 +218,16 @@ projectsData.forEach((project, index) => {
       <a href="${project.link}" class="btn">View More</a>
     </div>
   `;
-  if (index < 3) topRow.appendChild(card);
-  else bottomRow.appendChild(card);
+  topRow.appendChild(card);
 });
 
+// Initialize AOS
 AOS.init({
   once: true,
   duration: 1000,
   easing: 'ease-out-cubic',
 });
+
 
 // ==================== Certificates Section Particles ====================
 const canvas = document.getElementById("particles-canvas");
