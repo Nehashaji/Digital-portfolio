@@ -672,18 +672,21 @@ button:hover ~ .custom-cursor {
   .project-card { max-width: 100%; }
 }
 
-/*Skills section*/
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
-}
-
+/* Skills Section */
 .skills-section {
   background: #000;
   color: #fff;
-  padding: 40px 20px;
+  padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.skills-header {
   text-align: center;
 }
 
@@ -691,130 +694,129 @@ button:hover ~ .custom-cursor {
   font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
   color: #FFD700;
-  margin-bottom: 5px;
 }
 
 .skills-header h2 span {
   color: #fff;
 }
 
-.skills-header p.subtitle {
-  font-size: 1.1rem;
+.skills-header .subtitle {
   color: #ccc;
-  margin-bottom: 50px;
+  margin: 12px 0 50px;
+  font-size: 1.05rem;
 }
 
-/* Two-column layout */
+/* Rows */
 .skills-row {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 40px;
 }
 
+/* Cards */
 .skill-card.big-card {
-  background: rgba(255, 255, 255, 0.05); /* subtle transparent black */
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 12px;
-  padding: 25px;
-  flex: 1 1 400px; /* responsive width */
-  max-width: 480px;
+  flex: 1 1 420px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 14px;
+  padding: 30px 25px;
   text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .skill-card.big-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 12px 28px rgba(255, 215, 0, 0.35);
 }
 
-.skill-card.big-card h3 {
+.skill-card h3 {
   color: #FFD700;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* Tools grid inside each card */
-.skill-card .tools {
+/* Tools Grid */
+.tools {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
   justify-items: center;
-  align-items: center;
 }
 
-.skill-card .tools img {
+/* Tool Wrapper */
+.tool {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Icons */
+.tool img {
   width: 56px;
   height: 56px;
   object-fit: contain;
-  filter: brightness(1.1);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.skill-card .tools img:hover {
+.tool:hover img {
   transform: scale(1.15);
   filter: brightness(1.3);
 }
+
+/* Tooltip */
+.tool::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -32px;
+  background: #FFD700;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+
+.tool:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Tablet */
 @media (max-width: 900px) {
-
   .skills-row {
     flex-direction: column;
-    gap: 30px;
   }
 
-  .skill-card.big-card {
-    max-width: 100%;
-    padding: 30px 20px;
-  }
-
-  .skill-card .tools {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablet */
-    gap: 18px;
-  }
-
-  .skill-card .tools img {
-    width: 50px;
-    height: 50px;
+  .tools {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-
 /* Mobile */
 @media (max-width: 600px) {
-
-  .skills-section {
-    padding: 30px 15px;
-  }
-
   .skills-header h2 {
     font-size: 2.2rem;
   }
 
-  .skills-header p.subtitle {
-    font-size: 1rem;
-    margin-bottom: 35px;
-  }
-
-  .skill-card.big-card {
-    padding: 25px 15px;
-  }
-
-  .skill-card.big-card h3 {
+  .skill-card h3 {
     font-size: 1.3rem;
   }
 
-  .skill-card .tools {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row for clean spacing */
-    gap: 20px;
+  .tools {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .skill-card .tools img {
+  .tool img {
     width: 48px;
     height: 48px;
   }
 }
+
 
 /* Certificates Section */
 .certificates-section {
