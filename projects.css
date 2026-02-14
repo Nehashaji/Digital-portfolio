@@ -19,6 +19,36 @@ body{
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.6;
   overflow-x:hidden;
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  background: rgba(255, 215, 0, 0.3); /* soft gold glow */
+  box-shadow: 
+    0 0 15px 5px rgba(255, 215, 0, 0.5), 
+    0 0 25px 10px rgba(255, 215, 0, 0.2),
+    0 0 0 1px rgba(0,0,0,0.2); /* subtle outline for light bg */
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease;
+  z-index: 9999;
+}
+
+/* hover scale effect on clickable elements */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  width: 40px;
+  height: 40px;
+  box-shadow: 
+    0 0 25px 10px rgba(255, 215, 0, 0.7), 
+    0 0 40px 15px rgba(255, 215, 0, 0.3),
+    0 0 0 1px rgba(0,0,0,0.25); /* outline stays visible */
 }
 
 .container{

@@ -13,7 +13,37 @@ body {
   background: #000;
   color: #fff;
   line-height: 1.6;
+  cursor: none;
   overflow-x: hidden;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  background: rgba(255, 215, 0, 0.3); /* soft gold glow */
+  box-shadow: 
+    0 0 15px 5px rgba(255, 215, 0, 0.5), 
+    0 0 25px 10px rgba(255, 215, 0, 0.2),
+    0 0 0 1px rgba(0,0,0,0.2); /* subtle outline for light bg */
+  transition: width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease;
+  z-index: 9999;
+}
+
+/* hover scale effect on clickable elements */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  width: 40px;
+  height: 40px;
+  box-shadow: 
+    0 0 25px 10px rgba(255, 215, 0, 0.7), 
+    0 0 40px 15px rgba(255, 215, 0, 0.3),
+    0 0 0 1px rgba(0,0,0,0.25); /* outline stays visible */
 }
 
 /* Navbar */
@@ -522,14 +552,14 @@ body {
 
 /* ---------------- Projects Section ---------------- */
 .projects-section {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: rgb(0, 0, 0); 
+  padding-top: 20px; /* tight top spacing */
+  padding-bottom: 20px; /* tight bottom spacing */
+  background: #000; 
 }
 
 .projects-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px; /* small gap between header & cards */
 }
 
 .projects-header h2 {
@@ -545,7 +575,11 @@ body {
 .projects-header p {
   font-size: 1.1rem;
   color: #ccc;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto; /* centers text */
+  line-height: 1.5;
 }
 
 /* Project Rows */
@@ -554,7 +588,7 @@ body {
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin-bottom: 0; /* remove extra bottom gap */
 }
 
 /* Project Card */
@@ -567,6 +601,7 @@ body {
   transition: transform 0.35s, box-shadow 0.35s;
   display: flex;
   flex-direction: column;
+  min-height: 400px; /* ensures equal height for all cards */
 }
 
 .project-card:hover {
@@ -582,8 +617,12 @@ body {
 }
 
 .project-content {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* ensures buttons stay at bottom */
+  justify-content: space-between;
 }
 
 .project-content h3 {
@@ -597,17 +636,21 @@ body {
   font-size: 1rem;
   color: #ccc;
   margin-bottom: 15px;
+  flex-grow: 1; /* push button down */
 }
 
+/* Align "View More" buttons */
 .project-content .btn {
   display: inline-block;
-  padding: 8px 18px;
+  width: 120px; /* uniform width */
+  padding: 10px 0;
   border-radius: 5px;
   background: #FFD700;
   color: #000;
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
+  margin: 0 auto; /* center horizontally */
 }
 
 .project-content .btn:hover {
@@ -619,9 +662,11 @@ body {
 @media (max-width: 1024px) {
   .projects-row { gap: 25px; }
 }
+
 @media (max-width: 768px) {
-  .projects-row { flex-direction: column; gap: 25px; }
+  .projects-row { flex-direction: column; gap: 25px; align-items: center; }
 }
+
 @media (max-width: 480px) {
   .projects-header h2 { font-size: 2rem; }
   .project-card { max-width: 100%; }

@@ -5,6 +5,14 @@ AOS.init({
   easing: 'ease-out-cubic',
 });
 
+// ==================== Cursor ====================
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+});
+
 //  Category Filters
 const tabs = document.querySelectorAll('.cert-tabs .tab');
 const cards = document.querySelectorAll('.cert-card');

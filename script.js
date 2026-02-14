@@ -1,6 +1,14 @@
 // ==================== Smooth Scroll ====================
 document.documentElement.style.scrollBehavior = "smooth";
 
+// ==================== Cursor ====================
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+});
+
 // ==================== Code Particles ====================
 const codeSymbols = ['</>', '{}', '[]', 'REACT', 'AI', 'ML', 'JS', 'PY', 'HTML', 'CSS'];
 const particleCount = 30;
@@ -183,12 +191,12 @@ document.head.appendChild(style);
 const projectsData = [
   { 
     title: 'Web Development', 
-    description: 'High-quality frontend and backend websites, including client and academic projects, with a focus on usability and design.', 
+    description: 'High-quality frontend and backend websites, including client and academic projects, complemented with professional Figma UI/UX designs and wireframes.', 
     image: 'Images/web-development.gif', 
     link: 'projects.html#web-dev' 
   },
   { 
-    title: 'Data Exploration & ML', 
+    title: 'Data Exploration & Machine Learning', 
     description: 'Data-driven applications using Python Tkinter, interactive Flourish visualizations, and introductory machine learning experiments.', 
     image: 'Images/data.gif', 
     link: 'projects.html#data-analytics' 
@@ -197,7 +205,7 @@ const projectsData = [
     title: 'Interactive & Creative Media', 
     description: 'Creative coding projects including p5.js sketches, Dialogflow chatbots, Twine storytelling, and other interactive experiments.', 
     image: 'Images/creative-coding.gif', 
-    link: 'projects.html#creative-coding' 
+    link: 'projects.html#interactive-media' 
   }
 ];
 
