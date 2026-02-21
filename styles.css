@@ -239,7 +239,7 @@ button:hover ~ .custom-cursor {
 /* Hero Content */
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr; /* slightly wider text column */
   gap: 3rem;
   align-items: center;
   z-index: 10;
@@ -304,7 +304,9 @@ button:hover ~ .custom-cursor {
   position: relative;
   width: 400px;
   height: 400px;
-  margin: auto;
+  /* remove margin:auto since grid handles alignment */
+  justify-self: end; /* push image to the right */
+  transform: translateX(30px); /* fine-tune position */
 }
 .hero-image img {
   width: 100%;
@@ -404,6 +406,7 @@ button:hover ~ .custom-cursor {
     flex-direction: column-reverse; 
     align-items: center;
     gap: 2rem;
+    grid-template-columns: 1fr;
   }
 
   /* Hero Text */
@@ -445,7 +448,9 @@ button:hover ~ .custom-cursor {
   .hero-image {
     width: 250px;
     height: 250px;
-    margin-bottom: 1.5rem;
+    justify-self: center;
+    transform: translateX(0);
+    margin: auto;
   }
   .hero-image img {
     border-width: 4px;

@@ -124,16 +124,16 @@ animateAboutParticles();
 // ==================== Project section ====================
 const projectsData = [
   { 
-    title: 'Web Development', 
-    description: 'High-quality frontend and backend websites, including client and academic projects, complemented with professional Figma UI/UX designs and wireframes.', 
-    image: 'Images/web-development.gif', 
-    link: 'projects.html#web-dev' 
-  },
-  { 
     title: 'Data Exploration & Machine Learning', 
     description: 'Data-driven applications using Python Tkinter, interactive Flourish visualizations, and introductory machine learning experiments.', 
     image: 'Images/data.gif', 
     link: 'projects.html#data-analytics' 
+  },
+  { 
+    title: 'Web Development', 
+    description: 'High-quality frontend and backend websites, including client and academic projects, complemented with professional Figma UI/UX designs and wireframes.', 
+    image: 'Images/web-development.gif', 
+    link: 'projects.html#web-dev' 
   },
   { 
     title: 'Interactive & Creative Media', 
