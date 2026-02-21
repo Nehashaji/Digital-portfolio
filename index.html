@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Custom cursor and particles canvas -->
+  <div class="custom-cursor"></div>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Neha Shaji</div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certificate.html">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="grid-overlay"></div>
+  <div class="shapes"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="welcome" data-aos="fade-down" data-aos-delay="400">
+        Creative Computing Portfolio
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="500">
+        Hi, I’m <span class="gold-text">Neha Shaji</span>
+      </h1>
+      <h2 data-aos="fade-up" data-aos-delay="600">
+        Full-Stack Developer & Creative Technologist
+      </h2>
+
+      <!-- Roles / Skills -->
+      <div class="roles" data-aos="fade-up" data-aos-delay="650">
+        <span class="role">
+          <i class="fas fa-code"></i> Developer
+        </span>
+        <span class="role">
+          <i class="fas fa-pencil-ruler"></i> Designer
+        </span>
+      </div>
+
+      <p data-aos="fade-up" data-aos-delay="700">
+          Crafting interactive websites, apps, and creative digital experiences. Passionate about building data-driven solutions and exploring AI. 
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn gold-btn" data-aos="zoom-in" data-aos-delay="800">Explore My Work</a>
+        <a href="cv.pdf" class="btn outline-btn" download data-aos="zoom-in" data-aos-delay="900">Download CV</a>
+      </div>
+
+      <div class="stats" data-aos="fade-up" data-aos-delay="1000">
+        <div><span class="gold">10+</span><br>Projects</div>
+        <div><span class="gold">5+</span><br>Certifications</div>
+        <div><span class="gold">2+</span><br>Years Learning</div>
+      </div>
+    </div>
+
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="1100">
+      <div class="outer-ring"></div>
+      <div class="inner-ring"></div>
+      <img src="Images/photo.jpg" alt="Profile" class="photo-animate">
+    </div>
+  </div>
+
+  <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+    <div class="mouse"><div class="wheel"></div></div>
+    <p>Scroll to explore</p>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="about-section">
+  <canvas id="about-canvas"></canvas>
+  <div class="container">
+    <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+      <h2>About <span class="gold-text">Me</span></h2>
+      <p>
+        A final-year <strong><span class="gold">BSc Creative Computing</span> student at Bath Spa University RAK</strong>, 
+        with a strong focus on <span class="gold">web development</span> and building interactive digital experiences. 
+        I enjoy turning ideas into functional platforms that are both creative and user-focused.
+      </p>
+      <p>
+        Through a range of academic and personal projects, I have developed confidence in problem-solving, design thinking, and creating solutions that balance creativity with technical structure. 
+        This journey has shaped me into a <span class="gold">versatile creator</span> who adapts easily to new challenges.
+      </p>
+      <p>
+  While web development has been a strong foundation in my journey, 
+  I have developed a deeper interest in <span class="gold">data science</span> 
+  and <span class="gold">machine learning</span>. 
+  I am now focused on building my skills in this field, exploring how data can be analyzed, interpreted, and used to solve real-world problems. 
+  My long-term goal is to grow as a data-driven professional and contribute to intelligent systems powered by meaningful insights.
+</p>
+
+    </div>
+  </div>
+</section>
+
+<!--Project section-->
+<section id="projects" class="projects-section">
+  <canvas id="projects-canvas"></canvas>
+  <div class="container">
+    <div class="projects-header">
+      <h2 data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        My <span>Projects</span>
+      </h2>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-out-cubic">
+        Highlighting my journey through innovative design, coding, and interactive experiences.
+      </p>
+    </div>
+
+    <div class="projects-row top-row" id="top-row">
+      <!-- Top 3 cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <header class="skills-header" data-aos="fade-down">
+      <h2>My <span>Skills</span></h2>
+      <p class="subtitle" data-aos="fade-up" data-aos-delay="150">
+        A curated collection of my technical, creative, and professional abilities.
+      </p>
+    </header>
+
+    <!-- Row 1 -->
+    <div class="skills-row">
+
+      <!-- Core Web Development -->
+      <div class="skill-card big-card" data-aos="fade-right">
+        <h3>Core Web Development</h3>
+        <div class="tools">
+          <div class="tool" data-name="HTML"><img src="icons/html.png" alt="HTML"></div>
+          <div class="tool" data-name="CSS"><img src="icons/css.png" alt="CSS"></div>
+          <div class="tool" data-name="JavaScript"><img src="icons/javascript.png" alt="JavaScript"></div>
+          <div class="tool" data-name="SCSS"><img src="icons/sass.png" alt="SCSS"></div>
+          <div class="tool" data-name="React"><img src="icons/react.png" alt="React"></div>
+          <div class="tool" data-name="Node.js"><img src="icons/node.png" alt="Node.js"></div>
+          <div class="tool" data-name="MongoDB"><img src="icons/mongodb.png" alt="MongoDB"></div>
+        </div>
+      </div>
+
+      <!-- Data Science & ML -->
+      <div class="skill-card big-card" data-aos="fade-left">
+        <h3>Data Science & Machine Learning</h3>
+        <div class="tools">
+          <div class="tool" data-name="Python"><img src="icons/python.png" alt="Python"></div>
+          <div class="tool" data-name="Pandas"><img src="icons/pandas.png" alt="Pandas"></div>
+          <div class="tool" data-name="NumPy"><img src="icons/numpy.png" alt="NumPy"></div>
+          <div class="tool" data-name="Matplotlib"><img src="icons/matplotlib.png" alt="Matplotlib"></div>
+          <div class="tool" data-name="Seaborn"><img src="icons/seabourn.svg" alt="Seaborn"></div>
+          <div class="tool" data-name="SQL"><img src="icons/sql.png" alt="SQL"></div>
+          <div class="tool" data-name="TensorFlow"><img src="icons/tensorflow.jpg" alt="TensorFlow"></div>
+          <div class="tool" data-name="Google Cloud"><img src="icons/google cloud.png" alt="Google Cloud"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row 2 -->
+    <div class="skills-row">
+
+      <!-- Creative & Visualization -->
+      <div class="skill-card big-card" data-aos="fade-right">
+        <h3>Creative & Visualization Tools</h3>
+        <div class="tools">
+          <div class="tool" data-name="Figma"><img src="icons/figma.png" alt="Figma"></div>
+          <div class="tool" data-name="Canva"><img src="icons/canva.png" alt="Canva"></div>
+          <div class="tool" data-name="p5.js"><img src="icons/p5.png" alt="p5.js"></div>
+          <div class="tool" data-name="Unity"><img src="icons/unity.png" alt="Unity"></div>
+          <div class="tool" data-name="Android Studio"><img src="icons/android studio.png" alt="Android Studio"></div>
+        </div>
+      </div>
+
+      <!-- Productivity -->
+      <div class="skill-card big-card" data-aos="fade-left">
+        <h3>Productivity & Version Control</h3>
+        <div class="tools">
+          <div class="tool" data-name="GitHub"><img src="icons/github.png" alt="GitHub"></div>
+          <div class="tool" data-name="Microsoft Excel"><img src="icons/excel.png" alt="Microsoft Excel"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Certificates Section -->
+<section id="certificates" class="certificates-section">
+  <div class="container">
+    <h2>My <span>Certificates</span></h2>
+    <p class="subtitle">
+      A showcase of my most valuable achievements & recognitions.
+    </p>
+
+    <div class="certificates-grid">
+      <!-- Certificate Card 1 -->
+      <div class="certificate-card" >
+        <img src="Certificates/Python for DS_ Certificate.png" alt="IBM Python for Data Science">
+        <h3>IBM Python for Data Science</h3>
+      </div>
+
+      <!-- Certificate Card 2 -->
+      <div class="certificate-card" >
+        <img src="Certificates/Responsive design_certificate.jpg" alt="LinkedIn Responsive Design">
+        <h3>LinkedIn Responsive Design</h3>
+      </div>
+
+      <!-- Certificate Card 3 -->
+      <div class="certificate-card">
+        <img src="Certificates/Certificate of Academic Excellence.png" alt="Certificate of Academic Excellence">
+        <h3>Certificate of Academic Excellence</h3>
+      </div>
+    </div>
+
+    <div class="view-more">
+      <a href="certificate.html" class="btn">View More</a>
+    </div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2>Get in <span>Touch</span></h2>
+    <div class="underline"></div>
+    <p class="contact-sub">I’d love to hear from you! Connect with me via email or socials.</p>
+
+    <div class="contact-cards">
+      <!-- Email Card -->
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <a href="mailto:nehavshaji@gmail.com">nehavshaji@gmail.com</a>
+      </div>
+
+      <!-- LinkedIn Card -->
+      <div class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <h3>LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/nehavshaji/" target="_blank">linkedin.com/in/nehavshaji</a>
+      </div>
+
+      <!-- YouTube Card -->
+      <div class="contact-card">
+        <i class="fab fa-youtube"></i>
+        <h3>YouTube</h3>
+        <a href="https://www.youtube.com/@nehashaji1748" target="_blank">youtube.com/@nehashaji1748</a>
+      </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>Neha <span>Shaji</span></h2>
+      <p>Building creative solutions with design & code.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i> nehavshaji@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/nehavshaji/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Nehashaji"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@nehashaji1748"><i class="fab fa-youtube"></i></a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Neha Valuthundil Shaji | All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 1500,
+    easing: 'ease-in-out',
+    once: true,
+  });
+  // GSAP floating and gentle animations
+  window.addEventListener('load', () => {
+    gsap.from(".welcome", {y:-20, opacity:0, duration:1.2, ease:"power2.out"});
+    gsap.from("h1", {y:20, opacity:0, duration:1.2, delay:0.2, ease:"power2.out"});
+    gsap.from("h2", {y:20, opacity:0, duration:1.2, delay:0.4, ease:"power2.out"});
+    gsap.from("p", {y:20, opacity:0, duration:1.2, delay:0.6, ease:"power2.out"});
+    gsap.from(".btn", {y:20, opacity:0, duration:1.2, delay:0.8, stagger:0.2, ease:"power2.out"});
+    gsap.from(".stats div", {y:20, opacity:0, duration:1.2, delay:1.0, stagger:0.2, ease:"power2.out"});
+    gsap.to(".photo-animate", {y:-10, duration:3, repeat:-1, yoyo:true, ease:"sine.inOut"});
+  });
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
