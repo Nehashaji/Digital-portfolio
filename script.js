@@ -10,7 +10,7 @@ document.addEventListener('mousemove', (e) => {
 });
 
 // ==================== Code Particles ====================
-const codeSymbols = ['</>', '{}', '[]', 'REACT', 'AI', 'ML', 'JS', 'PY', 'HTML', 'CSS'];
+const codeSymbols = ['</>', '{}', '[]', 'DATA', 'AI', 'ML', 'JS', 'PY', 'HTML', 'CSS', 'SQL'];
 const particleCount = 30;
 const codeParticles = [];
 
@@ -125,7 +125,7 @@ animateAboutParticles();
 const projectsData = [
   { 
     title: 'Data Exploration & Machine Learning', 
-    description: 'Data-driven applications using Python Tkinter, interactive Flourish visualizations, and introductory machine learning experiments.', 
+    description: 'Machine learning projects using Python, including regression and classification models, basic CNN experimentation, and data-driven insights supported by interactive visualizations.',
     image: 'Images/data.gif', 
     link: 'projects.html#data-analytics' 
   },
