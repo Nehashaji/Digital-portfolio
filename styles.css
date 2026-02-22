@@ -365,6 +365,9 @@ button:hover ~ .custom-cursor {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  opacity: 0;
+  animation: fadeInScroll 1s ease forwards;
+  animation-delay: 1.8s; /* adjust timing */
 }
 .scroll-indicator .mouse {
   width: 25px;
@@ -387,7 +390,16 @@ button:hover ~ .custom-cursor {
   50% { transform: translateY(10px); opacity: 0.3; }
   100% { transform: translateY(0); opacity: 1; }
 }
-
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 2;
+    transform: translate(-50%, 0);
+  }
+}
 /* Mobile Responsive Hero Section */
 @media (max-width: 992px) {
   /* Hero Container */
