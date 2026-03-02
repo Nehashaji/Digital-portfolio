@@ -125,19 +125,19 @@ animateAboutParticles();
 const projectsData = [
   { 
     title: 'Data Exploration & Machine Learning', 
-    description: 'Machine learning projects using Python, including regression and classification models, basic CNN experimentation, and data-driven insights supported by interactive visualizations.',
+    description: 'Hands-on machine learning projects using Python, including predictive modeling, regression and classification tasks, CNN experimentation, and interactive data visualizations that demonstrate applied data-driven insights.',
     image: 'Images/data.gif', 
     link: 'projects.html#data-analytics' 
   },
   { 
-    title: 'Web Development', 
-    description: 'High-quality frontend and backend websites, including client and academic projects, complemented with professional Figma UI/UX designs and wireframes.', 
+    title: 'Full-Stack Web & UI/UX Design', 
+    description: 'Full-stack web projects including client-based and academic builds, complemented with professional Figma UI/UX designs, wireframes, and responsive web applications, showcasing practical application of web technologies.', 
     image: 'Images/web-development.gif', 
     link: 'projects.html#web-dev' 
   },
   { 
     title: 'Interactive & Creative Media', 
-    description: 'Creative coding projects including p5.js sketches, Dialogflow chatbots, Twine storytelling, and other interactive experiments.', 
+    description: 'Experimental digital projects exploring interactivity, creative coding, and intelligent systems, highlighted by smartphone apps and a Unity 2D game, demonstrating technical experimentation and innovative problem-solving.', 
     image: 'Images/creative-coding.gif', 
     link: 'projects.html#interactive-media' 
   }
