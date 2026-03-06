@@ -12,9 +12,12 @@
   <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
+  <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="projects.css">
 </head>
-
+<body>
 <!-- Navbar -->
 <nav class="navbar">
   <div class="logo">Neha Shaji</div>
@@ -34,14 +37,14 @@
   </ul>
 </nav>
 
-<body>
+
     <!-- Custom cursor-->
   <div class="custom-cursor"></div>
   <!-- Particles Background -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
   <header class="page-header">
-    <div class="container">
+      <div class="container" data-aos="fade-down">
       <h1>My Projects</h1>
       <p class="subtitle">Exploring data driven applications, machine learning experiments, interactive systems, and web development.</p>
     </div>
@@ -50,7 +53,7 @@
 <main class="container">
 
    <!-- 1) Data Exploration & Machine Learning< -->
-  <section class="project-category" id="data-analytics">
+  <section class="project-category" id="data-analytics" data-aos="fade-up">
     <header class="cat-header">
       <h2>Machine Learning & Data Exploration </h2>
       <p class="subheading">Hands-on projects in predictive modeling, data analysis, and applied machine learning..</p>
@@ -59,7 +62,7 @@
     <div class="project-grid">
 
      <!-- Weather Recogination model -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/data/ml model.png" alt="Weather Recogination model">
         <div class="overlay">
           <h3>Weather Image Classification - CNN & Transfer Learning</h3>
@@ -75,7 +78,7 @@
       </article>
 
             <!-- Regrssion task -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/data/regression task.png" alt="Regrssion task Machine Learning">
         <div class="overlay">
           <h3>Sports Car Price Prediction - Regression Analysis</h3>
@@ -90,7 +93,7 @@
       </article>
 
             <!-- classification task Machine Learning -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/data/classification.png" alt="classification task Machine Learning">
         <div class="overlay">
           <h3>Online Purchase Prediction - Classification Model</h3>
@@ -105,7 +108,7 @@
       </article>
 
       <!-- Python Tkinter app -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/data/pythonTkinder.png" alt="Python Tkinter data-driven application">
         <div class="overlay">
           <h3>Python Tkinter Data Driven App</h3>
@@ -120,7 +123,7 @@
       </article>
 
       <!-- Cross-link Flourish -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/data/flourish.png" alt="Flourish visualization">
         <div class="overlay">
           <h3>Flourish Data Visualization</h3>
@@ -137,7 +140,7 @@
   </section>
 
     <!-- 2) Web Development -->
-  <section class="project-category" id="web-dev" >
+  <section class="project-category" id="web-dev" data-aos="fade-up">
     <header class="cat-header">
       <h2>Web Development</h2>
       <p class="subheading">Academic & Client Web Projects Demonstrating Full-Stack, Frontend, and Responsive Design Skills</p>
@@ -146,7 +149,7 @@
     <div class="project-grid">
 
 <!-- Bookify – Full Stack Book Discovery Application -->
-<article class="project-card">
+<article class="project-card" data-aos="zoom-in">
   <img src="Project-Images/Websites/bookify.png" alt="Bookify application screenshot">
   <div class="overlay">
     <h3>Bookify - Full Stack Book Discovery Application</h3>
@@ -164,7 +167,7 @@
 </article>
 
       <!-- Dockside Technical Service website – Client-based -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Websites/docksidewebsite.png" alt="Dockside Technical Service website screenshot">
         <div class="overlay">
           <h3>Dockside Technical Service</h3>
@@ -180,7 +183,7 @@
       </article>
 
       <!-- Ayurminar website – Client-based -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Websites/ayurminar.png" alt="Ayurminar website screenshot">
         <div class="overlay">
           <h3>Ayurminar Website</h3>
@@ -194,7 +197,7 @@
       </article>
 
       <!-- Bentley website – Academic project -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Websites/bently.png" alt="Bentley academic website screenshot">
         <div class="overlay">
           <h3>Bentley Website (Academic)</h3>
@@ -210,7 +213,7 @@
       </article>
 
       <!-- Movie/TV show website -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Websites/movie.png" alt="Movie TV website with search and sign-in">
         <div class="overlay">
           <h3>Movie/TV Show Website</h3>
@@ -226,7 +229,7 @@
       </article>
 
       <!-- Responsive design clone task – Academic -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Websites/responsivedesign.png" alt="Responsive design clone layout">
         <div class="overlay">
           <h3>Responsive Design Clone</h3>
@@ -243,7 +246,7 @@
   </section>
 
   <!-- 2.1) Web/App Figma Design -->
-<section class="project-category" id="figma-design">
+<section class="project-category" id="figma-design" data-aos="fade-up">
   <header class="cat-header">
     <h2>Web/App Figma Design</h2>
     <p class="subheading">End-to-End UI/UX Design & Interactive Prototyping using Figma</p>
@@ -251,7 +254,7 @@
 
   <div class="project-grid">
     <!-- Dockside website design -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Web&app-Figma/dockside-figma.png" alt="Dockside website design high-fidelity mockups">
       <div class="overlay">
         <h3>Dockside Website Design</h3>
@@ -267,7 +270,7 @@
     </article>
 
     <!-- Mobile app design -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Web&app-Figma/moblie-app.png" alt="Mobile app design screens">
       <div class="overlay">
         <h3>Mobile App Design</h3>
@@ -283,7 +286,7 @@
     </article>
 
     <!-- Data-driven application design -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Web&app-Figma/movio.png" alt="Data-driven application UI design">
       <div class="overlay">
         <h3>Data-driven Application Design</h3>
@@ -299,7 +302,7 @@
     </article>
 
     <!-- Movie/TV show website design -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Web&app-Figma/movie-tvshow.png" alt="Movie/TV show website hi-fi design">
       <div class="overlay">
         <h3>Movie/TV Show Website Design</h3>
@@ -315,7 +318,7 @@
     </article>
 
     <!-- Data-driven Application Wireframe -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Web&app-Figma/movio-low.png" alt="Data-driven Application Wireframe">
       <div class="overlay">
         <h3>Data-driven App Wireframe</h3>
@@ -331,7 +334,7 @@
     </article>
 
     <!-- Real Website Wireframe -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Web&app-Figma/website-wireframe.png" alt="Real Website Wireframe">
       <div class="overlay">
         <h3>Website Wireframe</h3>
@@ -350,7 +353,7 @@
 </section>
 
 <!-- 3) Interactive & Creative Media -->
-<section class="project-category" id="interactive-media">
+<section class="project-category" id="interactive-media" data-aos="fade-up">
   <header class="cat-header">
     <h2>Interactive & Creative Media</h2>
     <p class="subheading">
@@ -359,7 +362,7 @@ Interactive digital experiences combining mobile development, game design, creat
   </header>
 
   <!-- 3.1) Mobile Apps -->
-  <section class="project-category" id="mobile-apps">
+  <section class="project-category" id="mobile-apps" data-aos="fade-up">
     <header class="cat-header">
       <h2>Mobile Apps</h2>
       <p class="subheading">Android Studio smartphone apps</p>
@@ -367,7 +370,7 @@ Interactive digital experiences combining mobile development, game design, creat
 
     <div class="project-grid">
       <!-- NAN Calculator -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Moblie/nan.png" alt="NAN Calculator Android app">
         <div class="overlay">
           <h3>NAN Calculator</h3>
@@ -382,7 +385,7 @@ Interactive digital experiences combining mobile development, game design, creat
       </article>
 
       <!-- Multipage app -->
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Moblie/multipage.png" alt="Multipage Android app">
         <div class="overlay">
           <h3>Multipage App</h3>
@@ -399,14 +402,14 @@ Interactive digital experiences combining mobile development, game design, creat
   </section>
 
   <!-- 3.2) Game Development -->
-  <section class="project-category" id="game-dev">
+  <section class="project-category" id="game-dev" data-aos="fade-up">
     <header class="cat-header">
       <h2>Game Development</h2>
       <p class="subheading">Unity 2D game with core mechanics</p>
     </header>
 
     <div class="project-grid">
-      <article class="project-card">
+      <article class="project-card" data-aos="zoom-in">
         <img src="Project-Images/Media/2dgame.png" alt="Unity 2D gameplay GIF">
         <div class="overlay">
           <h3>Unity 2D Game</h3>
@@ -424,7 +427,7 @@ Interactive digital experiences combining mobile development, game design, creat
   </section>
 
 <!-- 3.3) Creative Coding & Interactive Media -->
-<section class="project-category" id="creative-coding">
+<section class="project-category" id="creative-coding" data-aos="fade-up">
   <header class="cat-header">
     <h2>Creative Coding & Interactive Media</h2>
     <p class="subheading">Experiments, chatbots, and interactive stories</p>
@@ -432,7 +435,7 @@ Interactive digital experiences combining mobile development, game design, creat
 
   <div class="project-grid">
     <!-- Dialogflow chatbot -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Media/chatbot.png" alt="Dialogflow chatbot interface">
       <div class="overlay">
         <h3>Dialogflow Chatbot</h3>
@@ -446,7 +449,7 @@ Interactive digital experiences combining mobile development, game design, creat
     </article>
 
     <!-- Twine interactive story -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Media/twine.png" alt="Twine interactive story screenshot">
       <div class="overlay">
         <h3>Twine Interactive Story</h3>
@@ -461,7 +464,7 @@ Interactive digital experiences combining mobile development, game design, creat
     </article>
 
     <!-- p5.js Mouse Trails -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Media/Mouse Trails.jpg" alt="p5.js interactive sketch 1">
       <div class="overlay">
         <h3>p5.js Mouse Trails</h3>
@@ -476,7 +479,7 @@ Interactive digital experiences combining mobile development, game design, creat
     </article>
 
     <!-- p5.js Game -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Media/game.jpg" alt="p5.js interactive sketch 2">
       <div class="overlay">
         <h3>p5.js Game</h3>
@@ -492,7 +495,7 @@ Interactive digital experiences combining mobile development, game design, creat
     </article>
 
     <!-- p5.js Audio Visualization -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Media/Audio.png" alt="p5.js interactive sketch 3">
       <div class="overlay">
         <h3>p5.js Audio Visualization</h3>
@@ -507,7 +510,7 @@ Interactive digital experiences combining mobile development, game design, creat
     </article>
 
     <!--p5.js Pixel Data -->
-    <article class="project-card">
+    <article class="project-card" data-aos="zoom-in">
       <img src="Project-Images/Media/pixel data.png" alt="p5.js interactive sketch 6">
       <div class="overlay">
         <h3>p5.js Pixel Data</h3>
@@ -646,7 +649,7 @@ Interactive digital experiences combining mobile development, game design, creat
       <ul>
         <li>Monitored performance using accuracy, loss curves, and confusion matrix</li>
         <li>Calculated Precision, Recall, and F1-Score for each class</li>
-        <li>Strong accuracy achieved for Rainy and Sunrise images</li>
+        <li>The final MobileNetV2 model achieved 92% validation accuracy and improved classification performance compared to the baseline CNN.</li>
         <li>Some confusion between Shine and Cloudy, highlighting dataset challenges</li>
         <li>Implemented iterative improvements based on evaluation insights</li>
       </ul>
@@ -1049,7 +1052,7 @@ Interactive digital experiences combining mobile development, game design, creat
   <div class="modal-content">
     <span class="close-btn">&times;</span>
 
-    <h2>Dash of Hue – 2D Color-Matching Platformer</h2>
+    <h2>Dash of Hue - 2D Color-Matching Platformer</h2>
     <p class="modal-subtitle">
       Unity 2D • C# • Platformer • Color Matching • Parallax
     </p>
@@ -1282,6 +1285,16 @@ Interactive digital experiences combining mobile development, game design, creat
 
   </div>
 </div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-out-cubic",
+});
+</script>
 
 </body>
 </html>
