@@ -81,3 +81,33 @@ document.addEventListener('mousemove', (e) => {
 
   start();
 })();
+
+const infoButtons = document.querySelectorAll(".info-btn");
+const closeButtons = document.querySelectorAll(".close-btn");
+
+infoButtons.forEach(button => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const modalId = button.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+
+    if(modal){
+      modal.style.display = "flex";
+    }
+  });
+});
+
+closeButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.closest(".modal").style.display = "none";
+  });
+});
+
+window.addEventListener("click", (e) => {
+  document.querySelectorAll(".modal").forEach(modal => {
+    if(e.target === modal){
+      modal.style.display = "none";
+    }
+  });
+});

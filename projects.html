@@ -58,6 +58,22 @@
 
     <div class="project-grid">
 
+     <!-- Weather Recogination model -->
+      <article class="project-card">
+        <img src="Project-Images/data/ml model.png" alt="Weather Recogination model">
+        <div class="overlay">
+          <h3>Weather Image Classification - CNN & Transfer Learning</h3>
+          <div class="badges">
+            <span>Python </span><span>CNN</span><span>Gradio</span>
+          </div>
+<div class="actions">
+  <a aria-label="Live viz" href="https://www.kaggle.com/code/neha005/machine-learning-assessment-2" target="_blank"><i class="fab fa-kaggle"></i></a>
+<a aria-label="YouTube overview" href="https://www.youtube.com/watch?v=P__ITxF_Mx4" target="_blank"><i class="fab fa-youtube"></i></a>
+<a href="#" class="info-btn" data-modal="weatherModal" aria-label="Project details"><i class="fas fa-circle-info"></i></a>
+</div>
+        </div>
+      </article>
+
             <!-- Regrssion task -->
       <article class="project-card">
         <img src="Project-Images/data/regression task.png" alt="Regrssion task Machine Learning">
@@ -86,21 +102,6 @@
         </div>
       </article>
 
-            <!-- Weather Recogination model -->
-      <article class="project-card">
-        <img src="Project-Images/data/ml model.png" alt="Weather Recogination model">
-        <div class="overlay">
-          <h3>Weather Image Classification - CNN & Transfer Learning</h3>
-          <div class="badges">
-            <span>Python </span><span>CNN</span><span>Gradio</span>
-          </div>
-          <div class="actions">
-            <a aria-label="Live viz" href="https://www.kaggle.com/code/neha005/machine-learning-assessment-2" target="_blank"><i class="fab fa-kaggle"></i></a>
-            <a aria-label="YouTube overview" href="https://www.youtube.com/watch?v=P__ITxF_Mx4" target="_blank"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </article>
-
       <!-- Python Tkinter app -->
       <article class="project-card">
         <img src="Project-Images/data/pythonTkinder.png" alt="Python Tkinter data-driven application">
@@ -111,6 +112,7 @@
           </div>
           <div class="actions">
             <a aria-label="YouTube demo" href="https://youtu.be/JCkDhxl93MM" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="info-btn" data-modal="movioModal" aria-label="Project details"><i class="fas fa-circle-info"></i></a>
           </div>
         </div>
       </article>
@@ -154,6 +156,7 @@
         <i class="fas fa-link"></i>
       </a>
       <a aria-label="YouTube demo" href="https://www.youtube.com/watch?v=x5d8QjVf2uQ" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="info-btn" data-modal="bookifyModal"><i class="fas fa-circle-info"></i></a>
     </div>
   </div>
 </article>
@@ -371,6 +374,7 @@ Interactive digital experiences combining mobile development, game design, creat
           </div>
           <div class="actions">
             <a aria-label="YouTube demo" href="https://youtu.be/m8CSeN4cxRM" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="info-btn" data-modal="scholarMixModal"><i class="fas fa-circle-info"></i></a>
           </div>
         </div>
       </article>
@@ -385,6 +389,7 @@ Interactive digital experiences combining mobile development, game design, creat
           </div>
           <div class="actions">
             <a aria-label="YouTube demo" href="https://youtu.be/DSXKQj577jQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="info-btn" data-modal="globalEssenceModal"><i class="fas fa-circle-info"></i></a>
           </div>
         </div>
       </article>
@@ -409,6 +414,7 @@ Interactive digital experiences combining mobile development, game design, creat
           <div class="actions">
             <a aria-label="Playable build" href="https://neha-shaji.itch.io/dash-of-hues" target="_blank"><i class="fas fa-gamepad"></i></a>
             <a aria-label="Gameplay video" href="https://youtu.be/SG-oXzYQY-o" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="info-btn" data-modal="dashOfHueModal"><i class="fas fa-circle-info"></i></a>
           </div>
         </div>
       </article>
@@ -478,6 +484,7 @@ Interactive digital experiences combining mobile development, game design, creat
         <div class="actions">
           <a aria-label="Code" href="https://editor.p5js.org/nehavshaji/sketches/EGkXr54GO" target="_blank"><i class="fa-solid fa-code"></i></a>
           <a aria-label="Live sketch" href="https://editor.p5js.org/nehavshaji/full/EGkXr54GO" target="_blank"><i class="fas fa-link"></i></a>
+        
         </div>
       </div>
     </article>
@@ -564,5 +571,552 @@ Interactive digital experiences combining mobile development, game design, creat
   </div>
 </footer>
 <script defer src="projects.js"></script>
+
+<div class="modal" id="weatherModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Weather Image Classification</h2>
+    <p class="modal-subtitle">
+      CNN & Transfer Learning • Python • TensorFlow • Gradio
+    </p>
+
+    <!-- Technology Tags -->
+    <div class="modal-tags">
+      <span>Python</span>
+      <span>TensorFlow</span>
+      <span>CNN</span>
+      <span>MobileNetV2</span>
+      <span>Transfer Learning</span>
+      <span>Gradio</span>
+      <span>Data Preprocessing</span>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="modal-section">
+      <h4>Project Overview</h4>
+      <p>
+        Developed a computer vision system to automatically classify weather conditions 
+        from images into four categories: <b>Cloudy, Rainy, Shine, and Sunrise</b>. 
+        The project demonstrates end-to-end workflow from dataset preprocessing, model training, 
+        evaluation, to interactive deployment, showcasing practical AI application skills.
+      </p>
+    </div>
+
+    <!-- Problem & Objectives -->
+    <div class="modal-section">
+      <h4>Problem & Objectives</h4>
+      <ul>
+        <li>Automate detection of weather conditions from outdoor images</li>
+        <li>Handle visually similar categories and small dataset limitations</li>
+        <li>Leverage transfer learning to improve accuracy</li>
+        <li>Deploy an interactive, user-friendly interface for real-time predictions</li>
+      </ul>
+    </div>
+
+    <!-- Dataset & Preprocessing -->
+    <div class="modal-section">
+      <h4>Dataset & Preprocessing</h4>
+      <ul>
+        <li>Kaggle multi-class weather image dataset</li>
+        <li>4 labeled classes: Cloudy, Rainy, Shine, Sunrise</li>
+        <li>Image resizing, normalization, and pixel value scaling</li>
+        <li>Data augmentation: rotation, flipping, zoom for robustness</li>
+        <li>Training/validation split with stratification for class balance</li>
+      </ul>
+    </div>
+
+    <!-- Model Development -->
+    <div class="modal-section">
+      <h4>Model Development & Implementation</h4>
+      <ul>
+        <li>Built a baseline CNN to benchmark performance</li>
+        <li>Applied transfer learning with <b>MobileNetV2 (ImageNet pretrained)</b></li>
+        <li>Trained custom classification layers while freezing base layers initially</li>
+        <li>Fine-tuned deeper convolutional layers with reduced learning rate</li>
+        <li>Hyperparameter experimentation: batch size, dropout, learning rate, optimizer choice</li>
+      </ul>
+    </div>
+
+    <!-- Evaluation -->
+    <div class="modal-section">
+      <h4>Evaluation & Results</h4>
+      <ul>
+        <li>Monitored performance using accuracy, loss curves, and confusion matrix</li>
+        <li>Calculated Precision, Recall, and F1-Score for each class</li>
+        <li>Strong accuracy achieved for Rainy and Sunrise images</li>
+        <li>Some confusion between Shine and Cloudy, highlighting dataset challenges</li>
+        <li>Implemented iterative improvements based on evaluation insights</li>
+      </ul>
+    </div>
+
+    <!-- Deployment -->
+    <div class="modal-section">
+      <h4>Deployment & Application</h4>
+      <p>
+        Deployed the trained model with a <b>Gradio interface</b> allowing users to upload 
+        weather images and receive real-time predictions with confidence scores. 
+        This demonstrates full-stack deployment skills and user-oriented AI applications.
+      </p>
+    </div>
+
+    <!-- Key Learning & Skills -->
+    <div class="modal-section">
+      <h4>Key Learning & Skills Demonstrated</h4>
+      <ul>
+        <li>End-to-end computer vision project development from dataset preprocessing to deployment</li>
+        <li>Practical experience in CNNs, transfer learning, and fine-tuning pretrained models</li>
+        <li>Model evaluation using metrics and confusion matrix for actionable insights</li>
+        <li>Data augmentation techniques to improve model generalization</li>
+        <li>Deployment of machine learning models with interactive user interfaces</li>
+        <li>Problem-solving for small datasets, visually similar classes, and performance optimization</li>
+      </ul>
+    </div>
+
+    <!-- Reflection -->
+    <div class="modal-section">
+      <h4>Reflection</h4>
+      <p>
+        This project strengthened my ability to apply deep learning to real-world problems, 
+        enhanced my understanding of model evaluation, and demonstrated how to deliver 
+        functional AI solutions that are both accurate and user-friendly. 
+        I learned to balance technical implementation with usability and performance optimization.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" id="movioModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Movio - Data Driven Movie Application</h2>
+    <p class="modal-subtitle">
+      Python Tkinter GUI • MovieDB API Integration
+    </p>
+
+    <!-- Tech Tags -->
+    <div class="modal-tags">
+      <span>Python</span>
+      <span>Tkinter</span>
+      <span>API Integration</span>
+      <span>Requests</span>
+      <span>GUI Design</span>
+      <span>Threading</span>
+    </div>
+
+    <!-- Overview -->
+    <div class="modal-section">
+      <h4>Project Overview</h4>
+      <p>
+        Movio is a data-driven desktop application built using Python Tkinter 
+        that allows users to explore movies, genres, and popular actors by 
+        retrieving real-time data from the <b>Movie Database (TMDB) API</b>. 
+        The application provides an interactive graphical interface where users 
+        can search for movies, browse popular people, and explore film genres 
+        through an organized multi-page navigation system.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="modal-section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Real-time movie data retrieved using the MovieDB API</li>
+        <li>Search functionality for movies and popular actors</li>
+        <li>Genre-based movie browsing</li>
+        <li>Multi-page GUI navigation system</li>
+        <li>Scrollable content frames for displaying results</li>
+        <li>Interactive welcome page and side navigation panel</li>
+      </ul>
+    </div>
+
+    <!-- Technologies -->
+    <div class="modal-section">
+      <h4>Technologies & Libraries</h4>
+      <ul>
+        <li>Python Tkinter for GUI development</li>
+        <li>Requests library for API communication</li>
+        <li>PIL (Image & ImageTk) for image rendering</li>
+        <li>Threading for background tasks</li>
+        <li>BytesIO for handling image data in memory</li>
+      </ul>
+    </div>
+
+    <!-- System Design -->
+    <div class="modal-section">
+      <h4>System Design</h4>
+      <ul>
+        <li>Multi-frame architecture for navigation (Search, Genre, People, About)</li>
+        <li>Scrollable frames for large datasets</li>
+        <li>Dynamic image loading for movie posters and actor images</li>
+        <li>Consistent UI layout for improved usability</li>
+      </ul>
+    </div>
+
+    <!-- Error Handling -->
+    <div class="modal-section">
+      <h4>Error Handling & Robustness</h4>
+      <ul>
+        <li>Handles API request failures using RequestException</li>
+        <li>Fallback values for missing movie data</li>
+        <li>Placeholder images used when poster retrieval fails</li>
+        <li>Messagebox alerts when search results are empty</li>
+      </ul>
+    </div>
+
+    <!-- Development Process -->
+    <div class="modal-section">
+      <h4>Development Approach</h4>
+      <p>
+        The application was developed using an iterative eight-day development 
+        plan including design planning, API integration, GUI development, 
+        feature implementation, testing, debugging, and final documentation. 
+        Wireframes and flowcharts were created to structure the application 
+        layout and navigation flow before implementation.
+      </p>
+    </div>
+
+    <!-- Reflection -->
+    <div class="modal-section">
+      <h4>Key Learning</h4>
+      <p>
+        This project strengthened my understanding of API-driven applications, 
+        GUI design using Python Tkinter, asynchronous data handling, and 
+        structuring multi-page desktop applications. It also improved my 
+        ability to design user-friendly interfaces while integrating real-time 
+        external data sources.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" id="bookifyModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Bookify - Full Stack Book Discovery Platform</h2>
+    <p class="modal-subtitle">
+      MERN Stack Web Application • API Integration • User Authentication
+    </p>
+
+    <!-- Tech Tags -->
+    <div class="modal-tags">
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+      <span>JWT Auth</span>
+      <span>Google OAuth</span>
+      <span>REST APIs</span>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="modal-section">
+      <h4>Project Overview</h4>
+      <p>
+        Bookify is a full-stack book discovery platform that aggregates book
+        information, literary news, and bestseller lists into a unified user
+        experience. The application integrates multiple APIs and allows users
+        to discover books, explore genres, and manage their personal
+        favourites through a secure account system.
+      </p>
+    </div>
+
+    <!-- Core Features -->
+    <div class="modal-section">
+      <h4>Core Features</h4>
+      <ul>
+        <li>User authentication using Email/Password and Google OAuth</li>
+        <li>Personal Bookshelf where users can save favourite books</li>
+        <li>Featured Books carousel managed through admin CRUD operations</li>
+        <li>Book discovery via search and genre filtering</li>
+        <li>Responsive UI with carousels, modals and animations</li>
+      </ul>
+    </div>
+
+    <!-- API Integrations -->
+    <div class="modal-section">
+      <h4>API Integrations</h4>
+      <ul>
+        <li><b>Google Books API</b> - fetch detailed book metadata</li>
+        <li><b>New York Times API</b> - display bestseller lists</li>
+        <li><b>The Guardian API</b> - retrieve book related news</li>
+      </ul>
+    </div>
+
+    <!-- Architecture -->
+    <div class="modal-section">
+      <h4>System Architecture</h4>
+      <ul>
+        <li>Frontend built with React and component-based architecture</li>
+        <li>Node.js and Express REST API for backend services</li>
+        <li>MongoDB Atlas database storing users and featured books</li>
+        <li>JWT authentication securing protected routes</li>
+        <li>MVC-inspired backend structure for scalability</li>
+      </ul>
+    </div>
+
+    <!-- Database -->
+    <div class="modal-section">
+      <h4>Database Design</h4>
+      <ul>
+        <li><b>Users Collection:</b> authentication details and favourites list</li>
+        <li><b>FeaturedBooks Collection:</b> book metadata used in homepage carousel</li>
+        <li>Schema designed to support scalable content management</li>
+      </ul>
+    </div>
+
+    <!-- Deployment -->
+    <div class="modal-section">
+      <h4>Deployment</h4>
+      <ul>
+        <li>Frontend deployed on <b>Vercel</b></li>
+        <li>Backend deployed on <b>Render</b></li>
+        <li>Environment variables used to protect API keys and secrets</li>
+        <li>Cross-origin requests configured for secure communication</li>
+      </ul>
+    </div>
+
+    <!-- Reflection -->
+    <div class="modal-section">
+      <h4>Key Learning</h4>
+      <p>
+        This project strengthened my full-stack development skills including
+        API integration, secure authentication, database design and cloud
+        deployment. It also highlighted the importance of error handling,
+        performance optimisation and scalable architecture when building
+        real-world web applications.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" id="scholarMixModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Scholar Mix – Career Mixer App</h2>
+    <p class="modal-subtitle">
+      Interactive Smartphone Application • Kotlin • Galaxy-Themed UX
+    </p>
+
+    <!-- Technology Tags -->
+    <div class="modal-tags">
+      <span>Kotlin</span>
+      <span>Android Studio</span>
+      <span>Mobile UX</span>
+      <span>UI Animations</span>
+      <span>Interactive Design</span>
+    </div>
+
+    <!-- Concept -->
+    <div class="modal-section">
+      <h4>Conceptual Goal</h4>
+      <p>
+        Scholar Mix transforms career counselling into an engaging, interactive, and educational experience. 
+        Using a galaxy-themed interface, users explore careers by combining subjects and personality traits, 
+        making the exploration playful and memorable while demonstrating thoughtful UX design.
+      </p>
+    </div>
+
+    <!-- Design & Layout -->
+    <div class="modal-section">
+      <h4>Design & Layout</h4>
+      <ul>
+        <li>Interactive galaxy-themed main page with animated planets for intuitive navigation</li>
+        <li>Readable, high-contrast fonts and clear instructional page for accessibility</li>
+        <li>Career result popup with shadows, rounded edges, and dynamic content for engagement</li>
+        <li>Unique splash screen and app icon to establish branding</li>
+      </ul>
+    </div>
+
+    <!-- Technical Implementation -->
+    <div class="modal-section">
+      <h4>Technical Implementation</h4>
+      <ul>
+        <li>Single MainActivity.kt architecture to simplify navigation and logic flow</li>
+        <li>Responsive planet zoom-in/out animations for smooth interactive experience</li>
+        <li>Validation logic to ensure meaningful career mix only after user selections</li>
+        <li>Custom modal popups with Try Again and Close buttons for user engagement</li>
+      </ul>
+    </div>
+
+    <!-- Key Learning & Skills -->
+    <div class="modal-section">
+      <h4>Key Learning & Skills</h4>
+      <ul>
+        <li>Mobile UX design for engaging, interactive interfaces</li>
+        <li>Implementing smooth animations and responsive touch interactions</li>
+        <li>Designing dynamic modal-based content displays</li>
+        <li>Balancing conceptual goals with technical feasibility</li>
+      </ul>
+    </div>
+
+    <!-- Reflection -->
+    <div class="modal-section">
+      <h4>Reflection</h4>
+      <p>
+        Scholar Mix strengthened my understanding of interactive mobile UI design, animations, and navigation flow. 
+        I learned to combine creativity with technical skills to create prototypes that are both conceptually strong and user-friendly.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="globalEssenceModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Global Essence – Country Exploration App</h2>
+    <p class="modal-subtitle">
+      Interactive Smartphone Application • Kotlin • Android
+    </p>
+
+    <!-- Technology Tags -->
+    <div class="modal-tags">
+      <span>Kotlin</span>
+      <span>Android Studio</span>
+      <span>UI Animations</span>
+      <span>CardView</span>
+      <span>ConstraintLayout</span>
+      <span>Horizontal Scrolling</span>
+    </div>
+
+    <!-- Concept -->
+    <div class="modal-section">
+      <h4>Conceptual Goal</h4>
+      <p>
+        Global Essence provides a cultural exploration experience through an interactive, horizontal-scrollable globe map. 
+        Users explore countries by tapping location pins to reveal information in modals, combining education and engagement while showcasing intuitive mobile UX design.
+      </p>
+    </div>
+
+    <!-- Design & Layout -->
+    <div class="modal-section">
+      <h4>Design & Layout</h4>
+      <ul>
+        <li>Splash screen and logo for immediate brand identity</li>
+        <li>Simple, accessible sign-up page optimized for touch interaction</li>
+        <li>Horizontal scroll map for intuitive thumb-based navigation</li>
+        <li>Modal popups for country details without leaving the page</li>
+        <li>Explore page with country cards: images, titles, and summaries</li>
+        <li>Consistent layout and smooth scrolling for improved usability</li>
+      </ul>
+    </div>
+
+    <!-- Technical Implementation -->
+    <div class="modal-section">
+      <h4>Technical Implementation</h4>
+      <ul>
+        <li>Multiple activities: MainPage, ExplorePage, CountryDetailActivity, Profile</li>
+        <li>Dynamic map using ImageView overlays with onClick listeners for interactivity</li>
+        <li>Modal popups built using CardView and ConstraintLayout</li>
+        <li>Fade-in animations for country cards on the Explore page</li>
+        <li>Profile and Instruction pages for personalized experience and onboarding</li>
+        <li>Polished UX: edge-to-edge display, smooth navigation, splash screens</li>
+      </ul>
+    </div>
+
+    <!-- Key Learning & Skills -->
+    <div class="modal-section">
+      <h4>Key Learning & Skills</h4>
+      <ul>
+        <li>Advanced mobile UX design, focusing on intuitive navigation and interactive content</li>
+        <li>Structuring multiple activities and managing data flow between screens</li>
+        <li>Creating responsive, touch-friendly horizontal scroll interfaces</li>
+        <li>Implementing polished animations and card-based UI elements</li>
+      </ul>
+    </div>
+
+    <!-- Reflection -->
+    <div class="modal-section">
+      <h4>Reflection</h4>
+      <p>
+        Global Essence enhanced my skills in building interactive educational apps with engaging layouts and smooth navigation. 
+        I learned to balance visual design, usability, and technical implementation while creating a polished mobile experience.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="dashOfHueModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Dash of Hue – 2D Color-Matching Platformer</h2>
+    <p class="modal-subtitle">
+      Unity 2D • C# • Platformer • Color Matching • Parallax
+    </p>
+
+    <!-- Technology Tags -->
+    <div class="modal-tags">
+      <span>Unity</span>
+      <span>C#</span>
+      <span>2D Game</span>
+      <span>Color Matching</span>
+      <span>Platformer</span>
+      <span>Parallax</span>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="modal-section">
+      <h4>Project Overview</h4>
+      <p>
+        Dash of Hue is a fast-paced 2D platformer where players must match the character's color to platforms while navigating moving obstacles and traps. 
+        The game progressively increases in difficulty across three levels, introducing moving platforms, hazards, and complex color-matching challenges.
+      </p>
+    </div>
+
+    <!-- Key Learning & Skills -->
+    <div class="modal-section">
+      <h4>Key Learning & Skills</h4>
+      <ul>
+        <li>Implemented dynamic color-matching mechanics using Unity and C#.</li>
+        <li>Designed multi-level game progression with increasing complexity.</li>
+        <li>Managed character movement, jump physics, and responsive input handling.</li>
+        <li>Created moving platforms and trap mechanics to challenge players.</li>
+        <li>Applied parallax background layers to enhance visual depth and immersion.</li>
+        <li>Worked on game balancing, difficulty progression, and player feedback systems.</li>
+      </ul>
+    </div>
+
+    <!-- Technical Implementation -->
+    <div class="modal-section">
+      <h4>Technical Implementation</h4>
+      <ul>
+        <li>Game Manager Script: Managed level progression, score tracking, and scene transitions.</li>
+        <li>Color Change Script: Handled character color switching and platform color detection.</li>
+        <li>Player Movement Script: Ensured smooth automatic movement and jumping mechanics.</li>
+        <li>Moving Platforms Script: Controlled platform motion and player landing logic.</li>
+        <li>Trap Script: Detected obstacles and triggered game-over events appropriately.</li>
+      </ul>
+    </div>
+
+    <!-- Design & Inspiration -->
+    <div class="modal-section">
+      <h4>Design & Inspiration</h4>
+      <ul>
+        <li>Inspired by games like <b>Color Switch</b> (color-matching), <b>Monument Valley</b> (gradual level difficulty), and <b>Super Mario Bros.</b> (level-based progression).</li>
+        <li>Character and environment designed with playful, vibrant art assets.</li>
+        <li>Three distinct levels: Nature (Level 1), Desert (Level 2), Graveyard (Level 3) with increasing challenge.</li>
+        <li>Clear main menu and instruction interface to guide new players.</li>
+      </ul>
+    </div>
+
+    <!-- Critical Reflection -->
+    <div class="modal-section">
+      <h4>Critical Reflection</h4>
+      <p>
+        Dash of Hue strengthened my understanding of 2D game mechanics, Unity scripting, level design, and balancing gameplay for increasing difficulty. 
+        I learned to implement responsive controls, dynamic game objects, and visually engaging parallax backgrounds. Future improvements could include accessibility enhancements, procedural generation for dynamic challenges, and advanced AI for more unpredictable gameplay.
+      </p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
