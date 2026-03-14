@@ -710,11 +710,11 @@ button:hover ~ .custom-cursor {
 .skills-header h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
-  color: #FFD700;
+  color: #ffffff;
 }
 
 .skills-header h2 span {
-  color: #fff;
+  color: #FFD700;
 }
 
 .skills-header .subtitle {
