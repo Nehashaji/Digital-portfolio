@@ -1385,25 +1385,80 @@ html, body {
   color: #aaa;
 }
 
-/* Mobile Responsive */
+/* --- Optimized Mobile Footer --- */
 @media (max-width: 900px) {
   .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for tablets */
+    gap: 40px 20px;
+    padding-top: 50px;
   }
 }
 
 @media (max-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr;
+  .footer {
+    padding: 50px 20px 20px;
     text-align: center;
   }
+
+  .footer-container {
+    grid-template-columns: 1fr; 
+    gap: 35px;
+    padding-top: 40px;
+    overflow: hidden; /* Prevents the line from causing scroll */
+  }
+  .footer-container::before {
+    width: 80%;
+    opacity: 0.3;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-brand p {
+    max-width: 250px;
+    margin: 10px auto 0; /* Centers the text block */
+    font-size: 0.9rem;
+  }
+
+  .footer-links h3,
+  .footer-contact h3,
+  .footer-social h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-links ul li {
+    margin: 12px 0; /* Larger touch targets for links */
+  }
+
+  .footer-contact p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Better spacing for thumbs */
+    margin-top: 10px;
+  }
+
   .footer-social .social-icons a {
-    margin: 0 12px;
+    margin: 0;
+    font-size: 1.5rem; /* Larger icons for easier clicking */
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.1); /* Subtle gold hint */
+    padding: 20px 10px 0;
   }
 }
 
-/* Only show the custom cursor on devices that actually have a fine pointer (mouse) */
 @media (pointer: coarse) {
   .custom-cursor {
     display: none !important;

@@ -138,47 +138,78 @@ button:hover ~ .custom-cursor {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
+  /* 1. Reset the Navbar for Mobile */
+  .navbar {
+    padding: 10px 25px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #000;
   }
 
-  /* Hide desktop links */
+  .navbar .logo {
+    font-size: 1.3rem;
+    z-index: 3001;
+    color: gold; 
+  }
+
+  /* 2. Pull the Hamburger back onto the screen */
+  .hamburger {
+    display: flex;
+    z-index: 4000;
+    position: relative;
+    margin-right: 5px;
+    padding: 5px;
+  }
+
+  .hamburger span {
+    background-color: gold; /* Ensuring lines are gold */
+  }
+
+  /* 3. Visually Appealing Black & Yellow Menu Slide */
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 260px;
+    right: -100%; 
+    width: 260px; 
     height: 100vh;
     background: #000;
+    z-index: 3000;
+    padding: 100px 0 0 40px; /* Space from top and left */
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-top: 100px;
-    padding-left: 30px;
-    gap: 25px;
-    transition: right 0.4s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
-    overflow-y: auto;
+    gap: 25px; /* Elegant spacing between items */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    border-left: 1px solid rgba(255, 215, 0, 0.1); /* Subtle gold edge */
   }
 
   .nav-links.active {
     right: 0;
   }
 
+  /* 4. Menu Item Styling (Yellow/Gold) */
   .nav-links li a {
-    font-size: 18px;
+    color: gold !important; 
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: linkFade 0.5s forwards;
+    letter-spacing: 2px; /* Premium look */
+    transition: 0.3s;
   }
-  .nav-links li:nth-child(1) a { animation-delay: 0.2s; }
-  .nav-links li:nth-child(2) a { animation-delay: 0.3s; }
-  .nav-links li:nth-child(3) a { animation-delay: 0.4s; }
-  .nav-links li:nth-child(4) a { animation-delay: 0.5s; }
-  .nav-links li:nth-child(5) a { animation-delay: 0.6s; }
+
+  .nav-links li a:hover {
+    color: #fff !important; 
+  }
+
+  body {
+    overflow-x: hidden !important;
+    position: relative;
+  }
 }
 
 /* Animation for mobile links */
@@ -379,49 +410,87 @@ button:hover ~ .custom-cursor {
 }
 .actions i{ font-size:1.1rem; }
 
+/* -------------------- PROPER MOBILE PROJECT CARDS -------------------- */
 
-/* -------------------- MOBILE RESPONSIVE -------------------- */
 @media (max-width: 768px) {
-  .cat-header h2 {
-    font-size: clamp(1.25rem, 2vw + 1rem, 1.6rem);
+  /* 1. Adjust Grid for better spacing */
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack cards for full impact */
+    gap: 2rem;
+    padding: 0 10px;
   }
-  .cat-header .subheading {
-    font-size: 0.9rem;
+
+  .project-card {
+    min-height: auto;
+    background: #111;
+    border: 1px solid rgba(255, 215, 0, 0.2);
   }
+
   .project-card img {
-    height: 220px;
+    height: 250px; /* Keep image prominent */
+    transform: scale(1); /* Reset desktop scale */
+    filter: saturate(1);
   }
+
+  .overlay {
+    position: relative; /* No longer absolute/hidden */
+    opacity: 1; /* Always visible */
+    background: linear-gradient(180deg, transparent 0%, #000 20%);
+    backdrop-filter: none;
+    padding: 1.5rem 1rem;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align text to left for better mobile reading */
+  }
+
+  .project-card:hover .overlay {
+    opacity: 1; /* Keep it visible */
+  }
+
   .overlay h3 {
-    font-size: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    width: 100%;
   }
+
+  /* 4. Improve Badges for Mobile */
+  .badges {
+    justify-content: flex-start;
+    margin-bottom: 1.2rem;
+  }
+
   .badges span {
-    font-size: 0.72rem;
-    padding: 0.35rem 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.7rem;
   }
+
+  /* 5. Actions (Buttons) - Make them large touch targets */
+  .actions {
+    width: 100%;
+    justify-content: space-between; /* Spread icons out */
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .actions a {
-    --size: 38px;
+    --size: 48px; /* Bigger for thumbs */
+    flex: 1; /* Make buttons equal width */
+    max-width: 60px;
+    background: rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.3);
   }
 }
 
+/* Extra small screens */
 @media (max-width: 480px) {
-  .cat-header h2 {
-    font-size: clamp(1.1rem, 4vw + 0.8rem, 1.4rem);
-  }
-  .cat-header .subheading {
-    font-size: 0.85rem;
-  }
   .project-card img {
-    height: 180px;
+    height: 200px;
   }
+  
   .overlay h3 {
-    font-size: 0.95rem;
-  }
-  .badges span {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.55rem;
-  }
-  .actions a {
-    --size: 34px;
+    font-size: 1.1rem;
   }
 }
 
@@ -532,22 +601,77 @@ button:hover ~ .custom-cursor {
   font-size: 0.9rem;
   color: #aaa;
 }
-
-/* Mobile Responsive */
+/* --- Optimized Mobile Footer --- */
 @media (max-width: 900px) {
   .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for tablets */
+    gap: 40px 20px;
+    padding-top: 50px;
   }
 }
 
 @media (max-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr;
+  .footer {
+    padding: 50px 20px 20px;
     text-align: center;
   }
+
+  .footer-container {
+    grid-template-columns: 1fr; 
+    gap: 35px;
+    padding-top: 40px;
+    overflow: hidden; /* Prevents the line from causing scroll */
+  }
+  .footer-container::before {
+    width: 80%;
+    opacity: 0.3;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-brand p {
+    max-width: 250px;
+    margin: 10px auto 0; /* Centers the text block */
+    font-size: 0.9rem;
+  }
+
+  .footer-links h3,
+  .footer-contact h3,
+  .footer-social h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-links ul li {
+    margin: 12px 0; /* Larger touch targets for links */
+  }
+
+  .footer-contact p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Better spacing for thumbs */
+    margin-top: 10px;
+  }
+
   .footer-social .social-icons a {
-    margin: 0 12px;
+    margin: 0;
+    font-size: 1.5rem; /* Larger icons for easier clicking */
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.1); /* Subtle gold hint */
+    padding: 20px 10px 0;
   }
 }
 
@@ -741,4 +865,16 @@ body.modal-open {
     font-size:.7rem;
   }
 
+}
+
+/* Hiding it based on standard mobile screen widths as a backup */
+@media (max-width: 992px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  /* Ensure the default system cursor returns to normal */
+  html, body {
+    cursor: auto !important;
+  }
 }
