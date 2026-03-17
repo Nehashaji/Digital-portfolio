@@ -52,12 +52,12 @@ button:hover ~ .custom-cursor {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8); /* Darker for better visibility */
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 2000; /* High z-index to stay on top */
 }
 
 /* Logo */
@@ -128,47 +128,78 @@ button:hover ~ .custom-cursor {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
+  /* 1. Reset the Navbar for Mobile */
+  .navbar {
+    padding: 10px 25px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #000;
   }
 
-  /* Hide desktop links */
+  .navbar .logo {
+    font-size: 1.3rem;
+    z-index: 3001;
+    color: gold; 
+  }
+
+  /* 2. Pull the Hamburger back onto the screen */
+  .hamburger {
+    display: flex;
+    z-index: 4000;
+    position: relative;
+    margin-right: 5px;
+    padding: 5px;
+  }
+
+  .hamburger span {
+    background-color: gold; /* Ensuring lines are gold */
+  }
+
+  /* 3. Visually Appealing Black & Yellow Menu Slide */
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 260px;
+    right: -100%; 
+    width: 260px; 
     height: 100vh;
     background: #000;
+    z-index: 3000;
+    padding: 100px 0 0 40px; /* Space from top and left */
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-top: 100px;
-    padding-left: 30px;
-    gap: 25px;
-    transition: right 0.4s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
-    overflow-y: auto;
+    gap: 25px; /* Elegant spacing between items */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    border-left: 1px solid rgba(255, 215, 0, 0.1); /* Subtle gold edge */
   }
 
   .nav-links.active {
     right: 0;
   }
 
+  /* 4. Menu Item Styling (Yellow/Gold) */
   .nav-links li a {
-    font-size: 18px;
+    color: gold !important; 
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: linkFade 0.5s forwards;
+    letter-spacing: 2px; /* Premium look */
+    transition: 0.3s;
   }
-  .nav-links li:nth-child(1) a { animation-delay: 0.2s; }
-  .nav-links li:nth-child(2) a { animation-delay: 0.3s; }
-  .nav-links li:nth-child(3) a { animation-delay: 0.4s; }
-  .nav-links li:nth-child(4) a { animation-delay: 0.5s; }
-  .nav-links li:nth-child(5) a { animation-delay: 0.6s; }
+
+  .nav-links li a:hover {
+    color: #fff !important; 
+  }
+
+  body {
+    overflow-x: hidden !important;
+    position: relative;
+  }
 }
 
 /* Animation for mobile links */
@@ -252,61 +283,13 @@ button:hover ~ .custom-cursor {
 .hero-text p { font-size: 1.1rem; color: #ddd; margin-bottom: 2rem; max-width: 600px; }
 .gold-text, .gold { color: gold; font-weight: bold; }
 
-.roles {
-  display: flex;
-  justify-content: flex-start; 
-  gap: 40px;
-  margin: 0.5rem 0 1.5rem; 
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #ffffff; 
-}
-
-.role {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #FFD700; 
-  font-family: 'Poppins', sans-serif;
-  transition: color 0.3s ease;
-}
-
-.role i {
-  font-size: 1.1rem;
-  color: #FFD700;
-}
-
-/* Hover effect for elegance */
-.role:hover {
-  color: #fff;
-  text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
-}
-
-/* Responsive: center align roles on mobile */
-@media (max-width: 992px) {
-  .roles {
-    justify-content: center;
-    gap: 25px;
-    font-size: 1.05rem;
-    margin-bottom: 1.2rem;
-  }
-}
-@media (max-width: 480px) {
-  .roles {
-    flex-direction: column;
-    gap: 8px;
-    font-size: 1rem;
-  }
-}
-
 /* Hero Image */
 .hero-image {
   position: relative;
   width: 400px;
   height: 400px;
-  /* remove margin:auto since grid handles alignment */
-  justify-self: end; /* push image to the right */
-  transform: translateX(30px); /* fine-tune position */
+  justify-self: end;
+  transform: translateX(30px);
 }
 .hero-image img {
   width: 100%;
@@ -329,25 +312,77 @@ button:hover ~ .custom-cursor {
 
 @keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
 
-/* Buttons */
-.buttons { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+/* --- Buttons: Keeping Your Exact Sizing with Premium Effects --- */
+
+.buttons { 
+  display: flex; 
+  gap: 1rem; 
+  margin-bottom: 2rem; 
+  flex-wrap: wrap; 
+}
+
 .btn {
+  /* Keeping your exact dimensions */
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
+  
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
+/* --- Gold Button: Shimmer Hover --- */
 .gold-btn {
   background: linear-gradient(90deg, gold, goldenrod);
   color: black;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
 }
-.gold-btn:hover { background: goldenrod; color: #fff; }
+
+.gold-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.gold-btn:hover {
+  transform: translateY(-3px); /* Subtle lift */
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+  color: black; /* Keeping text black as per your design */
+}
+
+.gold-btn:hover::before {
+  left: 100%; /* Light streak moves across button */
+}
+
+/* --- Outline Button: Glowing Fill Hover --- */
 .outline-btn {
   border: 2px solid gold;
   color: gold;
+  background: transparent;
 }
-.outline-btn:hover { background: rgba(255,215,0,0.1); color: gold; }
+
+.outline-btn:hover {
+  transform: translateY(-3px);
+  background: gold; /* Fills with gold */
+  color: black !important; /* Text turns black for readability */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
 
 /* Stats */
 .stats {
@@ -367,7 +402,7 @@ button:hover ~ .custom-cursor {
   text-align: center;
   opacity: 0;
   animation: fadeInScroll 1s ease forwards;
-  animation-delay: 1.8s; /* adjust timing */
+  animation-delay: 1.8s;
 }
 .scroll-indicator .mouse {
   width: 25px;
@@ -402,110 +437,118 @@ button:hover ~ .custom-cursor {
 }
 /* Mobile Responsive Hero Section */
 @media (max-width: 992px) {
-  /* Hero Container */
   #hero {
+    padding: 100px 20px 60px; /* Space for the fixed navbar */
+    min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 6rem 2rem 4rem;
   }
 
-  /* Hero Content */
   .hero-content {
     display: flex;
-    flex-direction: column-reverse; 
+    flex-direction: column; /* Stacks everything in a single column */
     align-items: center;
-    gap: 2rem;
-    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0; 
   }
 
-  /* Hero Text */
+  /* 1. Photo First */
+  .hero-image {
+    order: 1; 
+    width: 220px;
+    height: 220px;
+    margin-bottom: 30px; /* Good spacing below the image */
+    transform: translateX(0); /* Centers it */
+    justify-self: center;
+  }
+
+  /* 2. Hero Text Content Second */
   .hero-text {
+    order: 2;
     width: 100%;
+    margin-bottom: 25px;
   }
+
+  .welcome {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+
   .hero-text h1 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
   }
+
   .hero-text h2 {
-    font-size: 1.4rem;
-    color: #fff;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
   }
+
   .hero-text p {
     font-size: 1rem;
+    margin: 0 auto 30px;
     max-width: 90%;
-    margin: 0 auto 1.5rem;
-    color: #ddd;
-    line-height: 1.6;
   }
 
-  /* Hero Buttons */
+ /* 3. Buttons Third - FIXED CENTERING */
   .buttons {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-bottom: 2rem;
-  }
-  .btn {
-    width: 48%;
-    padding: 0.8rem;
-    font-size: 0.95rem;
-  }
-
-  /* Hero Image */
-  .hero-image {
-    width: 250px;
-    height: 250px;
-    justify-self: center;
-    transform: translateX(0);
-    margin: auto;
-  }
-  .hero-image img {
-    border-width: 4px;
-  }
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .stats {
+    order: 3;
     display: flex;
-    justify-content: center; 
-    gap: 1rem;
-    flex-wrap: wrap; 
-    margin: 1.5rem 0; 
+    flex-direction: column; 
+    align-items: center; /* This pulls both buttons to the center */
+    justify-content: center;
+    width: 100%;
+    max-width: 280px; 
+    gap: 15px;
+    margin: 0 auto 40px; /* Centers the container itself */
   }
-  .stats div {
-    font-size: 0.85rem;
-    text-align: center; 
-  }
-  .stats .gold {
-    font-size: 1.3rem;
-  }
-}
 
- /* Hide scroll indicator */
-  .scroll-indicator {
+  .btn {
+    width: 100%; 
+    padding: 1rem;
+    margin: 0;
+    text-align: center; /* Centers text inside the button */
+  }
+  /* 4. Numbers (Stats) Last */
+  .stats {
+    order: 4;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .stats div {
+    font-size: 0.8rem;
+  }
+
+  .stats .gold {
+    font-size: 1.4rem;
+  }
+
+  /* Cleanup */
+  .scroll-indicator, .outer-ring, .inner-ring {
     display: none;
   }
-
-  /* Hide rings and adjust grid */
-  .outer-ring, .inner-ring { display: none; }
-  .grid-overlay { background-size: 35px 35px; }
 }
 
-/* Extra Small Devices (<480px) */
+/* Specific Tweak for very small screens */
 @media (max-width: 480px) {
-  .hero-text h1 { font-size: 2rem; }
-  .hero-text h2 { font-size: 1.2rem; }
-  .hero-text p { font-size: 0.9rem; max-width: 95%; }
-  .hero-image { width: 180px; height: 180px; }
-  .buttons .btn { width: 90%; padding: 0.7rem; font-size: 0.9rem; }
-  .stats .gold { font-size: 1.2rem; }
-}
+  .hero-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
 
+  .stats {
+    gap: 1rem;
+  }
+}
 /* ---------------- About Me ---------------- */
 .about-section {
   position: relative;
@@ -557,13 +600,28 @@ button:hover ~ .custom-cursor {
   pointer-events: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .about-content h2 {
-    font-size: 2.2rem;
+  .about-section {
+    padding: 4rem 1.5rem; /* Increased vertical padding to separate it from other sections */
   }
+
+  .about-content h2 {
+    font-size: 2rem; /* Slightly smaller for better mobile fit */
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
   .about-content p {
-    font-size: 1rem;
+    font-size: 0.95rem; /* Optimal reading size for mobile */
+    line-height: 1.7; /* Slightly tighter than desktop for better text blocks */
+    text-align: justify; 
+    margin-bottom: 1.2rem;
+    padding: 0 5px; /* Prevents text from feeling like it touches the screen edges */
+  }
+
+  .about-section .container {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -675,18 +733,85 @@ button:hover ~ .custom-cursor {
   color: #000;
 }
 
-/* Projects Responsive */
-@media (max-width: 1024px) {
-  .projects-row { gap: 25px; }
+/* --- Projects --- */
+
+@media (max-width: 992px) {
+  .projects-section {
+    padding: 60px 20px;
+  }
+  
+  .projects-row {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 768px) {
-  .projects-row { flex-direction: column; gap: 25px; align-items: center; }
+  .projects-header h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+
+  .projects-header p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .projects-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* More space between cards for a clean vertical look */
+  }
+
+  .project-card {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 400px; /* Slightly wider for better text flow on mobile */
+    min-height: auto; /* Allow card to height-adjust to content */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+  }
+
+  .project-image img {
+    height: 200px; /* Fixed height for consistent visuals */
+  }
+
+  .project-content {
+    padding: 25px 20px; /* More focused padding */
+    text-align: center;
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #bbb; /* Slightly softer white for better contrast */
+  }
+
+  .project-content .btn {
+    width: 100%; /* Full width buttons are easier to tap on mobile */
+    max-width: 200px; /* But not TOO wide */
+    padding: 12px 0;
+    font-size: 0.9rem;
+    border-radius: 8px; /* Matching the hero button style */
+  }
 }
 
 @media (max-width: 480px) {
-  .projects-header h2 { font-size: 2rem; }
-  .project-card { max-width: 100%; }
+  .projects-header h2 {
+    font-size: 2rem;
+  }
+  
+  .project-card {
+    max-width: 100%; /* Edge to edge with container padding */
+  }
+  
+  .project-image img {
+    height: 180px;
+  }
 }
 
 /* Skills Section */
@@ -802,38 +927,62 @@ button:hover ~ .custom-cursor {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Tablet */
-@media (max-width: 900px) {
+/* Mobile: One card per row, perfectly centered */
+@media (max-width: 768px) {
   .skills-row {
+    flex-direction: column; /* Stacks the cards vertically */
+    align-items: center;    /* Centers the cards */
+    gap: 25px;             
+    margin-bottom: 25px;
+  }
+
+  .skill-card.big-card {
+    flex: 1 1 auto;        
+    width: 100%;           
+    max-width: 100%;       
+    padding: 25px 15px;    
+    margin: 0;             
+    box-sizing: border-box; 
+  }
+
+.tool {
+    margin-bottom: 25px; /* Give space for the text */
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  .tools {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .skills-header h2 {
-    font-size: 2.2rem;
-  }
-
-  .skill-card h3 {
-    font-size: 1.3rem;
-  }
-
-  .tools {
-    grid-template-columns: repeat(2, 1fr);
+  .tool::after {
+    content: attr(data-name);
+    position: relative; /* Move it from absolute to relative */
+    bottom: 0;
+    opacity: 1; /* Always visible */
+    background: transparent; /* No box needed on mobile */
+    color: #FFD700; /* Gold text */
+    font-size: 0.7rem;
+    margin-top: 8px;
+    white-space: normal; /* Allow text to wrap if it's long */
+    text-align: center;
+    transform: none;
+    pointer-events: auto;
   }
 
   .tool img {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .skills-header h2 {
+    font-size: 2rem;
   }
 }
 
+/* Specific fix for very small phones */
+@media (max-width: 400px) {
+  .tools {
+    grid-template-columns: repeat(2, 1fr); /* 2 icons per row for tiny screens */
+  }
+}
 
 /* Certificates Section */
 .certificates-section {
@@ -1066,11 +1215,65 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Mobile Responsive */
+/* --- Optimized Mobile Contact Section --- */
+
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 15px; /* Tighter vertical padding */
+  }
+
+  .contact-section h2 {
+    font-size: 2rem; /* Scaled down for mobile headers */
+  }
+
+  .contact-sub {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
   .contact-cards {
-    flex-direction: column;
+    flex-direction: column; /* Stack cards vertically */
     align-items: center;
+    gap: 20px; /* Consistent gap between stacked cards */
+  }
+
+  .contact-card {
+    width: 100%; /* Full width of the container */
+    max-width: 320px; /* Keeps them from looking like huge rectangles */
+    padding: 20px;
+    flex: none; /* Disables the desktop flex-basis */
+    box-sizing: border-box; /* Ensures padding stays inside the box */
+  }
+
+  .contact-card i {
+    font-size: 1.8rem; /* Slightly smaller icons for mobile */
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-card a {
+    font-size: 0.85rem; /* Slightly smaller text to prevent line breaking */
+    display: block;
+    word-break: break-all; /* Safety feature: stops long URLs from pushing out of the box */
+    padding: 5px 0;
+  }
+
+  .contact-btn {
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small Phones (iPhone SE size) */
+@media (max-width: 400px) {
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-card {
+    max-width: 280px; /* Narrower for very slim screens */
   }
 }
 
@@ -1200,3 +1403,21 @@ html, body {
   }
 }
 
+/* Only show the custom cursor on devices that actually have a fine pointer (mouse) */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
+/* Hiding it based on standard mobile screen widths as a backup */
+@media (max-width: 992px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  /* Ensure the default system cursor returns to normal */
+  html, body {
+    cursor: auto !important;
+  }
+}

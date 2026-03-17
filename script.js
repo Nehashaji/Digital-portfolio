@@ -46,9 +46,9 @@ function animateParticles() {
     top -= p.dy;
     left += p.dx;
 
-    if (top < -20) top = window.innerHeight + 20;
-    if (left < -20) left = window.innerWidth + 20;
-    if (left > window.innerWidth + 20) left = -20;
+    if (top < -30) top = window.innerHeight + 20;
+    if (left < -30) left = window.innerWidth + 20;
+    if (left > window.innerWidth + 10) left = -20;
 
     p.el.style.top = top + 'px';
     p.el.style.left = left + 'px';
@@ -64,6 +64,22 @@ const navLinks = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navLinks.classList.toggle('active');
+
+  if (navLinks.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+    document.body.style.overflowX = 'hidden'; 
+  }
+});
+
+document.querySelectorAll('.nav-links li a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    document.body.style.overflowX = 'hidden';
+  });
 });
 
 // ===================== ABOUT SECTION PARTICLES =====================
@@ -169,7 +185,6 @@ AOS.init({
   duration: 1000,
   easing: 'ease-out-cubic',
 });
-
 
 // ==================== Certificates Section Particles ====================
 const canvas = document.getElementById("particles-canvas");
