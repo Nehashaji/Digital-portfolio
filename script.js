@@ -153,7 +153,7 @@ const projectsData = [
   },
   { 
     title: 'Interactive & Creative Media', 
-    description: 'Experimental digital projects exploring interactivity, creative coding, and intelligent systems, highlighted by smartphone apps and a Unity 2D game, demonstrating technical experimentation and innovative problem-solving.', 
+    description: 'Experimental projects exploring physical computing, mobile development, game design, creative coding, and conversational systems. Demonstrates technical creativity, interactive design, and innovative problem-solving across both digital and physical environments.', 
     image: 'Images/creative-coding.gif', 
     link: 'projects.html#interactive-media' 
   }
