@@ -327,10 +327,10 @@ button:hover ~ .custom-cursor {
   border-radius: 18px;
   background: rgba(20,20,20,.85);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
   box-shadow:
     0 10px 30px rgba(0,0,0,.5),
-    inset 0 1px 0 rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,0.08);
+    inset 0 0 0 1px rgba(212, 175, 55, 0.08);
   isolation:isolate;
   transition:
     transform .4s ease,
