@@ -627,14 +627,14 @@ button:hover ~ .custom-cursor {
 
 /* ---------------- Projects Section ---------------- */
 .projects-section {
-  padding-top: 20px; /* tight top spacing */
-  padding-bottom: 20px; /* tight bottom spacing */
+  padding-top: 20px; 
+  padding-bottom: 20px; 
   background: #000; 
 }
 
 .projects-header {
   text-align: center;
-  margin-bottom: 25px; /* small gap between header & cards */
+  margin-bottom: 25px; 
 }
 
 .projects-header h2 {
@@ -653,7 +653,7 @@ button:hover ~ .custom-cursor {
   margin-bottom: 10px;
   max-width: 650px;
   margin-left: auto;
-  margin-right: auto; /* centers text */
+  margin-right: auto; 
   line-height: 1.5;
 }
 
@@ -663,7 +663,7 @@ button:hover ~ .custom-cursor {
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
-  margin-bottom: 0; /* remove extra bottom gap */
+  margin-bottom: 0; 
 }
 
 /* Project Card */
@@ -676,7 +676,7 @@ button:hover ~ .custom-cursor {
   transition: transform 0.35s, box-shadow 0.35s;
   display: flex;
   flex-direction: column;
-  min-height: 400px; /* ensures equal height for all cards */
+  min-height: 400px;
 }
 
 .project-card:hover {
@@ -711,7 +711,7 @@ button:hover ~ .custom-cursor {
   font-size: 1rem;
   color: #ccc;
   margin-bottom: 15px;
-  flex-grow: 1; /* push button down */
+  flex-grow: 1; 
 }
 
 /* Align "View More" buttons */
@@ -725,7 +725,7 @@ button:hover ~ .custom-cursor {
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
-  margin: 0 auto; /* center horizontally */
+  margin: 0 auto; 
 }
 
 .project-content .btn:hover {
@@ -759,23 +759,23 @@ button:hover ~ .custom-cursor {
   .projects-row {
     flex-direction: column;
     align-items: center;
-    gap: 40px; /* More space between cards for a clean vertical look */
+    gap: 40px; 
   }
 
   .project-card {
     flex: 1 1 100%;
     width: 100%;
-    max-width: 400px; /* Slightly wider for better text flow on mobile */
-    min-height: auto; /* Allow card to height-adjust to content */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    max-width: 400px; 
+    min-height: auto; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   }
 
   .project-image img {
-    height: 200px; /* Fixed height for consistent visuals */
+    height: 200px; 
   }
 
   .project-content {
-    padding: 25px 20px; /* More focused padding */
+    padding: 25px 20px; 
     text-align: center;
   }
 
@@ -788,15 +788,15 @@ button:hover ~ .custom-cursor {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 25px;
-    color: #bbb; /* Slightly softer white for better contrast */
+    color: #bbb;
   }
 
   .project-content .btn {
-    width: 100%; /* Full width buttons are easier to tap on mobile */
-    max-width: 200px; /* But not TOO wide */
+    width: 100%;
+    max-width: 200px;
     padding: 12px 0;
     font-size: 0.9rem;
-    border-radius: 8px; /* Matching the hero button style */
+    border-radius: 8px; 
   }
 }
 
@@ -806,7 +806,7 @@ button:hover ~ .custom-cursor {
   }
   
   .project-card {
-    max-width: 100%; /* Edge to edge with container padding */
+    max-width: 100%; 
   }
   
   .project-image img {
@@ -927,11 +927,11 @@ button:hover ~ .custom-cursor {
   opacity: 1;
   transform: translateY(0);
 }
-/* Mobile: One card per row, perfectly centered */
+
 @media (max-width: 768px) {
   .skills-row {
-    flex-direction: column; /* Stacks the cards vertically */
-    align-items: center;    /* Centers the cards */
+    flex-direction: column; 
+    align-items: center;    
     gap: 25px;             
     margin-bottom: 25px;
   }
@@ -946,7 +946,7 @@ button:hover ~ .custom-cursor {
   }
 
 .tool {
-    margin-bottom: 25px; /* Give space for the text */
+    margin-bottom: 25px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -954,14 +954,14 @@ button:hover ~ .custom-cursor {
 
   .tool::after {
     content: attr(data-name);
-    position: relative; /* Move it from absolute to relative */
+    position: relative;
     bottom: 0;
     opacity: 1; /* Always visible */
-    background: transparent; /* No box needed on mobile */
-    color: #FFD700; /* Gold text */
+    background: transparent; 
+    color: #FFD700; 
     font-size: 0.7rem;
     margin-top: 8px;
-    white-space: normal; /* Allow text to wrap if it's long */
+    white-space: normal; 
     text-align: center;
     transform: none;
     pointer-events: auto;

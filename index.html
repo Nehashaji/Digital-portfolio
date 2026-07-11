@@ -3,36 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Digital Portfolio</title>
+  <title>Neha Shaji - My Digital Portfolio</title>
   <link rel="icon" href="icons/logo.png" type="image/png">
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
 
-<!-- Open Graph Meta Tags for link previews -->
-<meta property="og:title" content="Neha Shaji - Creative Computing Portfolio">
-<meta property="og:description" content="Explore my Machine Learning projects, data-driven applications, and full-stack web development work.">
-<meta property="og:image" content="https://i.ibb.co/rRFnqXQX/hero-section.png">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Portfolio hero section">
-<meta property="og:type" content="website">
+  <meta property="og:title" content="Neha Shaji - Creative Computing Portfolio">
+  <meta property="og:description" content="Explore my Machine Learning projects, data-driven applications, and full-stack web development work.">
+  <meta property="og:image" content="https://i.ibb.co/rRFnqXQX/hero-section.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio hero section">
+  <meta property="og:type" content="website">
 
-<!-- Twitter preview (optional) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Neha Shaji - Creative Computing Portfolio">
-<meta name="twitter:description" content="Explore my Machine Learning projects, data-driven applications, and full-stack web development work.">
-<meta name="twitter:image" content="https://i.ibb.co/rRFnqXQX/hero-section.png">
-
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neha Shaji - Creative Computing Portfolio">
+  <meta name="twitter:description" content="Explore my Machine Learning projects, data-driven applications, and full-stack web development work.">
+  <meta name="twitter:image" content="https://i.ibb.co/rRFnqXQX/hero-section.png">
 </head>
 <body>
-  <!-- Custom cursor and particles canvas -->
   <div class="custom-cursor"></div>
-<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">Neha Shaji</div>
 
@@ -47,52 +45,50 @@
     <li><a href="projects.html">Projects</a></li>
     <li><a href="certificate.html">Certificates</a></li>
     <li><a href="#contact">Contact</a></li>
-
   </ul>
 </nav>
 
-<!-- Hero Section -->
 <section id="hero">
   <div class="grid-overlay"></div>
   <div class="shapes"></div>
 
   <div class="hero-content">
     <div class="hero-text">
-      <div class="welcome" data-aos="fade-down" data-aos-delay="400">
+      <div class="welcome hero-animate-item">
         Creative Computing Portfolio
       </div>
-      <h1 data-aos="fade-up" data-aos-delay="500">
+      <h1 class="hero-animate-item">
         Hi, I’m <span class="gold-text">Neha Shaji</span>
       </h1>
-      <h2 data-aos="fade-up" data-aos-delay="600">
+      <h2 class="hero-animate-item">
         Creative Computing Student | Data & ML Enthusiast
       </h2>
 
-      <p data-aos="fade-up" data-aos-delay="700">
+      <p class="hero-animate-item">
        Focused on building intelligent systems where machine learning, data analysis, and interactive applications converge to solve real-world problems with purpose and precision
       </p>
 
-<div class="buttons">
-  <a href="#projects" class="btn gold-btn" data-aos="zoom-in" data-aos-delay="800">
-    Explore My Work
-  </a>
+      <div class="buttons hero-animate-item">
+        <a href="#projects" class="btn gold-btn">
+          Explore My Work
+        </a>
 
-  <a href="Neha Shaji_CV.pdf" class="btn outline-btn" target="_blank" data-aos="zoom-in" data-aos-delay="900">
-    View CV
-  </a>
-</div>
+        <a href="Neha Shaji_CV.pdf" class="btn outline-btn" target="_blank">
+          View CV
+        </a>
+      </div>
 
-      <div class="stats" data-aos="fade-up" data-aos-delay="1000">
+      <div class="stats hero-animate-item">
         <div><span class="gold">10+</span><br>Projects</div>
         <div><span class="gold">5+</span><br>Certifications</div>
         <div><span class="gold">2+</span><br>Years Learning</div>
       </div>
     </div>
 
-    <div class="hero-image" data-aos="fade-left" data-aos-delay="1100">
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
       <div class="outer-ring"></div>
       <div class="inner-ring"></div>
-      <img src="Images/image1.jpeg" alt="Profile" class="photo-animate">
+      <img src="Images/image1.jpeg" alt="Profile" class="photo-bounce">
     </div>
   </div>
 
@@ -102,21 +98,17 @@
   </div>
 </section>
 
-<!-- About Me Section -->
 <section id="about" class="about-section">
   <canvas id="about-canvas"></canvas>
   <div class="container">
     <div class="about-content" data-aos="fade-up" data-aos-delay="200">
       <h2>About <span class="gold-text">Me</span></h2>
-
       <p>
         I am a final-year <strong><span class="gold">BSc Creative Computing</span> student at Bath Spa University RAK</strong>, specializing in <span class="gold">machine learning</span> and <span class="gold">data-driven systems</span>. My hands-on projects in predictive modeling, computer vision, and intelligent applications demonstrate my technical skills and creative problem-solving.
       </p>
-
       <p>
         Alongside my focus on artificial intelligence, I have experience in <span class="gold">full-stack web development</span> and interactive digital applications, allowing me to approach challenges from both analytical and creative perspectives. This interdisciplinary expertise supports my interest in human-centered AI and real-world deployment of intelligent systems.
       </p>
-
       <p>
         Passionate about exploring data and creating insights from it, I focus on applying machine learning and intelligent systems to solve real-world problems.
       </p>
@@ -124,7 +116,6 @@
   </div>
 </section>
 
-<!--Project section-->
 <section id="projects" class="projects-section">  
   <canvas id="projects-canvas"></canvas>
   <div class="container">
@@ -138,12 +129,10 @@
     </div>
 
     <div class="projects-row top-row" id="top-row">
-      <!-- Top 3 cards injected by JS -->
-    </div>
+       </div>
   </div>
 </section>
 
-<!-- Skills Section -->
 <section id="skills" class="skills-section">
   <div class="container">
     <header class="skills-header" data-aos="fade-down">
@@ -153,10 +142,7 @@
       </p>
     </header>
 
-    <!-- Row 1 -->
     <div class="skills-row">
-      
-      <!-- Data Science & ML -->
       <div class="skill-card big-card" data-aos="fade-left">
         <h3>Data Science & Machine Learning</h3>
         <div class="tools">
@@ -171,7 +157,6 @@
         </div>
       </div>
 
-      <!-- Core Web Development -->
       <div class="skill-card big-card" data-aos="fade-right">
         <h3>Core Web Development</h3>
         <div class="tools">
@@ -184,44 +169,21 @@
           <div class="tool" data-name="MongoDB"><img src="icons/mongodb.png" alt="MongoDB"></div>
         </div>
       </div>
-
     </div>
 
-    <!-- Row 2 -->
     <div class="skills-row">
-      
-<!-- Creative & Development Tools -->
-<div class="skill-card big-card" data-aos="fade-right">
-  <h3>Creative & Development Tools</h3>
+      <div class="skill-card big-card" data-aos="fade-right">
+        <h3>Creative & Development Tools</h3>
+        <div class="tools">
+          <div class="tool" data-name="Figma"><img src="icons/figma.png" alt="Figma"></div>
+          <div class="tool" data-name="Canva"><img src="icons/canva.png" alt="Canva"></div>
+          <div class="tool" data-name="p5.js"><img src="icons/p5.png" alt="p5.js"></div>
+          <div class="tool" data-name="Unity - Game Development"><img src="icons/unity.png" alt="Unity"></div>
+          <div class="tool" data-name="Android Studio - Mobile Development"><img src="icons/android studio.png" alt="Android Studio"></div>
+          <div class="tool" data-name="Arduino - Physical Computing"><img src="icons/arduino.png" alt="Arduino"></div>
+        </div>
+      </div>
 
-  <div class="tools">
-    <div class="tool" data-name="Figma">
-      <img src="icons/figma.png" alt="Figma">
-    </div>
-
-    <div class="tool" data-name="Canva">
-      <img src="icons/canva.png" alt="Canva">
-    </div>
-
-    <div class="tool" data-name="p5.js">
-      <img src="icons/p5.png" alt="p5.js">
-    </div>
-
-    <div class="tool" data-name="Unity - Game Development">
-      <img src="icons/unity.png" alt="Unity">
-    </div>
-
-    <div class="tool" data-name="Android Studio - Mobile Development">
-      <img src="icons/android studio.png" alt="Android Studio">
-    </div>
-
-    <div class="tool" data-name="Arduino - Physical Computing">
-      <img src="icons/arduino.png" alt="Arduino">
-    </div>
-  </div>
-</div>
-
-      <!-- Experimentation & Version Control -->
       <div class="skill-card big-card" data-aos="fade-left">
         <h3>Experimentation & Version Control</h3>
         <div class="tools">
@@ -235,7 +197,6 @@
   </div>
 </section>
 
-<!-- Certificates Section -->
 <section id="certificates" class="certificates-section">
   <div class="container">
     <h2>My <span>Certificates</span></h2>
@@ -244,19 +205,14 @@
     </p>
 
     <div class="certificates-grid">
-      <!-- Certificate Card 1 -->
-      <div class="certificate-card" >
+      <div class="certificate-card">
         <img src="Certificates/Python for DS_ Certificate.png" alt="IBM Python for Data Science">
         <h3>IBM Python for Data Science</h3>
       </div>
-
-<!-- Certificate Card 2 -->
-<div class="certificate-card">
-  <img src="Certificates/intermediate to ml.png" alt="Kaggle Intermediate Machine Learning Certificate">
-  <h3>Kaggle - Intermediate Machine Learning</h3>
-</div>
-
-      <!-- Certificate Card 3 -->
+      <div class="certificate-card">
+        <img src="Certificates/intermediate to ml.png" alt="Kaggle Intermediate Machine Learning Certificate">
+        <h3>Kaggle - Intermediate Machine Learning</h3>
+      </div>
       <div class="certificate-card">
         <img src="Certificates/Certificate of Academic Excellence.png" alt="Certificate of Academic Excellence">
         <h3>Certificate of Academic Excellence</h3>
@@ -264,13 +220,12 @@
     </div>
 
     <div class="view-more">
-      <a href="certificate.html" class="btn">View More</a>
+      <a href="certificate.html" class="btn explicit-view-btn">View More</a>
     </div>
   </div>
   <canvas id="particles-canvas"></canvas>
 </section>
 
-<!-- Contact Section -->
 <section class="contact-section" id="contact">
   <div class="container">
     <h2>Get in <span>Touch</span></h2>
@@ -278,40 +233,31 @@
     <p class="contact-sub">I’d love to hear from you! Connect with me via email or socials.</p>
 
     <div class="contact-cards">
-      <!-- Email Card -->
       <div class="contact-card">
         <i class="fas fa-envelope"></i>
         <h3>Email</h3>
         <a href="mailto:nehavshaji@gmail.com">nehavshaji@gmail.com</a>
       </div>
-
-      <!-- LinkedIn Card -->
       <div class="contact-card">
         <i class="fab fa-linkedin"></i>
         <h3>LinkedIn</h3>
         <a href="https://www.linkedin.com/in/nehavshaji/" target="_blank">linkedin.com/in/nehavshaji</a>
       </div>
-
-      <!-- YouTube Card -->
       <div class="contact-card">
         <i class="fab fa-youtube"></i>
         <h3>YouTube</h3>
         <a href="https://www.youtube.com/@nehashaji1748" target="_blank">youtube.com/@nehashaji1748</a>
       </div>
     </div>
+  </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
-    
-    <!-- Brand -->
     <div class="footer-brand">
       <h2>Neha <span>Shaji</span></h2>
       <p>Building creative solutions with design & code.</p>
     </div>
-
-    <!-- Quick Links -->
     <div class="footer-links">
       <h3>Quick Links</h3>
       <ul>
@@ -322,56 +268,56 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Contact -->
     <div class="footer-contact">
       <h3>Contact</h3>
       <p><i class="fas fa-envelope"></i> nehavshaji@gmail.com</p>
       <p><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</p>
     </div>
-
-    <!-- Social -->
     <div class="footer-social">
       <h3>Follow Me</h3>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/nehavshaji/"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/Nehashaji"><i class="fab fa-github"></i></a>
         <a href="https://www.youtube.com/@nehashaji1748"><i class="fab fa-youtube"></i></a>
-
       </div>
     </div>
-
   </div>
-
   <div class="footer-bottom">
     <p>© 2026 Neha Valuthundil Shaji | All Rights Reserved</p>
   </div>
 </footer>
 
-<!-- FontAwesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
-  // Initialize AOS
+
   AOS.init({
-    duration: 1500,
-    easing: 'ease-in-out',
+    duration: 1000,
+    easing: 'ease-out-cubic',
     once: true,
+    startEvent: 'DOMContentLoaded'
   });
-  // GSAP floating and gentle animations
+
   window.addEventListener('load', () => {
-    gsap.from(".welcome", {y:-20, opacity:0, duration:1.2, ease:"power2.out"});
-    gsap.from("h1", {y:20, opacity:0, duration:1.2, delay:0.2, ease:"power2.out"});
-    gsap.from("h2", {y:20, opacity:0, duration:1.2, delay:0.4, ease:"power2.out"});
-    gsap.from("p", {y:20, opacity:0, duration:1.2, delay:0.6, ease:"power2.out"});
-    gsap.from(".btn", {y:20, opacity:0, duration:1.2, delay:0.8, stagger:0.2, ease:"power2.out"});
-    gsap.from(".stats div", {y:20, opacity:0, duration:1.2, delay:1.0, stagger:0.2, ease:"power2.out"});
-    gsap.to(".photo-animate", {y:-10, duration:3, repeat:-1, yoyo:true, ease:"sine.inOut"});
+    const tl = gsap.timeline({
+      onComplete: () => {
+        AOS.refresh();
+      }
+    });
+
+    gsap.set(".hero-animate-item, .hero-btn-item", { visibility: "visible" });
+
+    tl.from(".welcome.hero-animate-item", { y: -20, opacity: 0, duration: 1.2, ease: "power2.out" })
+      .from("h1.hero-animate-item", { y: 20, opacity: 0, duration: 1.2, ease: "power2.out" }, "-=1.0")
+      .from("h2.hero-animate-item", { y: 20, opacity: 0, duration: 1.2, ease: "power2.out" }, "-=1.0")
+      .from("p.hero-animate-item", { y: 20, opacity: 0, duration: 1.2, ease: "power2.out" }, "-=1.0")
+      .from(".buttons.hero-animate-item", { y: 20, opacity: 0, duration: 1.2, ease: "power2.out" }, "-=1.0")
+      .from(".stats.hero-animate-item div", { y: 20, opacity: 0, duration: 1.2, stagger: 0.2, ease: "power2.out" }, "-=1.0");
+
+    gsap.to(".photo-bounce", { y: -10, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut" });
   });
-
 </script>
-
 <script src="script.js"></script>
 </body>
 </html>
