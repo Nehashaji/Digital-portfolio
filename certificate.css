@@ -15,7 +15,7 @@ body {
 }
 
 :root{
-  --gold: #FFD700;
+  --gold: #d4af37;
   --gold-dim: rgba(255,215,0,0.15);
   --card: #101010;
   --card-2: #141414;
@@ -90,7 +90,7 @@ button:hover ~ .custom-cursor {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 600;
-  color: gold;
+  color: #d4af37;
   letter-spacing: 1px;
   cursor: default;
 }
@@ -118,7 +118,7 @@ button:hover ~ .custom-cursor {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: gold;
+  background-color: #d4af37;
   transition: width 0.4s ease;
 }
 .nav-links li a:hover {
@@ -139,7 +139,7 @@ button:hover ~ .custom-cursor {
 .hamburger span {
   width: 28px;
   height: 3px;
-  background-color: gold;
+  background-color: #d4af37;
   border-radius: 2px;
   transition: all 0.4s ease;
 }
@@ -438,7 +438,7 @@ button:hover ~ .custom-cursor {
   transform: translateX(-50%);
   width: 200%; 
   height: 2px;
-  background: #FFD700;
+  background: #d4af37;
   opacity: 0.5;
   border-radius: 2px;
 }

@@ -55,10 +55,10 @@
   <div class="hero-content">
     <div class="hero-text">
       <div class="welcome hero-animate-item">
-        Creative Computing Portfolio
+        Digital Portfolio
       </div>
       <h1 class="hero-animate-item">
-        Hi, I’m <span class="gold-text">Neha Shaji</span>
+        Hi, I’m Neha Shaji</span>
       </h1>
       <h2 class="hero-animate-item">
         Creative Computing Student | Data & ML Enthusiast
@@ -69,7 +69,7 @@
       </p>
 
       <div class="buttons hero-animate-item">
-        <a href="#projects" class="btn gold-btn">
+        <a href="#featured-projects" class="btn gold-btn">
           Explore My Work
         </a>
 
@@ -104,9 +104,9 @@
     <div class="about-content" data-aos="fade-up" data-aos-delay="200">
       <h2>About <span class="gold-text">Me</span></h2>
 
-      <p>
-        I am a <strong><span class="gold">BSc (Hons) Creative Computing</span> student at Bath Spa University RAK</strong>, graduating with <strong><span class="gold">First Class Honours</span></strong>. Through my academic studies and hands-on projects, I have developed a strong interest in <span class="gold">Data Science</span> and <span class="gold">Artificial Intelligence</span>, particularly in <span class="gold">machine learning</span>, <span class="gold">data analytics</span>, and <span class="gold">business intelligence</span> applications.
-      </p>
+<p>
+  I am a <strong><span class="gold">First Class Honours graduate</span></strong> in BSc (Hons) Creative Computing from Bath Spa University RAK. Throughout my undergraduate studies, I explored a broad range of technologies, which gave me a strong creative and technical foundation. Along the way, I discovered a particular interest in <span class="gold">Data Science</span> and <span class="gold">Artificial Intelligence</span>, leading me to specialise in areas such as <span class="gold">machine learning</span>, <span class="gold">data analytics</span>, and <span class="gold">business intelligence</span>.
+</p>
 
       <p>
         Through projects in <span class="gold">predictive modelling</span>, <span class="gold">computer vision</span>, <span class="gold">data analysis</span>, and <span class="gold">full-stack development</span>, I have gained practical experience designing and implementing data-driven applications. I enjoy exploring how data can be used to solve real-world problems and creating solutions that combine analytical thinking with modern technologies.
@@ -120,147 +120,674 @@
   </div>
 </section>
 
-<section id="projects" class="projects-section">  
-  <canvas id="projects-canvas"></canvas>
+<!-- ============================================
+     FEATURED DATA SCIENCE & ML PROJECTS 
+     ============================================ -->
+
+<section id="featured-projects">
   <div class="container">
-    <div class="projects-header">
-      <h2 data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-        My <span>Projects</span>
-      </h2>
-      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-out-cubic">
-        Highlighting my journey through innovative design, coding, and interactive experiences.
+
+    <div class="section-heading" data-aos="fade-up">
+      <h2>Featured <span>Data Science &amp; ML Projects</span></h2>
+      <p>
+       A selection of projects demonstrating practical skills in machine learning, data analytics, business intelligence, and data-driven problem solving using real-world datasets.
       </p>
     </div>
 
-    <div class="projects-row top-row" id="top-row">
-       </div>
+    <!-- PROJECT 1 - Weather Image Classification -->
+    <div class="featured-project left-layout" data-aos="fade-right">
+      <div class="project-content">
+        <span class="project-tag">Deep Learning • Computer Vision</span>
+        <h3>Weather Image Classification</h3>
+        <p>
+          Developed a weather image classification model using MobileNetV2 transfer learning to classify atmospheric conditions from image data. Applied image augmentation, preprocessing, model fine-tuning, and evaluation techniques, achieving approximately 92% validation accuracy.
+        </p>
+        <p class="highlight">
+          Validation performance improved through targeted data augmentation of visually similar weather classes.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>Transfer Learning</span>
+          <span>CNN</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.kaggle.com/code/neha005/weather-image-classification-ml-project">Kaggle</a>
+          <a href="#">Live Demo</a>
+          <button type="button" class="view-details-btn" data-project="weather">View Details</button>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="Images/weather.png" alt="Weather Classification">
+      </div>
+    </div>
+
+    <!-- PROJECT 2 - Olist E-Commerce Analytics -->
+    <div class="featured-project right-layout" data-aos="fade-left">
+      <div class="project-image">
+        <img src="Images/dashboard.jpg" alt="SQL Power BI">
+      </div>
+      <div class="project-content">
+        <span class="project-tag">Data Analytics • Business Intelligence</span>
+        <h3>SQL + Power BI Analytics</h3>
+        <p>
+          An end-to-end analytics pipeline combining relational database modelling, SQL business analysis, and interactive Power BI dashboards.
+        </p>
+        <p class="highlight">
+          Customer segmentation and cohort retention analysis revealed purchasing behaviour patterns, highlighting low repeat-purchase rates and opportunities for improving customer retention.
+        </p>
+        <div class="tech-stack">
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>DAX</span>
+          <span>Power Query</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Nehashaji/Olist-ecommerce-analytics.git">GitHub</a>
+          <button type="button" class="view-details-btn" data-project="olist">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 - Online Purchase Prediction -->
+    <div class="featured-project left-layout" data-aos="fade-right">
+      <div class="project-content">
+        <span class="project-tag">Classification</span>
+        <h3>Online Purchase Prediction</h3>
+        <p>
+          Developed a binary classification model to predict online purchasing behaviour using customer browsing data. Compared multiple machine learning algorithms, applied preprocessing, class balancing, feature engineering, and hyperparameter tuning to identify the most effective predictive approach.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>Random Forest</span>
+          <span>GridSearchCV</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.kaggle.com/code/neha005/02-classification-task">Kaggle</a>
+          <button type="button" class="view-details-btn" data-project="purchase">View Details</button>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="Images/online_purchase.jpg" alt="Purchase Prediction">
+      </div>
+    </div>
+
+    <!-- PROJECT 4 - Sports Car Price Prediction -->
+    <div class="featured-project right-layout" data-aos="fade-left">
+      <div class="project-image">
+        <img src="Images/car.jpg" alt="Sports Car Prediction">
+      </div>
+      <div class="project-content">
+        <span class="project-tag">Regression Analysis</span>
+        <h3>Sports Car Price Prediction</h3>
+        <p>
+          A machine learning regression project predicting sports car prices from performance specifications. The project includes exploratory data analysis, feature engineering, model comparison, and Decision Tree optimisation to identify key price-driving factors.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Matplotlib</span>
+          <span>Decision Tree</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.kaggle.com/code/neha005/01-regression-task">Kaggle</a>
+          <button type="button" class="view-details-btn" data-project="car">View Details</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pd-modal-overlay" id="pdModalOverlay">
+    <div class="pd-modal" role="dialog" aria-modal="true" aria-labelledby="pdModalTitle">
+      <button type="button" class="pd-modal-close" id="pdModalClose" aria-label="Close project details">&times;</button>
+
+      <div class="pd-modal-header">
+        <span class="pd-modal-subtitle" id="pdModalSubtitle"></span>
+        <h3 id="pdModalTitle"></h3>
+        <div class="pd-modal-tags" id="pdModalTags"></div>
+      </div>
+
+      <div class="pd-modal-body" id="pdModalBody"></div>
+    </div>
+  </div>
+
+  <template id="tpl-weather">
+    <p class="pd-tags-src" data-subtitle="CNN &amp; Transfer Learning • Python • TensorFlow • Gradio" data-title="Weather Image Classification" data-tags="Python,TensorFlow,CNN,MobileNetV2,Transfer Learning,Gradio,Data Preprocessing"></p>
+
+    <h4>Project Overview</h4>
+    <p>Developed a computer vision system to automatically classify weather conditions from images into four categories: Cloudy, Rainy, Shine, and Sunrise. The project demonstrates an end-to-end workflow from dataset preprocessing, model training, and evaluation, to interactive deployment, showcasing practical AI application skills.</p>
+
+    <h4>Problem &amp; Objectives</h4>
+    <ul>
+      <li>Automate detection of weather conditions from outdoor images</li>
+      <li>Handle visually similar categories and small dataset limitations</li>
+      <li>Leverage transfer learning to improve accuracy</li>
+      <li>Deploy an interactive, user-friendly interface for real-time predictions</li>
+    </ul>
+
+    <h4>Dataset &amp; Preprocessing</h4>
+    <ul>
+      <li>Kaggle multi-class weather image dataset</li>
+      <li>4 labeled classes: Cloudy, Rainy, Shine, Sunrise</li>
+      <li>Image resizing, normalization, and pixel value scaling</li>
+      <li>Data augmentation: rotation, flipping, zoom for robustness</li>
+      <li>Training/validation split with stratification for class balance</li>
+    </ul>
+
+    <h4>Model Development &amp; Implementation</h4>
+    <ul>
+      <li>Built a baseline CNN to benchmark performance</li>
+      <li>Applied transfer learning with MobileNetV2 (ImageNet pretrained)</li>
+      <li>Trained custom classification layers while freezing base layers initially</li>
+      <li>Fine-tuned deeper convolutional layers with reduced learning rate</li>
+      <li>Hyperparameter experimentation: batch size, dropout, learning rate, optimizer choice</li>
+    </ul>
+
+    <h4>Evaluation &amp; Results</h4>
+    <ul>
+      <li>Monitored performance using accuracy, loss curves, and confusion matrix</li>
+      <li>Calculated Precision, Recall, and F1-Score for each class</li>
+      <li>The final MobileNetV2 model achieved 92% validation accuracy, improving on the baseline CNN</li>
+      <li>Some confusion between Shine and Cloudy, highlighting dataset challenges</li>
+      <li>Implemented iterative improvements based on evaluation insights</li>
+    </ul>
+
+    <h4>Deployment &amp; Application</h4>
+    <p>Deployed the trained model with a Gradio interface allowing users to upload weather images and receive real-time predictions with confidence scores, demonstrating full-stack deployment skills and user-oriented AI application design.</p>
+
+    <h4>Key Learning &amp; Skills Demonstrated</h4>
+    <ul>
+      <li>End-to-end computer vision development from preprocessing to deployment</li>
+      <li>Practical experience with CNNs, transfer learning, and fine-tuning pretrained models</li>
+      <li>Model evaluation using metrics and confusion matrices for actionable insights</li>
+      <li>Data augmentation techniques to improve generalization</li>
+      <li>Deploying ML models with interactive user interfaces</li>
+      <li>Problem-solving for small datasets, visually similar classes, and performance optimization</li>
+    </ul>
+
+    <h4>Reflection</h4>
+    <p>This project strengthened my ability to apply deep learning to real-world problems, enhanced my understanding of model evaluation, and demonstrated how to deliver functional AI solutions that are both accurate and user-friendly. I learned to balance technical implementation with usability and performance optimization.</p>
+  </template>
+
+  <template id="tpl-olist">
+    <p class="pd-tags-src" data-subtitle="SQL &amp; Power BI • Business Intelligence • Data Analytics" data-title="Olist E-Commerce Analytics" data-tags="MySQL,SQL,Power BI,DAX,Power Query,Window Functions,Cohort Analysis"></p>
+
+    <h4>Project Overview</h4>
+    <p>A real-world business intelligence workflow transforming raw relational e-commerce data into validated business insights using SQL and Power BI. Using the Brazilian Olist E-Commerce dataset — 99,441 marketplace orders — the project explores customer behaviour, sales performance, seller trends, and delivery performance through data validation, KPI analysis, advanced SQL techniques, cohort retention analysis, and interactive dashboard development.</p>
+
+    <h4>Tools &amp; Technologies</h4>
+    <ul>
+      <li>MySQL</li>
+      <li>SQL (Joins, CTEs, Window Functions, Aggregations &amp; Subqueries)</li>
+      <li>Power BI (Data Modelling, DAX &amp; Dashboard Development)</li>
+      <li>Power Query</li>
+    </ul>
+
+    <h4>Analytical Workflow</h4>
+    <ul>
+      <li>Data exploration and validation, including referential integrity checks</li>
+      <li>Business KPI development</li>
+      <li>Customer behaviour, product, seller, and delivery performance analysis</li>
+      <li>Advanced SQL using Window Functions</li>
+      <li>Monthly cohort retention analysis</li>
+      <li>Power BI dashboard development using analytical views, across four pages: Executive Overview, Customer Analysis, Products &amp; Sellers, and Delivery Performance</li>
+    </ul>
+
+    <h4>Project Highlights</h4>
+    <ul>
+      <li>Built an end-to-end analytics pipeline on 99,441 marketplace orders</li>
+      <li>Designed a four-page interactive Power BI dashboard for business reporting and decision-making</li>
+      <li>Applied Window Functions including RANK(), ROW_NUMBER(), LAG(), NTILE(), and cumulative aggregations using SUM() OVER()</li>
+      <li>Implemented customer segmentation using both fixed business thresholds and data-driven quartile analysis</li>
+      <li>Created analytical Power BI views to simplify dashboard modelling and prevent duplicate-counting issues</li>
+      <li>Performed referential integrity validation and documented source-data limitations</li>
+    </ul>
+
+    <h4>Key Business Insights</h4>
+    <ul>
+      <li>Approximately 96.88% of customers made only one purchase, while repeat customers account for just 3.12% of the customer base — confirmed through both repeat-purchase calculations and cohort retention analysis</li>
+      <li>Delivery performance is strong overall: 93.23% of completed orders arrived on or before the estimated date. Ceará had the highest late-delivery rate (~14%), while São Paulo had one of the lowest (under 5%) despite the highest order volume</li>
+      <li>Concentrated seller performance: the top 10 sellers represent just 0.3% of the seller base but contribute 13.15% of total item revenue</li>
+      <li>Revenue and order volume both peaked in November 2017, reflecting Brazilian Black Friday demand</li>
+      <li>São Paulo is the largest customer region, accounting for 15.63% of all orders</li>
+      <li>Cohort retention analysis confirms significant customer drop-off after the initial purchase</li>
+    </ul>
+
+    <h4>SQL Techniques Used</h4>
+    <ul>
+      <li>Common Table Expressions (CTEs), Window Functions, Aggregate Functions, Subqueries, Multi-table Joins</li>
+      <li>Cohort Analysis, Customer Segmentation, Ranking and Quartile Analysis</li>
+      <li>Referential Integrity Validation, Analytical View Creation, Time-based Analysis</li>
+    </ul>
+
+    <h4>Technical Implementation Notes</h4>
+    <ul>
+      <li>Customer-level analysis performed using customer_unique_id rather than the order-level customer_id</li>
+      <li>Payment values aggregated at the order level before KPI calculations to avoid duplicate-counting</li>
+      <li>Customer spend segmentation performed using NTILE(4) quartile analysis</li>
+      <li>Window Functions used to rank sellers, products, and customers across multiple business metrics</li>
+      <li>Referential integrity validation identified 1,604 order items (1.4% of total, R$209,666.09 in item revenue) with no matching product record — excluded from category-level analyses without affecting headline KPIs</li>
+    </ul>
+
+    <p>Full SQL scripts, the Power BI file, and setup instructions are available on GitHub.</p>
+  </template>
+
+  <template id="tpl-purchase">
+    <p class="pd-tags-src" data-subtitle="Machine Learning Classification • Python • EDA &amp; Model Evaluation" data-title="Online Purchase Prediction" data-tags="Python,Pandas,NumPy,Scikit-learn,Logistic Regression,KNN,Decision Trees,Random Forest,EDA &amp; Visualization"></p>
+
+    <h4>Project Overview</h4>
+    <p>This project focused on predicting whether an online user would make a purchase. The workflow covered dataset exploration, preprocessing, EDA, model selection, hyperparameter tuning, evaluation, and reflection on model performance and limitations.</p>
+
+    <h4>Data Preprocessing</h4>
+    <ul>
+      <li>Encoded categorical features, scaled numerical variables, standardized Boolean attributes</li>
+      <li>Handled class imbalance via oversampling to improve model fairness and accuracy</li>
+      <li>Ensured consistent input formats across models for reliable performance</li>
+    </ul>
+
+    <h4>Exploratory Data Analysis (EDA)</h4>
+    <ul>
+      <li>Visualized user behaviour patterns to guide feature selection and hypothesis formation</li>
+      <li>Observed correlations — e.g. more time on product pages linked to purchases</li>
+      <li>Identified non-purchase indicators such as high bounce and exit rates</li>
+      <li>Used graphical insights to inform preprocessing and model choices</li>
+    </ul>
+
+    <h4>Model Development &amp; Evaluation</h4>
+    <ul>
+      <li>Applied multiple models: Logistic Regression, K-Nearest Neighbors, Decision Trees, Random Forests</li>
+      <li>Linear models prioritized interpretability; tree-based models captured non-linear interactions</li>
+      <li>Hyperparameter tuning balanced generalization and overfitting</li>
+      <li>Random Forest achieved the highest F1-score, demonstrating the practical benefits of ensemble learning</li>
+    </ul>
+
+    <h4>Critical Reflection &amp; Skills Demonstrated</h4>
+    <ul>
+      <li>Structured approach from data exploration to model evaluation</li>
+      <li>Addressed class imbalance and preprocessing challenges</li>
+      <li>Used EDA to inform feature engineering and model selection</li>
+      <li>Experience across multiple modeling techniques and hyperparameter tuning</li>
+      <li>Refined understanding of real-world trade-offs between interpretability and predictive performance</li>
+    </ul>
+  </template>
+
+  <template id="tpl-car">
+    <p class="pd-tags-src" data-subtitle="Data Cleaning, Visualization &amp; Machine Learning • Python • Regression Analysis" data-title="Sports Car Price Prediction" data-tags="Python,Pandas,NumPy,Matplotlib,Seaborn,Scikit-learn,Decision Trees,Linear Regression"></p>
+
+    <h4>Project Overview</h4>
+    <p>This project aimed to predict sports car prices using structured data analysis and machine learning. The workflow included thorough data exploration, cleaning, visualization, feature engineering, model selection, tuning, and critical evaluation.</p>
+
+    <h4>Data Cleaning &amp; Preprocessing</h4>
+    <ul>
+      <li>Identified and handled skewed distributions, missing values, and inconsistent numerical formatting</li>
+      <li>Converted numeric-like strings to proper numerical types</li>
+      <li>Applied median imputation for missing values to maintain model stability</li>
+    </ul>
+
+    <h4>Data Visualization &amp; Exploration</h4>
+    <ul>
+      <li>Used scatter plots, histograms, and correlation analysis to detect patterns and dependencies</li>
+      <li>Identified right-skewed variables like horsepower and pricing</li>
+      <li>Visual insights guided preprocessing priorities and feature selection</li>
+    </ul>
+
+    <h4>Model Development &amp; Evaluation</h4>
+    <ul>
+      <li>Implemented a baseline Linear Regression model for interpretability and benchmarking</li>
+      <li>Developed Decision Tree Regression to capture non-linear relationships</li>
+      <li>Applied hyperparameter tuning to balance generalization and model complexity</li>
+      <li>Used cross-validation and residual analysis to assess model reliability and avoid overfitting</li>
+    </ul>
+
+    <h4>Critical Reflection &amp; Skills Demonstrated</h4>
+    <ul>
+      <li>Structured, end-to-end approach from data exploration to model deployment</li>
+      <li>Practical experience handling real-world dataset issues: skewness, missing values, inconsistencies</li>
+      <li>Statistical reasoning and visualization to guide preprocessing and modelling decisions</li>
+      <li>Model selection, tuning, and critical evaluation through iterative experimentation</li>
+      <li>Understanding of model limitations and future improvement areas (ensemble methods, feature engineering)</li>
+    </ul>
+  </template>
+
+</section>
+
+<!-- ============================================
+     CREATIVE COMPUTING FOUNDATION —
+     ============================================ -->
+
+<section id="creative-computing" class="cc-section" aria-label="Creative Computing foundation">
+
+  <canvas id="cc-dots-canvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+
+    <div class="cc-heading" data-aos="fade-up">
+      <span class="cc-eyebrow">Multidisciplinary Foundation</span>
+      <h2>Creative Computing <span>Foundation</span></h2>
+      <p>Exploring design, development, and interactive technologies across Creative Computing.</p>
+    </div>
+
+    <div class="cc-bento">
+
+      <a href="projects.html#web-dev"
+         class="cc-tile cc-tile-web"
+         data-aos="fade-up" data-aos-delay="0">
+        <img src="Images/Web_development.jpg" alt="Full-Stack and Front-End Development" loading="lazy">
+        <span class="cc-tile-overlay"><span class="cc-tile-title">Web Development</span></span>
+      </a>
+
+      <a href="projects.html#figma-design"
+         class="cc-tile cc-tile-uiux"
+         data-aos="fade-up" data-aos-delay="100">
+        <img src="Images/ui_ux.jpg" alt="UI and UX Design" loading="lazy">
+        <span class="cc-tile-overlay"><span class="cc-tile-title">UI/UX & Prototyping</span></span>
+      </a>
+
+      <a href="projects.html#mobile-apps"
+         class="cc-tile cc-tile-mobile"
+         data-aos="fade-up" data-aos-delay="200">
+        <img src="Images/moblie_development.jpg" alt="Mobile Development" loading="lazy">
+        <span class="cc-tile-overlay"><span class="cc-tile-title">Mobile Development</span></span>
+      </a>
+
+      <a href="projects.html#game-dev"
+         class="cc-tile cc-tile-unity"
+         data-aos="fade-up" data-aos-delay="300">
+        <img src="Images/game_development.jpg" alt="Unity Game Development" loading="lazy">
+        <span class="cc-tile-overlay"><span class="cc-tile-title">Unity Game Development</span></span>
+      </a>
+
+      <a href="projects.html#physical-computing"
+         class="cc-tile cc-tile-physical"
+         data-aos="fade-up" data-aos-delay="400">
+        <img src="Images/physical_computing.jpg" alt="Physical Computing" loading="lazy">
+        <span class="cc-tile-overlay"><span class="cc-tile-title">Physical Computing</span></span>
+      </a>
+
+      <a href="projects.html#creative-coding"
+         class="cc-tile cc-tile-creative"
+         data-aos="fade-up" data-aos-delay="500">
+        <img src="Images/creative_coding.jpg" alt="Creative Coding and Interactive Systems" loading="lazy">
+        <span class="cc-tile-overlay"><span class="cc-tile-title">Creative Coding & Interactive Systems</span></span>
+      </a>
+
+    </div>
+
   </div>
 </section>
 
+<!-- ============================================
+     SKILLS SECTION 
+     ============================================ -->
+
 <section id="skills" class="skills-section">
   <div class="container">
+
     <header class="skills-header" data-aos="fade-down">
       <h2>My <span>Skills</span></h2>
       <p class="subtitle" data-aos="fade-up" data-aos-delay="150">
-        Demonstrated expertise in programming, data analysis, machine learning, and creative digital solutions across web and interactive platforms
+        <p class="subtitle">
+Practical skills in data science, machine learning, and software development built through academic and real-world projects.
+</p>
       </p>
     </header>
 
-    <div class="skills-row">
-      <div class="skill-card big-card" data-aos="fade-left">
-        <h3>Data Science & Machine Learning</h3>
-        <div class="tools">
-          <div class="tool" data-name="Python"><img src="icons/python.png" alt="Python"></div>
-          <div class="tool" data-name="Pandas"><img src="icons/pandas.png" alt="Pandas"></div>
-          <div class="tool" data-name="NumPy"><img src="icons/numpy.png" alt="NumPy"></div>
-          <div class="tool" data-name="Scikit-learn"><img src="icons/Scikit.png" alt="Scikit-learn"></div>
-          <div class="tool" data-name="Matplotlib"><img src="icons/matplotlib.png" alt="Matplotlib"></div>
-          <div class="tool" data-name="Seaborn"><img src="icons/seabourn.svg" alt="Seaborn"></div>
-          <div class="tool" data-name="SQL"><img src="icons/sql.png" alt="SQL"></div>
-          <div class="tool" data-name="TensorFlow"><img src="icons/tensorflow.png" alt="TensorFlow"></div>
+    <!-- ================= HERO CARD ================= -->
+    <div class="skill-hero" data-aos="fade-up">
+
+      <span class="skill-hero-badge">Primary Specialisation</span>
+      <h3>Data Science &amp; Machine Learning</h3>
+      <p class="skill-hero-desc">
+        Building practical experience in data analysis, machine learning,
+and deep learning through projects involving predictive modelling,
+computer vision, and business analytics.
+      </p>
+
+      <div class="capability-grid">
+
+        <div class="capability">
+          <div class="capability-head">
+            <span class="capability-icon"><i class="fa-solid fa-code"></i></span>
+            <span class="capability-label">Programming</span>
+          </div>
+          <div class="capability-tags">
+            <span class="tag tag-icon"><img src="icons/python.png" alt="">Python</span>
+            <span class="tag tag-icon"><img src="icons/sql.png" alt="">SQL</span>
+          </div>
+        </div>
+
+        <div class="capability">
+          <div class="capability-head">
+            <span class="capability-icon"><i class="fa-solid fa-broom"></i></span>
+            <span class="capability-label">Data Science</span>
+          </div>
+          <div class="capability-tags">
+            <span class="tag tag-icon"><img src="icons/pandas.png" alt="">Pandas</span>
+            <span class="tag tag-icon"><img src="icons/numpy.png" alt="">NumPy</span>
+            <span class="tag">Data Cleaning & Preprocessing</span>
+            <span class="tag tag-icon"><img src="icons/EDA.png" alt="">Exploratory Data Analysis</span>
+            <span class="tag">Feature Engineering</span>
+            <span class="tag tag-icon"><img src="icons/matplotlib.png" alt="">Matplotlib</span>
+            <span class="tag tag-icon"><img src="icons/seabourn.svg" alt="">Seaborn</span>
+          </div>
+        </div>
+
+        <div class="capability">
+          <div class="capability-head">
+            <span class="capability-icon"><i class="fa-solid fa-diagram-project"></i></span>
+            <span class="capability-label">Machine Learning</span>
+          </div>
+          <div class="capability-tags">
+            <span class="tag tag-icon"><img src="icons/Scikit.png" alt="">Scikit-learn</span>
+            <span class="tag">Classification</span>
+            <span class="tag">Regression</span>
+            <span class="tag">Model Evaluation</span>
+            <span class="tag">Hyperparameter Tuning</span>
+            <span class="tag">Cross-Validation</span>
+          </div>
+        </div>
+
+        <div class="capability">
+          <div class="capability-head">
+            <span class="capability-icon"><i class="fa-solid fa-brain"></i></span>
+            <span class="capability-label">Deep Learning</span>
+          </div>
+          <div class="capability-tags">
+            <span class="tag tag-icon"><img src="icons/tensorflow.png" alt="">TensorFlow</span>
+            <span class="tag">CNN</span>
+            <span class="tag">Transfer Learning</span>
+          </div>
+        </div>
+
+        <div class="capability">
+          <div class="capability-head">
+            <span class="capability-icon"><i class="fa-solid fa-chart-column"></i></span>
+            <span class="capability-label">Business Analytics</span>
+          </div>
+          <div class="capability-tags">
+    <span class="tag">Advanced SQL</span>
+    <span class="tag tag-icon"><img src="icons/PowerBi.png" alt=""> Power BI</span>
+    <span class="tag">DAX</span>
+    <span class="tag">Power Query</span>
+    <span class="tag">Customer Segmentation</span>
+    <span class="tag">Cohort Analysis</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="skill-card big-card" data-aos="fade-right">
-        <h3>Core Web Development</h3>
+    <!-- ================= SECONDARY ROW ================= -->
+    <div class="skills-row">
+
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="skill-card-badge">Supporting Skill</span>
+        <h4>Web Development Foundation</h4>
         <div class="tools">
           <div class="tool" data-name="HTML"><img src="icons/html.png" alt="HTML"></div>
           <div class="tool" data-name="CSS"><img src="icons/css.png" alt="CSS"></div>
           <div class="tool" data-name="JavaScript"><img src="icons/javascript.png" alt="JavaScript"></div>
-          <div class="tool" data-name="SCSS"><img src="icons/sass.png" alt="SCSS"></div>
           <div class="tool" data-name="React"><img src="icons/react.png" alt="React"></div>
           <div class="tool" data-name="Node.js"><img src="icons/node.png" alt="Node.js"></div>
           <div class="tool" data-name="MongoDB"><img src="icons/mongodb.png" alt="MongoDB"></div>
+          <div class="tool" data-name="GitHub"><img src="icons/github.png" alt="GitHub"></div>
         </div>
       </div>
-    </div>
 
-    <div class="skills-row">
-      <div class="skill-card big-card" data-aos="fade-right">
-        <h3>Creative & Development Tools</h3>
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="skill-card-badge">Additional Strength</span>
+        <h4>Creative Computing Background</h4>
         <div class="tools">
           <div class="tool" data-name="Figma"><img src="icons/figma.png" alt="Figma"></div>
           <div class="tool" data-name="Canva"><img src="icons/canva.png" alt="Canva"></div>
+          <div class="tool" data-name="Unity"><img src="icons/unity.png" alt="Unity"></div>
+          <div class="tool" data-name="Android Studio"><img src="icons/android studio.png" alt="Android Studio"></div>
           <div class="tool" data-name="p5.js"><img src="icons/p5.png" alt="p5.js"></div>
-          <div class="tool" data-name="Unity - Game Development"><img src="icons/unity.png" alt="Unity"></div>
-          <div class="tool" data-name="Android Studio - Mobile Development"><img src="icons/android studio.png" alt="Android Studio"></div>
-          <div class="tool" data-name="Arduino - Physical Computing"><img src="icons/arduino.png" alt="Arduino"></div>
+          <div class="tool" data-name="Arduino"><img src="icons/arduino.png" alt="Arduino"></div>
         </div>
       </div>
 
-      <div class="skill-card big-card" data-aos="fade-left">
-        <h3>Experimentation & Version Control</h3>
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="skill-card-badge">Tools &amp; Platforms</span>
+        <h4>Development Tools & Platforms</h4>
         <div class="tools">
-          <div class="tool" data-name="GitHub"><img src="icons/github.png" alt="GitHub"></div>
+          <div class="tool" data-name="MySQL Workbench"><img src="icons/MySQL.jpg" alt="MySQL Workbench"></div>
           <div class="tool" data-name="Jupyter Notebook"><img src="icons/jupy.png" alt="Jupyter Notebook"></div>
           <div class="tool" data-name="Kaggle"><img src="icons/kaggle.png" alt="Kaggle"></div>
           <div class="tool" data-name="Microsoft Excel"><img src="icons/excel.png" alt="Microsoft Excel"></div>
-        </div> 
+        </div>
       </div>
+
     </div>
+
   </div>
 </section>
+
+<!-- ============================================
+     CERTIFICATES
+     ============================================ -->
 
 <section id="certificates" class="certificates-section">
+
+  <canvas id="cert-particles-canvas"></canvas>
+
   <div class="container">
-    <h2>My <span>Certificates</span></h2>
-    <p class="subtitle">
-      A showcase of my most valuable achievements & recognitions.
-    </p>
+
+    <header class="certificates-header" data-aos="fade-down">
+      <h2>My <span>Certificates</span></h2>
+      <p class="subtitle">
+        Verified credentials highlighting my expertise and continuous learning journey.
+      </p>
+    </header>
 
     <div class="certificates-grid">
-      <div class="certificate-card">
-        <img src="Certificates/Python for DS_ Certificate.png" alt="IBM Python for Data Science">
-        <h3>IBM Python for Data Science</h3>
+
+      <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="cert-badge">Academic</span>
+        <div class="cert-image">
+          <img src="Certificates/Certificate of Academic Excellence.png" alt="Certificate of Academic Excellence">
+        </div>
+        <div class="cert-body">
+          <h3>Certificate of Academic Excellence</h3>
+          <p class="cert-issuer">Bath Spa University RAK</p>
+          <div class="cert-tags">
+            <span>Top Performance</span>
+            <span>Honors</span>
+          </div>
+          <a href="Certificates/Certificate of Academic Excellence.png" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
-      <div class="certificate-card">
-        <img src="Certificates/intermediate to ml.png" alt="Kaggle Intermediate Machine Learning Certificate">
-        <h3>Kaggle - Intermediate Machine Learning</h3>
+
+      <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="cert-badge">Data</span>
+        <div class="cert-image">
+          <img src="Certificates/Python for DS_ Certificate.png" alt="IBM Python for Data Science">
+        </div>
+        <div class="cert-body">
+          <h3>IBM &ndash; Python for Data Science</h3>
+          <p class="cert-issuer">IBM</p>
+          <div class="cert-tags">
+            <span>Python</span>
+            <span>NumPy</span>
+            <span>Pandas</span>
+          </div>
+          <a href="Certificates/Python for DS_ Certificate.png" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
-      <div class="certificate-card">
-        <img src="Certificates/Certificate of Academic Excellence.png" alt="Certificate of Academic Excellence">
-        <h3>Certificate of Academic Excellence</h3>
+
+      <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="cert-badge">ML</span>
+        <div class="cert-image">
+          <img src="Certificates/intermediate to ml.png" alt="Kaggle Intermediate Machine Learning Certificate">
+        </div>
+        <div class="cert-body">
+          <h3>Kaggle &ndash; Intermediate Machine Learning</h3>
+          <p class="cert-issuer">Kaggle</p>
+          <div class="cert-tags">
+            <span>Feature Engineering</span>
+            <span>Model Optimization</span>
+            <span>XGBoost</span>
+          </div>
+          <a href="Certificates/intermediate to ml.png" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
+
     </div>
 
-    <div class="view-more">
-      <a href="certificate.html" class="btn explicit-view-btn">View More</a>
+    <div class="view-more" data-aos="fade-up">
+      <a href="certificate.html" class="btn explicit-view-btn">View All Certificates</a>
     </div>
+
   </div>
-  <canvas id="particles-canvas"></canvas>
 </section>
+
+<!-- ============================================
+     CONTACT SECTION
+     ============================================ -->
 
 <section class="contact-section" id="contact">
   <div class="container">
     <h2>Get in <span>Touch</span></h2>
     <div class="underline"></div>
-    <p class="contact-sub">I’d love to hear from you! Connect with me via email or socials.</p>
+    <p class="contact-sub">I&rsquo;d love to hear from you! Connect with me via email or socials.</p>
 
     <div class="contact-cards">
-      <div class="contact-card">
-        <i class="fas fa-envelope"></i>
+
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="contact-icon-badge">
+          <i class="fas fa-envelope"></i>
+        </div>
         <h3>Email</h3>
         <a href="mailto:nehavshaji@gmail.com">nehavshaji@gmail.com</a>
       </div>
-      <div class="contact-card">
-        <i class="fab fa-linkedin"></i>
+
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="contact-icon-badge">
+          <i class="fab fa-linkedin"></i>
+        </div>
         <h3>LinkedIn</h3>
         <a href="https://www.linkedin.com/in/nehavshaji/" target="_blank">linkedin.com/in/nehavshaji</a>
       </div>
-      <div class="contact-card">
-        <i class="fab fa-youtube"></i>
+
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="contact-icon-badge">
+          <i class="fab fa-youtube"></i>
+        </div>
         <h3>YouTube</h3>
         <a href="https://www.youtube.com/@nehashaji1748" target="_blank">youtube.com/@nehashaji1748</a>
       </div>
+
     </div>
   </div>
 </section>
-
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
       <h2>Neha <span>Shaji</span></h2>
-      <p>Building creative solutions with design & code.</p>
+      <p>Transforming data into meaningful insights through machine learning and intelligent technologies.</p>
     </div>
     <div class="footer-links">
       <h3>Quick Links</h3>

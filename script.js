@@ -137,110 +137,318 @@ function animateAboutParticles() {
 initAboutParticles();
 animateAboutParticles();
 
-// ==================== Project section ====================
-const projectsData = [
-  { 
-    title: 'Data Exploration & Machine Learning', 
-    description: 'Hands-on machine learning projects using Python, including predictive modeling, regression and classification tasks, CNN experimentation, and interactive data visualizations that demonstrate applied data-driven insights.',
-    image: 'Images/data.gif', 
-    link: 'projects.html#data-analytics' 
-  },
-  { 
-    title: 'Full-Stack Web & UI/UX Design', 
-    description: 'Full-stack web projects including client-based and academic builds, complemented with professional Figma UI/UX designs, wireframes, and responsive web applications, showcasing practical application of web technologies.', 
-    image: 'Images/web-development.gif', 
-    link: 'projects.html#web-dev' 
-  },
-  { 
-    title: 'Interactive & Creative Media', 
-    description: 'Experimental projects exploring physical computing, mobile development, game design, creative coding, and conversational systems. Demonstrates technical creativity, interactive design, and innovative problem-solving across both digital and physical environments.', 
-    image: 'Images/creative-coding.gif', 
-    link: 'projects.html#interactive-media' 
+
+/* ============================================
+ Glowing Dots Background
+   ============================================ */
+
+(function () {
+  const canvas = document.getElementById('cc-dots-canvas');
+  if (!canvas) return;
+
+  const section = canvas.closest('.cc-section');
+  if (!section) return;
+
+  const ctx = canvas.getContext('2d');
+  canvas.style.opacity = '0.5';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isSmallScreen = window.matchMedia('(max-width: 700px)').matches;
+
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+  const DOT_COUNT = isSmallScreen ? 28 : 55;
+
+  let width = 0, height = 0;
+  let dots = [];
+  let running = false;
+  let rafId = null;
+  let startTime = null;
+
+  function resize() {
+    width = section.offsetWidth;
+    height = section.offsetHeight;
+    canvas.width = width * DPR;
+    canvas.height = height * DPR;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    buildDots();
   }
-];
 
-const topRow = document.getElementById('top-row');
-
-projectsData.forEach((project, index) => {
-  const card = document.createElement('div');
-  card.classList.add('project-card');
-  card.setAttribute('data-aos', 'fade-up');
-  card.setAttribute('data-aos-delay', `${index * 150}`);
-  card.innerHTML = `
-    <div class="project-image">
-      <img src="${project.image}" alt="${project.title}">
-    </div>
-    <div class="project-content">
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <a href="${project.link}" class="btn">View More</a>
-    </div>
-  `;
-  topRow.appendChild(card);
-});
-
-// Initialize AOS
-AOS.init({
-  once: true,
-  duration: 1000,
-  easing: 'ease-out-cubic',
-});
-
-// ==================== Certificates Section Particles ====================
-const canvas = document.getElementById("particles-canvas");
-const ctx = canvas.getContext("2d");
-
-let particlesArray;
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = canvas.parentElement.offsetHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-class Particle {
-  constructor(x, y, size, speedX, speedY) {
-    this.x = x;
-    this.y = y;
-    this.size = size;
-    this.speedX = speedX;
-    this.speedY = speedY;
+  function buildDots() {
+    dots = Array.from({ length: DOT_COUNT }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 1.8 + 0.9,
+      // slow constant drift in a random direction
+      vx: (Math.random() - 0.5) * 6,  // px per second
+      vy: (Math.random() - 0.5) * 6,
+      baseAlpha: Math.random() * 0.4 + 0.4,
+      twinklePeriod: Math.random() * 4 + 4, // seconds
+      twinklePhase: Math.random() * Math.PI * 2
+    }));
   }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-  }
-  draw() {
+
+  function drawDot(x, y, r, alpha) {
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255, 215, 0, 0.7)";
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(228, 193, 112, ${alpha})`;
+    ctx.shadowColor = 'rgba(212, 175, 55, 0.9)';
+    ctx.shadowBlur = 9;
     ctx.fill();
+    ctx.shadowBlur = 0;
   }
-}
 
-function initParticles() {
-  particlesArray = [];
-  const numberOfParticles = 60;
-  for (let i = 0; i < numberOfParticles; i++) {
-    const size = Math.random() * 3 + 1;
-    const x = Math.random() * canvas.width;
-    const y = Math.random() * canvas.height;
-    const speedX = (Math.random() - 0.5) * 1;
-    const speedY = (Math.random() - 0.5) * 1;
-    particlesArray.push(new Particle(x, y, size, speedX, speedY));
+  function drawStaticFrame() {
+    ctx.clearRect(0, 0, width, height);
+    dots.forEach(d => drawDot(d.x, d.y, d.r, d.baseAlpha));
   }
-}
-initParticles();
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particlesArray.forEach(p => {
-    p.update();
-    p.draw();
+  function step(timestamp) {
+    if (startTime === null) startTime = timestamp;
+    const elapsed = (timestamp - startTime) / 1000;
+
+    ctx.clearRect(0, 0, width, height);
+
+    dots.forEach(d => {
+      // drift, frame-rate independent — 1/60s reference step
+      d.x += d.vx / 60;
+      d.y += d.vy / 60;
+
+      // wrap around the edges with a little padding
+      if (d.x < -10) d.x = width + 10;
+      if (d.x > width + 10) d.x = -10;
+      if (d.y < -10) d.y = height + 10;
+      if (d.y > height + 10) d.y = -10;
+
+      const twinkle = 0.5 + 0.5 * Math.sin(elapsed * (2 * Math.PI / d.twinklePeriod) + d.twinklePhase);
+      const alpha = d.baseAlpha * (0.5 + 0.5 * twinkle);
+
+      drawDot(d.x, d.y, d.r, alpha);
+    });
+
+    if (running) rafId = requestAnimationFrame(step);
+  }
+
+  function start() {
+    if (running || dots.length === 0) return;
+    running = true;
+    startTime = null;
+    rafId = requestAnimationFrame(step);
+  }
+
+  function stop() {
+    running = false;
+    if (rafId) cancelAnimationFrame(rafId);
+  }
+
+  resize();
+
+  if (reduceMotion) {
+    drawStaticFrame();
+  } else {
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(entry => (entry.isIntersecting ? start() : stop())),
+      { threshold: 0.05 }
+    );
+    observer.observe(section);
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      resize();
+      if (reduceMotion) drawStaticFrame();
+    }, 200);
   });
-  requestAnimationFrame(animate);
-}
-animate();
+})();
+
+/* ============================================
+   PROJECT DETAILS MODAL
+   =================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('pdModalOverlay');
+  const closeBtn = document.getElementById('pdModalClose');
+  const modalTitle = document.getElementById('pdModalTitle');
+  const modalSubtitle = document.getElementById('pdModalSubtitle');
+  const modalTags = document.getElementById('pdModalTags');
+  const modalBody = document.getElementById('pdModalBody');
+
+  if (!overlay) return;
+
+  let lastFocusedEl = null;
+
+  function openModal(projectKey) {
+    const template = document.getElementById('tpl-' + projectKey);
+    if (!template) return;
+
+    const fragment = template.content.cloneNode(true);
+
+    // the first element carries the title/subtitle/tags as data attributes
+    const meta = fragment.querySelector('.pd-tags-src');
+    if (meta) {
+      modalTitle.textContent = meta.dataset.title || '';
+      modalSubtitle.textContent = meta.dataset.subtitle || '';
+      modalTags.innerHTML = (meta.dataset.tags || '')
+        .split(',')
+        .map(tag => `<span>${tag.trim()}</span>`)
+        .join('');
+      meta.remove();
+    }
+
+    modalBody.innerHTML = '';
+    modalBody.appendChild(fragment);
+
+    lastFocusedEl = document.activeElement;
+    overlay.classList.add('active');
+    document.body.classList.add('pd-modal-open');
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    document.body.classList.remove('pd-modal-open');
+    if (lastFocusedEl) lastFocusedEl.focus();
+  }
+
+  // open on any "View Details" button
+  document.querySelectorAll('.view-details-btn').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.project));
+  });
+
+  // close via the X button
+  closeBtn.addEventListener('click', closeModal);
+
+  // close by clicking the dark overlay (but not the modal itself)
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  // close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
+
+/* ============================================
+   CERTIFICATES SECTION
+   ============================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('cert-particles-canvas');
+
+  if (!canvas) {
+    console.warn(
+      '[certificates particles] No element with id="cert-particles-canvas" found.'
+    );
+    return;
+  }
+
+  const section = canvas.closest('.certificates-section');
+  if (!section) {
+    console.warn('[certificates particles] Canvas found, but not inside .certificates-section.');
+    return;
+  }
+
+  const ctx = canvas.getContext('2d');
+
+  // near-full — brightness is now controlled per-dot below,
+  // not stacked on top of a dim canvas-level opacity
+  canvas.style.opacity = '0.9';
+
+  const isSmallScreen = window.matchMedia('(max-width: 700px)').matches;
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+  const DOT_COUNT = isSmallScreen ? 30 : 60;
+
+  let width = 0, height = 0;
+  let dots = [];
+  let running = false;
+  let rafId = null;
+  let startTime = null;
+
+  function resize() {
+    width = section.offsetWidth;
+    height = section.offsetHeight;
+    canvas.width = width * DPR;
+    canvas.height = height * DPR;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    buildDots();
+  }
+
+  function buildDots() {
+    dots = Array.from({ length: DOT_COUNT }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 1.6 + 1.1,
+      vx: (Math.random() - 0.5) * 10,   
+      vy: (Math.random() - 0.5) * 10,
+      baseAlpha: Math.random() * 0.35 + 0.55,
+      twinklePeriod: Math.random() * 3 + 3,     
+      twinklePhase: Math.random() * Math.PI * 2
+    }));
+  }
+
+  function drawDot(x, y, r, alpha) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(230, 195, 110, ${alpha})`;
+    ctx.shadowColor = 'rgba(212, 175, 55, 0.9)';
+    ctx.shadowBlur = 9;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  function step(timestamp) {
+    if (startTime === null) startTime = timestamp;
+    const elapsed = (timestamp - startTime) / 1000;
+
+    ctx.clearRect(0, 0, width, height);
+
+    dots.forEach(d => {
+      d.x += d.vx / 60;
+      d.y += d.vy / 60;
+
+      if (d.x < -10) d.x = width + 10;
+      if (d.x > width + 10) d.x = -10;
+      if (d.y < -10) d.y = height + 10;
+      if (d.y > height + 10) d.y = -10;
+
+      const twinkle = 0.6 + 0.4 * Math.sin(elapsed * (2 * Math.PI / d.twinklePeriod) + d.twinklePhase);
+      drawDot(d.x, d.y, d.r, d.baseAlpha * twinkle);
+    });
+
+    if (running) rafId = requestAnimationFrame(step);
+  }
+
+  function start() {
+    if (running || dots.length === 0) return;
+    running = true;
+    startTime = null;
+    rafId = requestAnimationFrame(step);
+  }
+
+  function stop() {
+    running = false;
+    if (rafId) cancelAnimationFrame(rafId);
+  }
+
+  resize();
+
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(entry => (entry.isIntersecting ? start() : stop())),
+    { threshold: 0.05 }
+  );
+  observer.observe(section);
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 200);
+  });
+});
