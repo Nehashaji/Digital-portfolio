@@ -153,7 +153,7 @@
         </div>
         <div class="project-links">
           <a href="https://www.kaggle.com/code/neha005/weather-image-classification-ml-project">Kaggle</a>
-          <a href="#">Live Demo</a>
+          <a href="https://huggingface.co/spaces/NehaShaji/weather-classifier">Live Demo</a>
           <button type="button" class="view-details-btn" data-project="weather">View Details</button>
         </div>
       </div>
@@ -255,63 +255,63 @@
     </div>
   </div>
 
-  <template id="tpl-weather">
-    <p class="pd-tags-src" data-subtitle="CNN &amp; Transfer Learning • Python • TensorFlow • Gradio" data-title="Weather Image Classification" data-tags="Python,TensorFlow,CNN,MobileNetV2,Transfer Learning,Gradio,Data Preprocessing"></p>
+<template id="tpl-weather">
+  <p class="pd-tags-src" data-subtitle="CNN &amp; Transfer Learning • Python • TensorFlow • Gradio" data-title="Weather Image Classification" data-tags="Python,TensorFlow,CNN,MobileNetV2,Transfer Learning,Gradio,Data Preprocessing"></p>
 
-    <h4>Project Overview</h4>
-    <p>Developed a computer vision system to automatically classify weather conditions from images into four categories: Cloudy, Rainy, Shine, and Sunrise. The project demonstrates an end-to-end workflow from dataset preprocessing, model training, and evaluation, to interactive deployment, showcasing practical AI application skills.</p>
+  <h4>Project Overview</h4>
+  <p>Developed a computer vision system to automatically classify weather conditions from images into four categories: Cloudy, Rainy, Shine, and Sunrise. The project demonstrates an end-to-end workflow from dataset preprocessing, model training, and evaluation, to interactive deployment, showcasing practical AI application skills.</p>
 
-    <h4>Problem &amp; Objectives</h4>
-    <ul>
-      <li>Automate detection of weather conditions from outdoor images</li>
-      <li>Handle visually similar categories and small dataset limitations</li>
-      <li>Leverage transfer learning to improve accuracy</li>
-      <li>Deploy an interactive, user-friendly interface for real-time predictions</li>
-    </ul>
+  <h4>Problem &amp; Objectives</h4>
+  <ul>
+    <li>Automate detection of weather conditions from outdoor images</li>
+    <li>Handle visually similar categories and small dataset limitations</li>
+    <li>Leverage transfer learning to improve accuracy</li>
+    <li>Deploy an interactive, user-friendly interface for real-time predictions</li>
+  </ul>
 
-    <h4>Dataset &amp; Preprocessing</h4>
-    <ul>
-      <li>Kaggle multi-class weather image dataset</li>
-      <li>4 labeled classes: Cloudy, Rainy, Shine, Sunrise</li>
-      <li>Image resizing, normalization, and pixel value scaling</li>
-      <li>Data augmentation: rotation, flipping, zoom for robustness</li>
-      <li>Training/validation split with stratification for class balance</li>
-    </ul>
+  <h4>Dataset &amp; Preprocessing</h4>
+  <ul>
+    <li>Kaggle multi-class weather image dataset</li>
+    <li>4 labeled classes: Cloudy, Rainy, Shine, Sunrise</li>
+    <li>Image resizing, normalization, and pixel value scaling</li>
+    <li>Data augmentation: rotation, flipping, zoom for robustness</li>
+    <li>Class-preserving 80/20 train/validation split</li>
+  </ul>
 
-    <h4>Model Development &amp; Implementation</h4>
-    <ul>
-      <li>Built a baseline CNN to benchmark performance</li>
-      <li>Applied transfer learning with MobileNetV2 (ImageNet pretrained)</li>
-      <li>Trained custom classification layers while freezing base layers initially</li>
-      <li>Fine-tuned deeper convolutional layers with reduced learning rate</li>
-      <li>Hyperparameter experimentation: batch size, dropout, learning rate, optimizer choice</li>
-    </ul>
+  <h4>Model Development &amp; Implementation</h4>
+  <ul>
+    <li>Built a baseline CNN to benchmark performance</li>
+    <li>Applied transfer learning with MobileNetV2 (ImageNet pretrained)</li>
+    <li>Trained custom classification layers while freezing base layers initially</li>
+    <li>Fine-tuned deeper convolutional layers with reduced learning rate</li>
+    <li>Hyperparameter experimentation: batch size, dropout, learning rate scheduling</li>
+  </ul>
 
-    <h4>Evaluation &amp; Results</h4>
-    <ul>
-      <li>Monitored performance using accuracy, loss curves, and confusion matrix</li>
-      <li>Calculated Precision, Recall, and F1-Score for each class</li>
-      <li>The final MobileNetV2 model achieved 92% validation accuracy, improving on the baseline CNN</li>
-      <li>Some confusion between Shine and Cloudy, highlighting dataset challenges</li>
-      <li>Implemented iterative improvements based on evaluation insights</li>
-    </ul>
+  <h4>Evaluation &amp; Results</h4>
+  <ul>
+    <li>Monitored performance using accuracy, loss curves, and confusion matrix</li>
+    <li>Calculated Precision, Recall, and F1-Score for each class</li>
+    <li>The final MobileNetV2 model achieved ~88% validation accuracy, improving on the baseline CNN's mid-80% range</li>
+    <li>Some confusion between Shine and Cloudy, highlighting dataset challenges</li>
+    <li>Implemented iterative improvements based on evaluation insights</li>
+  </ul>
 
-    <h4>Deployment &amp; Application</h4>
-    <p>Deployed the trained model with a Gradio interface allowing users to upload weather images and receive real-time predictions with confidence scores, demonstrating full-stack deployment skills and user-oriented AI application design.</p>
+  <h4>Deployment &amp; Application</h4>
+  <p>Deployed the trained model with a Gradio interface allowing users to upload weather images and receive real-time predictions with confidence scores, demonstrating full-stack deployment skills and user-oriented AI application design.</p>
 
-    <h4>Key Learning &amp; Skills Demonstrated</h4>
-    <ul>
-      <li>End-to-end computer vision development from preprocessing to deployment</li>
-      <li>Practical experience with CNNs, transfer learning, and fine-tuning pretrained models</li>
-      <li>Model evaluation using metrics and confusion matrices for actionable insights</li>
-      <li>Data augmentation techniques to improve generalization</li>
-      <li>Deploying ML models with interactive user interfaces</li>
-      <li>Problem-solving for small datasets, visually similar classes, and performance optimization</li>
-    </ul>
+  <h4>Key Learning &amp; Skills Demonstrated</h4>
+  <ul>
+    <li>End-to-end computer vision development from preprocessing to deployment</li>
+    <li>Practical experience with CNNs, transfer learning, and fine-tuning pretrained models</li>
+    <li>Model evaluation using metrics and confusion matrices for actionable insights</li>
+    <li>Data augmentation techniques to improve generalization</li>
+    <li>Deploying ML models with interactive user interfaces</li>
+    <li>Problem-solving for small datasets, visually similar classes, and performance optimization</li>
+  </ul>
 
-    <h4>Reflection</h4>
-    <p>This project strengthened my ability to apply deep learning to real-world problems, enhanced my understanding of model evaluation, and demonstrated how to deliver functional AI solutions that are both accurate and user-friendly. I learned to balance technical implementation with usability and performance optimization.</p>
-  </template>
+  <h4>Reflection</h4>
+  <p>This project strengthened my ability to apply deep learning to real-world problems, enhanced my understanding of model evaluation, and demonstrated how to deliver functional AI solutions that are both accurate and user-friendly. I learned to balance technical implementation with usability and performance optimization.</p>
+</template>
 
   <template id="tpl-olist">
     <p class="pd-tags-src" data-subtitle="SQL &amp; Power BI • Business Intelligence • Data Analytics" data-title="Olist E-Commerce Analytics" data-tags="MySQL,SQL,Power BI,DAX,Power Query,Window Functions,Cohort Analysis"></p>
